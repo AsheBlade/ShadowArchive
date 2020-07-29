@@ -32,13 +32,13 @@ favicon: https://github.com/easonback26/ShadowArchive/blob/master/images/favicon
 
 # 菜单中的按钮
 navigation:
-  - name: 首页
+  - name: ホーム
     url: /
-  - name: 关于
+  - name: About
     url: /about
-  - name: 归档
+  - name: アーカイブ
     url: /archive
-  - name: 标签
+  - name: 付箋
     url: /tags
 
 # 每页的文章数
