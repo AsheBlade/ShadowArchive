@@ -36,8 +36,12 @@ navigation:
     url: /
   - name: About
     url: /about
-  - name: アーカイブ
+  - name: 归档
     url: /archive
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
   - name: 付箋
     url: /tags
 
