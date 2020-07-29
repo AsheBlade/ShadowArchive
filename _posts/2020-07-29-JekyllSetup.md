@@ -6,7 +6,7 @@ author: Shadow Walker
 tags: [Tech]
 comments: true
 toc: true
-youtubeId: CBhp86SdFVY
+<!--youtubeId: CBhp86SdFVY-->
 ---
 
 {% include youtubePlayer.html id=CBhp86SdFVY %}
