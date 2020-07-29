@@ -9,5 +9,5 @@ toc: true
 youtubeId: 『椎名林檎と彼奴等がゆく 百鬼夜行2015』ダイジェスト・ムービー
 ---
 
-{% include youtubePlayer.html id=page.CBhp86SdFVY %}
+{% include youtubePlayer.html id=CBhp86SdFVY %}
 
