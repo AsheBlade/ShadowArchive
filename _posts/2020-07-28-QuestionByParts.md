@@ -930,6 +930,7 @@ public void methodName() throws Exception {
 ------
 <br><br>
 **Q3. What are the types of Exceptions?**
+
 - Checked Exception
 	- checked by the compiler at the time of compilation.
 	- e.g. ClassNotFound Exception
@@ -937,10 +938,12 @@ public void methodName() throws Exception {
 - Unchecked Exception
 	- are not checked during the compile time by the compiler. 
 	- e.g. Arithmetic Exception, ArrayIndexOutOfBounds Exception. 
+	
 ------
 <br><br>
 
 **Q4. What are different ways to handle exceptions?**
+
 - try/catch:
 ```java
 class Manipulation {
@@ -1215,12 +1218,17 @@ public class HelloWorld {
 <br><br>
 
 **Q2. Difference between start() and run()**
+
 - Start() method creates new thread and the code inside the run () method is executed in the new thread. 
+
 - If we directly called the run() method then a new thread is not created and the currently executing thread will continue to execute the run() method.
+
 ---
 <br><br>
 **Q3. What is Synchronization?**
+
 - Synchronization makes only one thread to access a block of code at a time. If multiple thread accesses the block of code, then there is a chance for inaccurate results at the end. To avoid this issue, we can provide synchronization for the sensitive block of codes.
+
 ---
 <br><br>
 
@@ -1391,6 +1399,7 @@ The process of injection spring bean dependencies while initializing it is calle
 2. autowire byType
 3. autowire by constructor
 4. autowire by @Autowired and @qualifer annotations
+
 ---
 <br><br>
 
@@ -1641,6 +1650,7 @@ Mainly IOC &
 - **@Scope** – for configuring scope of the spring bean.
 - **@Configuration, @ComponentScan and @Bean** – for java based configurations.
 - AspectJ annotations for configuring aspects and advices, @Aspect, @Before, @After, @Around, @Pointcut etc.
+
 ---
 <br><br>
 
