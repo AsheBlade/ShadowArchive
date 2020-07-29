@@ -736,18 +736,14 @@ class Main
 
 ### ArrayList
 
-**Q1: Difference Between Arraylist and array**
+**Q1: Difference Between Arraylist and array** 
+ 
+- Array must be same elements. <br>
+- Array's size is set when initilized. 
 
-Array must be same elements. <br>
-Array's size is set when initilized. 
-
----
-
-**Q2: What is the internal implementation of ArrayList**
+**Q2: What is the internal implementation of ArrayList**  
 
 ArrayList inherits AbstractList class and implements List interface.
-
-------
 
 **Q3: Two ways to iterate over an ArrayList**
 
@@ -762,7 +758,7 @@ ArrayList inherits AbstractList class and implements List interface.
 
 ### Queue
 
-1. Queue is an interface like list. 
+1. Queue is an interface like List. 
 2. Queue is **first in first out**.
 3. You can init a Queue using either LinkedList or PriorityQueue, such as: 
 
@@ -809,6 +805,7 @@ equal 更慢, 依靠算法. 如果equal不同, 二者有可能相同.
 
 用于add方法, 去检测hash collection之中是否已经包含此元素. 
 先用hashcode比较, 如果hashcode不同就肯定不同. 直接加进去.  如果hashcode相同, 再比较equal进一步确认是否一样. 
+
 ---
 <br><br>
 **Q2: Difference between HashMap and HashTable**
