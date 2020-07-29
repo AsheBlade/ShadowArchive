@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll Setupc
+title: Jekyll Setupb
 date: 2020-07-29
 author: Shadow Walker
 tags: [Tech]
