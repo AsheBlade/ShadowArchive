@@ -5,8 +5,6 @@ date: 2020-07-28
 author: Shadow Song
 tags: [Japanese, Ghost_in_the_shell]
 comments: true
-toc: true
-pinned: true
 ---
 
 ## 傀儡謠─怨恨みて散る
@@ -105,3 +103,22 @@ Kugutuuta_Kagirohiwayominimatamuto
 
 　　常闇百夜悲　ももよのかなしき　とこやみに  
 　　来生祈皇神　かひこのこむよを　すめかみにのむ  
+　　
+## 謡III - Reinvarnation (2.0 Ver.)
+
+　　吾が舞えば  
+　　麗し女酔いにけり  
+　　吾が舞えば  
+　　照る月響むなり  
+　　結婚に神降りて  
+　　夜は明け鵺鳥鳴く  
+　　遠神恵賜  
+
+
+　　若吾起舞时   
+　　丽人亦沉醉   
+　　若吾起舞时   
+　　皓月亦鸣响   
+　　神降合婚夜   
+　　破晓虎鸫啼   
+　　远神惠赐  
