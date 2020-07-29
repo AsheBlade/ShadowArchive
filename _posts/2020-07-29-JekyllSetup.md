@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll Setupcf
+title: Jekyll Setupcg
 date: 2020-07-29
 author: Shadow Walker
 tags: [Tech]
@@ -9,4 +9,6 @@ toc: true
 youtubeId: H_nCw1WMFs4
 ---
 
-[Old_Souls.mp3?autoplay=1&loop=1&controls=0]()
+{% include youtubePlayer.html id=page.youtubeId %}
+
+/uploads/Old_Souls.mp3
