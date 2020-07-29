@@ -8,6 +8,9 @@ comments: true
 toc: true
 ---
 
+**原则说明**  
+此文档存在的价值在于迅速检索有关Java的面试题, 应该录入知识要点, 不应讨论过分详尽信息. 详尽信息应另开文档. 
+
 
 ## Topics
 **Concepts from core Java:**
@@ -226,6 +229,7 @@ The static can be:
 * method (also known as class method)
 * block
 * nested class
+
 ---
 <br><br>
 
@@ -737,17 +741,15 @@ class Main
 Array must be same elements. <br>
 Array's size is set when initilized. 
 
-------
-<br><br>
+---
 
-**What is the internal implementation of ArrayList**
+**Q2: What is the internal implementation of ArrayList**
 
 ArrayList inherits AbstractList class and implements List interface.
 
 ------
-<br><br>
 
-**Two ways to iterate over an ArrayList**
+**Q3: Two ways to iterate over an ArrayList**
 
 1. Looping using Java5 foreach loop.
 2. Looping ArrayList using for loop and size() method.
@@ -755,9 +757,28 @@ ArrayList inherits AbstractList class and implements List interface.
 4. Traversing ArrayList using ListIterator in Java.
 
 ------
-<br><br>
 
 ### LinkedList
+
+### Queue
+
+1. Queue is an interface like list. 
+2. Queue is **first in first out**.
+3. You can init a Queue using either LinkedList or PriorityQueue, such as: 
+
+	```java
+	Queue<Obj> queue = new PriorityQueue<Obj> ();
+	Queue<Obj> queue = new LinkedList<>();
+	```
+4. [More operation about Queue from GeeksforGeeks](https://www.geeksforgeeks.org/queue-interface-java/?ref=lbp)
+
+### PriorityQueue
+
+1. A PriorityQueue is used when the objects are supposed to be processed **based on the priority**. 
+2. PriorityQueue doesn’t permit null.
+3. We can’t create PriorityQueue of Objects that are non-comparable
+4. Basically, **when we add() into PriorityQueue, we will compare first and then add**. 
+5. [More operation about PriorityQueue from GeeksforGeeks](https://www.geeksforgeeks.org/priority-queue-class-in-java-2/)
 
 ### Set
 
