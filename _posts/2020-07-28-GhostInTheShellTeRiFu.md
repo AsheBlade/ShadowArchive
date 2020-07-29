@@ -5,6 +5,7 @@ date: 2020-07-28
 author: Shadow Song
 tags: [Japanese, Ghost_in_the_shell]
 comments: true
+toc: true
 ---
 
 ## 傀儡謠─怨恨みて散る
