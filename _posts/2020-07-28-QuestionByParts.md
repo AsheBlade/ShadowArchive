@@ -6,10 +6,9 @@ author: Shadow Walker
 tags: [Java]
 comments: true
 ---
-# Java Interview Question By Parts
 
 
-# Topics
+## Topics
 **Concepts from core Java:**
 
 * OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)
@@ -42,22 +41,22 @@ comments: true
 * Design patterns and design questions related to your projects.
 
 
-# Group Stupid Why Questions
+## Stupid Why Questions
 
-# Why MicroService
+### Why MicroService
 [Why MicroService](https://shadow-soft.com/why-microservice-architecture/)
 
 ---
 <br><br>
 
-# Why Lambda Expression
+### Why Lambda Expression
 
 [Why Lambda Expressio](https://www.programcreek.com/2014/01/why-lambda-java-8/)
 
 ---
 <br><br>
 
-# Why Stream? What is the benefit of Stream? 
+### Why Stream? What is the benefit of Stream? 
 
 - Streams have a strong affinity with functions. 
 - Streams encourage less mutability.
@@ -68,7 +67,7 @@ comments: true
 ---
 <br><br>
 
-# Why Spring? Advantage of Spring?
+### Why Spring? Advantage of Spring?
 
 * **Spring is non invasive:** That means you no need to implements any interface or inherit any class from spring to your classes, so when ever you want to change from spring to any other technology then you no need to change the logics of your class.
 
@@ -95,7 +94,7 @@ comments: true
 <br><br>
 
 
-# Why Jenkins? Benefit? 
+### Why Jenkins? Benefit? 
 
 - Jenkins can automate the build process (Compile, Static Code analysis, Archiving)
 
@@ -103,7 +102,7 @@ comments: true
 <br><br>
 
 
-# Why Spring Boot? Advantage of Spring Boot
+### Why Spring Boot? Advantage of Spring Boot
 
 ---
 <br><br>
@@ -116,9 +115,9 @@ comments: true
 
 ---
 <br><br>
-# Group Pre
+## Pre
 
-# Example
+### Example
 
 **Q1.**
 
@@ -138,7 +137,7 @@ Output:
 ------
 <br><br>
 
-# String
+### String
 
 **Q1. What is the difference between “==” and “equals(…)” in comparing Java String objects?**
 
@@ -192,7 +191,7 @@ true
 	Slower than StringBuilder | Faster than StringBuffer
 
 
-# boolean
+### boolean
 **Q1: Default value of boolean?**
 
 A: false
@@ -215,7 +214,7 @@ false
 ------
 <br><br>
 
-# Static
+### Static
 **Q1: What is static in Java?**
 
 The static keyword in java is used for memory management mainly. We can apply java static keyword with variables, methods, blocks and nested class. The static keyword belongs to the class than instance of the class.
@@ -255,7 +254,7 @@ Yes, static block can throw only Runtime exception or can use a try-catch block 
 ---
 <br><br>
 
-# Abstract
+### Abstract
 **Q1: Difference between abstract class and interface**
 - Abstract Class:
 
@@ -310,17 +309,19 @@ class Player extends AB1 {
 
 
 The interface contains only constants.
+
 ------
+
 <br><br>
 
-# Encapsulation
+### Encapsulation
 
 Map<Integer, Integer> map = new HashMap<>();
 
 ------
 <br><br>
 
-# Polymorphism
+### Polymorphism
 **Q2:What is Polymorphism**
 
 Simple:
@@ -349,9 +350,9 @@ NO. You don't have to @Override. @Override is to ensure that the method is overr
 ------
 <br><br>
 
-# Package
+### Package
 
-# Array
+### Array
 
 **Q1. Array vs List**
 
@@ -362,7 +363,7 @@ NO. You don't have to @Override. @Override is to ensure that the method is overr
 ------
 <br><br>
 
-# Wrapper
+### Wrapper
 **Q1. What are wrapper classes in Java?**
 
 Wrapper classes convert the Java primitives into the reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper classes because they “wrap” the primitive data type into an object of that class.
@@ -384,10 +385,11 @@ long | Integer
 float | Float
 double | Double
 boolean | Boolean
+
 ------
 <br><br>
 
-# Java
+### Java
 
 **java 7 new feature**
 	
@@ -474,7 +476,7 @@ boolean | Boolean
 
 
 
-# Unclassifed
+## Unclassifed
 **Q1. Difference between break and continue**
 break | continue
 ---| ---
@@ -541,7 +543,7 @@ public class HelloWorld extends HttpServlet {
 ---
 <br><br>
 
-# Group Collection
+## Collection
 
 <br>
 <p align="center">
@@ -727,7 +729,7 @@ class Main
 <br><br>
 
 
-# ArrayList
+### ArrayList
 
 **Q1: Difference Between Arraylist and array**
 
@@ -754,14 +756,14 @@ ArrayList inherits AbstractList class and implements List interface.
 ------
 <br><br>
 
-# LinkedList
+### LinkedList
 
-# Set
+### Set
 
 
-# Iterator
+### Iterator
 
-# TreeSet
+### TreeSet
 **Q1: Difference between HashSet and TreeSet**
 
 HashSet	| TreeSet
@@ -771,7 +773,7 @@ Can able to store null objects	| Couldn’t store null objects
 Performance is fast |	Performance is slow
 ---
 <br><br>
-# Map
+### Map
 **Q1: Difference between hashcode and equals**
 
 **hashcode is only used in hashset, hashtable, hashmap.**. It's not used in linkedlist/Array. 
@@ -865,9 +867,9 @@ Time Complexity O(n) | Time Complexity O(log n)
 <br><br>
 
 
-# Group High Level
+## High Level
 
-# Predicate
+### Predicate
 
 **What is predicate in Java?**
 
@@ -881,23 +883,23 @@ Time Complexity O(n) | Time Complexity O(log n)
 
 
 
-# Generics
+### Generics
 
-# args
+### args
 
-# Enum
+### Enum
 
-# Annotation
+### Annotation
 
-# Reflection
+### Reflection
 
-# Java EE 6 Interceptor
+### Java EE 6 Interceptor
 
 - [The interceptor Example Application](https://javaee.github.io/tutorial/interceptors003.html)
 - [Overview of Interceptors](https://docs.oracle.com/javaee/6/tutorial/doc/gkigq.html)
 
 
-# Group Exception
+## Exception
 
 **Q1.Difference between final, finally and finalize.**
 
@@ -1021,9 +1023,9 @@ public class IncorrectFileNameException extends Exception {
 
 
 
-# Group Stream
+## Stream
 
-# Overview
+### Overview
 
 **[Best Guide](https://stackify.com/streams-guide-java-8/) with common stream operations**
 
@@ -1051,7 +1053,7 @@ public class IncorrectFileNameException extends Exception {
 <br><br>
 
 
-# Stream
+### FAQ
 
 **Q1. Methods/Operations in Stream**
 
@@ -1104,7 +1106,7 @@ public void whenFlatMapEmployeeNames_thenGetNameStream() {
 ---
 <br><br>
 
-# Stream Coding Assignment
+### Stream Coding Assignment
 
 
 **Write a Java program to find the duplicate values of an array of integer values WITHOUT USING LOOPS.**
@@ -1162,9 +1164,9 @@ public class HelloWorld {
 <br><br>
 
 
-# Group Java.io
+## Java.io
 
-# Serialization
+### Serialization
 
 - Custom class implemeting Serializable. 
 	
@@ -1189,7 +1191,7 @@ public class HelloWorld {
 ---
 <br><br>
 
-# Group Thread
+## Thread
 **Q1. How to make a thread in Java?**
 - Extend Thread class and override the run method. 
 	- Advantage: Java can only extend one class. Extend Thread prevent us extending other classes. 
@@ -1254,9 +1256,9 @@ Its life independent.	| Its life depends on user threads.
 ---
 <br><br>
 
-# Group Design Pattern
+## Design Pattern
 
-# Singleton
+### Singleton
 
 **需要默写**  
 
@@ -1316,7 +1318,7 @@ Its life independent.	| Its life depends on user threads.
   ```
 
 
-# Lazy Loading
+### Lazy Loading
 
 - Lazy loading is a design pattern where we delay the loading of object until the point where we need it.
 - [GeeksforGeeks Tutorial](https://www.geeksforgeeks.org/lazy-loading-design-pattern/)
@@ -1325,9 +1327,9 @@ Its life independent.	| Its life depends on user threads.
 
 
 
-# Group Spring
+## Spring
 
-# Dependency Injection (IOC)
+### Dependency Injection (IOC)
 
 **How is dependency injection achieved in Spring?**
 - Dependency Injection in Spring can be done through constructors, setters or fields. (Setter injection, constructor injection or fiedls injection)
@@ -1365,7 +1367,7 @@ xx
 ---
 <br><br>
 
-# Bean
+### Bean
 
 **6. What is Spring Bean**
 
@@ -1462,7 +1464,7 @@ The default scope of Spring bean is singleton, so there will be only one instanc
 <br><br>
 
 
-# JPA
+### JPA
 
 **JPA vs JDBC**
 
@@ -1477,7 +1479,7 @@ high level | low level
 <br><br>
 
 
-# JSP
+### JSP
 
 JSP = Java Serv Pages
 
@@ -1501,7 +1503,7 @@ JSP = Java Serv Pages
 --- 
 <br><br>
 
-# Security
+### Security
 **这一部分需要的更多是项目经验, 或者tutorial, 而不是背题**
 
 --- 
@@ -1525,7 +1527,7 @@ JSP = Java Serv Pages
 --- 
 <br><br>
 
-# Ajax
+### Ajax
 AJAX = Asynchronous JavaScript and XML.
 
 AJAX is a technique for creating fast and dynamic web pages. Mostly used with Jquery for submit forms.
@@ -1566,7 +1568,7 @@ AJAX is a technique for creating fast and dynamic web pages. Mostly used with Jq
 ---
 <br><br>
 
-# 杂
+## 杂
 
 **1. Spring Core Concept**
 
@@ -1656,12 +1658,12 @@ Yes we can, using @ResponseBody annotation. This is how we send JSON or XML base
 <br><br>
 
 
-# Group REST
+## REST
 
 [REST API Tutorial](https://restfulapi.net/)
 
 
-# What is REST?
+### What is REST?
 
 REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems 
 
@@ -1694,7 +1696,7 @@ REST is acronym for REpresentational State Transfer. It is architectural style f
 ---
 <br><br>
 
-# Idempotent
+### Idempotent
 
 	- In the context of REST APIs, when making multiple identical requests has the same effect as making a single request – then that REST API is called idempotent.
 
@@ -1714,7 +1716,7 @@ REST is acronym for REpresentational State Transfer. It is architectural style f
 ---
 <br><br>
 
-# PUT vs POST
+### PUT vs POST
 
 PUT | POST
 ---|---
@@ -1738,7 +1740,7 @@ DELETE	/device-management/devices/{id} : Delete device by "id"
 ---
 <br><br>
  
-# SOAP vs REST
+### SOAP vs REST
 
 [SOAP Vs. REST: Difference between Web API Services](https://www.guru99.com/comparison-between-web-services.html)
 
@@ -1761,7 +1763,7 @@ SOAP requires more bandwidth for its usage| REST does not need much bandwidth wh
 <br><br>
 
 
-# Group Angular
+## Angular
 
 **Advantage of Angular**
 
@@ -1787,7 +1789,7 @@ SOAP requires more bandwidth for its usage| REST does not need much bandwidth wh
 
 ---
 <br><br> 
-# Group AWS
+## AWS
 
 - [Deploying a Spring Boot Application on AWS Using AWS Elastic Beanstalk](https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/)
 
@@ -1795,7 +1797,7 @@ SOAP requires more bandwidth for its usage| REST does not need much bandwidth wh
 
 
 
-# Group Hibernate
+## Hibernate
 
 **save vs persist**
 
@@ -1857,7 +1859,7 @@ Use @ManyToMany, @JoinTable and @JoinColumn annotations
 ---
 <br><br>
 
-# Group SQL
+## SQL
 
 **What is Database Normalization**
 
@@ -1884,9 +1886,9 @@ Use @ManyToMany, @JoinTable and @JoinColumn annotations
 
 
 
-# Group Testing
+## Testing
 
-# Junit
+### Junit
 
 **Junit Testing in Spring**
 
@@ -1915,11 +1917,11 @@ Use @ManyToMany, @JoinTable and @JoinColumn annotations
 ---
 <br><br>
 
-# Group Working Mode and Code Review
+## Working Mode and Code Review
 
 **How do you do code review?**
 
-# Agile
+### Agile
 
 <br>
 <p align="center">
@@ -1929,7 +1931,7 @@ Use @ManyToMany, @JoinTable and @JoinColumn annotations
 
 
 
-# Group After Interview
+## After Interview
 
 4. Describe the culture of the company.
 
