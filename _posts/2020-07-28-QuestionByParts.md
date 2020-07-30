@@ -3,7 +3,7 @@ layout: post
 title: Java Interview Question By Parts
 date: 2020-07-28
 author: Shadow Walker
-tags: [Java]
+tags: [JAVA]
 comments: true
 toc: true
 ---
