@@ -398,37 +398,40 @@ boolean | Boolean
 
 **java 7 new feature**
 	
-	- multi-catch with one try
+- multi-catch with one try
+
 **java 8 new feature**
 	
-	- Lambda Expression
-	- Stream
-	- predicate
+- Lambda Expression
+- Stream
+- predicate
 	
 **java 9 new feature**
 	
-	- Factory Methods for Immutable List, Set, Map and Map.Entry
-	- Private methods in Interfaces
+- Factory Methods for Immutable List, Set, Map and Map.Entry
+- Private methods in Interfaces
+
 **java 11 new feature**
 	
-	- no longer needs javac. Can run java and it will auto compile. 
-	- var in lambda expression.
-	- Reading and Writing Strings to and from the Files
+- no longer needs javac. Can run java and it will auto compile. 
+- var in lambda expression.
+- Reading and Writing Strings to and from the Files
 	
-	- Example:
-		
-		```java
-		Path path = Files.writeString(Files.createTempFile("test", ".txt"), "This was posted on JD");
-		System.out.println(path);
-		String s = Files.readString(path);
-		System.out.println(s); //This was posted on JD
-		```
+- Example:
+	
+	```java
+	Path path = Files.writeString(Files.createTempFile("test", ".txt"), "This was posted on JD");
+	System.out.println(path);
+	String s = Files.readString(path);
+	System.out.println(s); //This was posted on JD
+	```
+	
 **java 12 new feature**
 
-	- File.mismatch
-	- Compact Number Formatting
-	- Teeing Collectors in Stream API
-	- Java Strings New Methods – indent(), transform(), describeConstable(), and resolveConstantDesc()
+- File.mismatch
+- Compact Number Formatting
+- Teeing Collectors in Stream API
+- Java Strings New Methods – indent(), transform(), describeConstable(), and resolveConstantDesc()
 
 ---
 <br><br>

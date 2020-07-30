@@ -44,6 +44,18 @@ navigation:
     url: /tags
   - name: 付箋
     url: /tags
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
+  - name: 付箋
+    url: /tags
 
 # 每页的文章数
 paginate: 8
