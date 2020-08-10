@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 攻殼機動隊台詞
+title: 傀儡謠
 date: 2020-07-28
 author: Shadow Song
 tags: [Japanese, Ghost_in_the_shell]
@@ -30,7 +30,7 @@ Kugutsuuta ura mite chiru
 　　驀然回首百花殘　わがかへり　みすれど 　はなはちりぬべし  
 　　宛似心慰杳無蹤　なぐさむるこころは　けぬるがごとく  
 
-　　諸神集新世　あらたよに　かむつどひて  　　
+　　諸神集新世　あらたよに　かむつどひて  
 　　夜明虎鶇啼　よはあけ　ぬえとりなく  
 　　花開向神祈　さくはなは　かみにこひのむ  
 　　浮生空自哀　いけるよに　あまみがかなしも  
