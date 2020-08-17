@@ -23,4 +23,4 @@ Please note that we should try to avoid using local or Youtube files as much as 
 {% include googleDrivePlayer.html id=page.driveId %}
 
 ## Google Drive Mp3
-* {% include googleDriveMp3Player.html id=page.driveMp3Id %}
+{% include googleDriveMp3Player.html id=page.driveMp3Id %}
