@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 个人非常喜欢的音乐
+title: Music I enjoy
 date: 2020-08-16
 author: Shadow Song
 tags: [Music]
