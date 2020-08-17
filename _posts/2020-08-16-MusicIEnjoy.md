@@ -31,7 +31,7 @@ driveId21: 1TjzggpkgeurvwraPmnn06qxdJFb-0IxA/preview
 youtubeId2: lf5hlxkJ81w
 youtubeId3: HBafEndcQug
 driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
-driveMp3Id2: 1lh9RVmA98DQFd4MVFMDWQwg0dD59yE-B/previe
+driveMp3Id2: 1lh9RVmA98DQFd4MVFMDWQwg0dD59yE-B/preview
 ---
 
 ## Overview
@@ -179,7 +179,7 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 
 ### 椎名林檎 - 熱愛発覚中from百鬼夜行
 
-{% include googleDrivePlayer.html id=page.driveId %}
+{% include youtubePlayer.html id=page.youtubeId1%}
 
 ### 降雨概率
 
@@ -190,3 +190,7 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 ### 守望麦田 - 王菲
 
 {% include googleDriveMp3Player.html id=page.driveMp3Id2 %}
+
+## 其他
+
+这里所有的和平时听的不是特多的都在[这里](https://drive.google.com/drive/folders/10LHkmKJmFpfkgLlGh1OgistKNPKijTDV?usp=sharing)
