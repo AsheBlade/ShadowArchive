@@ -24,8 +24,6 @@ driveId14: 1sdwAxeH02za_bLoKvZkrxSBdhI7dDgzR/preview
 driveId15:1MubajqbiUYaEPPlg2VyVcLyKEnPYbeyS/preview
 driveId16:1CfJ7XlOXfBuqCO6caU2VT5I-V0v5KKMs
 driveId17:1xrrHKV8x7rvJXtgiCEY0-dz9mJYsKow5/preview
-driveId1:
-driveId1:
 
 
 youtubeId: lf5hlxkJ81w
