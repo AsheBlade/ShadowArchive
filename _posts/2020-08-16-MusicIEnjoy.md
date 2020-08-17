@@ -14,13 +14,22 @@ driveId4: 1xPfE6ZODLwUTuQi0C6XmqxowoS80cgsR/preview
 driveId5: 1rLDr1UggXU_6GBJMth0q5EbY73l9Kz3H/preview
 driveId6: 1bHpexSval6aXrk1SyKwR0nPSO9NIUebz/preview
 driveId7: 1y5TSvg3TNh_weIy6GgnCc5UQnbyyQRU-/preview
-driveId:
+driveId8:19YO3CZ_Lo4FBrNGDhimZj3mf-YuaEFRl/preview
 driveId9:1F-NcnSn_5NzNnFPtAiAcIlRfrRdgGG4B/preview
 driveId10:16A_Z_0pPEaBGaKsy1vsqwfsvJMaEPeaH/preview
 driveId11:1-_ry6VXfEbNO94Y0yziz0TL0JYrVC6NE/preview
 driveId12:1cl2tzViU0ZvX92Omp45toJ6SrvPwJa9Z/preview
-driveId:
+driveId13:1yUQKADV6Opz74Rv4ldFFnA0lUSBGFB26/preview
+driveId14: 1sdwAxeH02za_bLoKvZkrxSBdhI7dDgzR/preview
+driveId15:1MubajqbiUYaEPPlg2VyVcLyKEnPYbeyS/preview
+driveId16:1CfJ7XlOXfBuqCO6caU2VT5I-V0v5KKMs
+driveId17:1xrrHKV8x7rvJXtgiCEY0-dz9mJYsKow5/preview
+driveId1:
+driveId1:
+
+
 youtubeId: lf5hlxkJ81w
+driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
 ---
 
 ## Overview
@@ -69,24 +78,17 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 {% include googleDrivePlayer.html id=page.driveId5 %}
 
 
-## 鸡血类
-
-我没想好起什么名字, 就叫鸡血类吧. 与sorrow类相对, 这些听了之后让人振奋. 一般是早上的时候听. 听了之后精神. 
-
-### Blood of the Dragon
-
-Game of Throne的曲子, 喜欢这个鼓和旋律. 
-
-{% include googleDrivePlayer.html id=page.driveId7 %}
-
-
 ## 电音
 
-电音听的不多, 而且口味偏轻
+电音听的不多, 而且口味偏轻.  听的比较多的就是 Late Night Alumni, 晚上关灯听.  
 
 ### Devils Never Cry
 
 听了至少有八年了, 这应该是我经常听的歌里面口味比较重的. 
+
+{% include googleDrivePlayer.html id=page.driveId11 %}
+
+### In the ashes - Late Night Alumni
 
 {% include googleDrivePlayer.html id=page.driveId11 %}
 
@@ -109,17 +111,46 @@ Game of Throne的曲子, 喜欢这个鼓和旋律.
 2008年去新东方的时候老师给放的, 这么多年听的唯一一首西语歌
 
 {% include googleDrivePlayer.html id=page.driveId10 %}
-<!--### from the roof top-somewhere in the silence
 
-{% include googleDrivePlayer.html id=page.driveId8 %}-->
+### from the roof top-somewhere in the silence
+
+{% include googleDrivePlayer.html id=page.driveId8 %}
 
 
+### brouillard mouvant
 
+日本人唱的法语歌. 日本人很擅长法语歌. 
 
+{% include googleDriveMp3Player.html id=page.driveMp3Id %}
+
+### GROSSO _ ラビリンス
+
+日本人在香港拍的MV, MV拍的不错
+
+{% include googleDrivePlayer.html id=page.driveId13 %}
+
+### Kaer Morhen
+
+喜欢这个笛子, 挺安静的. 
+
+{% include googleDrivePlayer.html id=page.driveId13 %}
+
+### Lady of The World
+
+歌词挺押韵的. 
+
+{% include googleDrivePlayer.html id=page.driveId15 %}
+
+### Night Elf
+
+{% include googleDrivePlayer.html id=page.driveId16 %}
 ### 流行歌曲
 
 其实流行歌曲听的不多, 总共没几首. 
 
+### 春に揺られど君想う feat. こぴ
+
+{% include googleDrivePlayer.html id=page.driveId17 %}
 ### To be 
 
 滨崎步是天后啊. 纪念日本曾经的那个时代
