@@ -21,8 +21,3 @@ toc: true
 
 {% include googleDrivePlayer.html id=1c9CxB4Ijnp98ESpRnF8qsTCY3O_ZAyq3/preview %}
 
-<!--## Google Drive Video
-{% include googleDrivePlayer.html id=page.driveId %}
-
-## Google Drive Mp3
-{% include googleDriveMp3Player.html id=page.driveMp3Id %}-->
