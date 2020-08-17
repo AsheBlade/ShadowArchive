@@ -22,5 +22,9 @@ Please note that we should try to avoid using local or Youtube files as much as 
 ## Google Drive Video
 {% include googleDrivePlayer.html id=page.driveId %}
 
+### 重要
+
+**不能按照教程之中说的那样, 直接把driveId放在等于号后边. 这样是行不通的, 必须init变量然后引用.** 
+
 ## Google Drive Mp3
 {% include googleDriveMp3Player.html id=page.driveMp3Id %}
