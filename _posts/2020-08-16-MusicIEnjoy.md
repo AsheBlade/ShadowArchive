@@ -12,6 +12,15 @@ driveId2: 1jwtfwCU-FELOgLbexjJC7sg4AuYB4Jsx/preview
 driveId3: 1vkPJVvGC-njVuRIOUIrjUpUE6h12d9zV/preview
 driveId4: 1xPfE6ZODLwUTuQi0C6XmqxowoS80cgsR/preview
 driveId5: 1rLDr1UggXU_6GBJMth0q5EbY73l9Kz3H/preview
+driveId6: 1bHpexSval6aXrk1SyKwR0nPSO9NIUebz/preview
+driveId7: 1y5TSvg3TNh_weIy6GgnCc5UQnbyyQRU-/preview
+driveId:
+driveId9:1F-NcnSn_5NzNnFPtAiAcIlRfrRdgGG4B/preview
+driveId10:16A_Z_0pPEaBGaKsy1vsqwfsvJMaEPeaH/preview
+driveId11:1-_ry6VXfEbNO94Y0yziz0TL0JYrVC6NE/preview
+driveId12:1cl2tzViU0ZvX92Omp45toJ6SrvPwJa9Z/preview
+driveId:
+youtubeId: lf5hlxkJ81w
 ---
 
 ## Overview
@@ -35,6 +44,11 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 
 {% include googleDrivePlayer.html id=page.driveId2 %}
 
+### 傀儡谣
+
+这一首我从2015年开始听, 可能听了有上百遍. 
+
+{% include googleDrivePlayer.html id=page.driveId6 %}
 
 ### Old Souls
 
@@ -53,3 +67,62 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 来自Ghost in the shell.  这个音乐可能需要看电影才有感觉.  不看电影的人可能听了之后没什么感觉. 
 
 {% include googleDrivePlayer.html id=page.driveId5 %}
+
+
+## 鸡血类
+
+我没想好起什么名字, 就叫鸡血类吧. 与sorrow类相对, 这些听了之后让人振奋. 一般是早上的时候听. 听了之后精神. 
+
+### Blood of the Dragon
+
+Game of Throne的曲子, 喜欢这个鼓和旋律. 
+
+{% include googleDrivePlayer.html id=page.driveId7 %}
+
+
+## 电音
+
+电音听的不多, 而且口味偏轻
+
+### Devils Never Cry
+
+听了至少有八年了, 这应该是我经常听的歌里面口味比较重的. 
+
+{% include googleDrivePlayer.html id=page.driveId11 %}
+
+### Rest of You - Late Night Alumni
+
+女性应该比较喜欢这种. 听了应该有几百遍了. 销魂. 
+
+{% include googleDrivePlayer.html id=page.driveId12 %}
+
+### Angels and Angles - Late Night Alumni
+
+{% include youtubePlayer.html id=page.youtubeId %}
+
+## 无分类
+
+不知道怎么分类的都放这里了, 大部分是日本人的东西. 
+
+### Canto Alla Vita
+
+2008年去新东方的时候老师给放的, 这么多年听的唯一一首西语歌
+
+{% include googleDrivePlayer.html id=page.driveId10 %}
+<!--### from the roof top-somewhere in the silence
+
+{% include googleDrivePlayer.html id=page.driveId8 %}-->
+
+
+
+
+### 流行歌曲
+
+其实流行歌曲听的不多, 总共没几首. 
+
+### To be 
+
+滨崎步是天后啊. 纪念日本曾经的那个时代
+
+{% include googleDrivePlayer.html id=page.driveId9 %}
+
