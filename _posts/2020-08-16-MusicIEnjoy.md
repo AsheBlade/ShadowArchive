@@ -19,5 +19,5 @@ toc: true
 
 来源自库布里克的电影: eyes wide shut. 电影我也非常喜欢. 这个曲子伴我度过了许多个黑色的夜, 让我享受孤独之中的宁静. 
 
-{% include googleDrivePlayer.html id=1c9CxB4Ijnp98ESpRnF8qsTCY3O_ZAyq3/preview %}
 
+{% include googleDrivePlayer.html id=1c9CxB4Ijnp98ESpRnF8qsTCY3O_ZAyq3/preview %}
