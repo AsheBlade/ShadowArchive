@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 个人非常喜欢的音乐
-date: 2020-07-29
+date: 2020-08-16
 author: Shadow Song
 tags: [Music]
 comments: true
@@ -20,10 +20,10 @@ toc: true
 
 来源自库布里克的电影: eyes wide shut. 电影我也非常喜欢. 这个曲子伴我度过了许多个黑色的夜, 让我享受孤独之中的宁静. 
 
-{% include googleDriveMp3Player.html id=1c9CxB4Ijnp98ESpRnF8qsTCY3O_ZAyq3 %}
+{% include googleDrivePlayer.html id=1c9CxB4Ijnp98ESpRnF8qsTCY3O_ZAyq3/preview %}
 
-## Google Drive Video
+<!--## Google Drive Video
 {% include googleDrivePlayer.html id=page.driveId %}
 
 ## Google Drive Mp3
-{% include googleDriveMp3Player.html id=page.driveMp3Id %}
+{% include googleDriveMp3Player.html id=page.driveMp3Id %}-->
