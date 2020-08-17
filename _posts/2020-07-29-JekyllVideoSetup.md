@@ -28,8 +28,3 @@ Please note that we should try to avoid using local or Youtube files as much as 
 
 ## Google Drive Mp3
 {% include googleDriveMp3Player.html id=page.driveMp3Id %}
-
-## test
-<!--{% include googleDrivePlayer.html id= 1_UJnBUCWiRBPRGRrqcrKy6V1ezrE1gtg/preview %}-->
-
-{% include googleDrivePlayer.html id=1_UJnBUCWiRBPRGRrqcrKy6V1ezrE1gtg/preview %}
