@@ -24,8 +24,14 @@ driveId14: 1sdwAxeH02za_bLoKvZkrxSBdhI7dDgzR/preview
 driveId15: 1MubajqbiUYaEPPlg2VyVcLyKEnPYbeyS/preview
 driveId16: 1CfJ7XlOXfBuqCO6caU2VT5I-V0v5KKMs/preview
 driveId17: 1xrrHKV8x7rvJXtgiCEY0-dz9mJYsKow5/preview
+driveId18: 17WF0jqYws64CfQDz2pwqHUGdP48RfMMw/preview
+driveId19: 1DfPevb8M2Cy42McHJoB267alWxvxLz7e/preview
+driveId20: 1Il4D9bo_oKhWIrbG909OCuQSlZDMYxxW/preview
+driveId21: 1TjzggpkgeurvwraPmnn06qxdJFb-0IxA/preview
 youtubeId2: lf5hlxkJ81w
+youtubeId3: HBafEndcQug
 driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
+driveMp3Id2: 1lh9RVmA98DQFd4MVFMDWQwg0dD59yE-B/previe
 ---
 
 ## Overview
@@ -86,7 +92,7 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 
 ### In the ashes - Late Night Alumni
 
-{% include googleDrivePlayer.html id=page.driveId11 %}
+{% include youtubePlayer.html id=page.youtubeId3 %}
 
 ### Rest of You - Late Night Alumni
 
@@ -129,7 +135,7 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 
 喜欢这个笛子, 挺安静的. 
 
-{% include googleDrivePlayer.html id=page.driveId13 %}
+{% include googleDrivePlayer.html id=page.driveId14 %}
 
 ### Lady of The World
 
@@ -140,16 +146,47 @@ sorrow类是我听的比较多的一个类, 一般都是晚上听. 晚上不喜�
 ### Night Elf
 
 {% include googleDrivePlayer.html id=page.driveId16 %}
+
+### 司马大人
+
+还是日本人的曲子
+
+{% include googleDrivePlayer.html id=page.driveId20 %}
+
+### 风声
+
+大岛满的曲子, 可惜只有一半, 完整版找了很多年都找不到
+
+{% include googleDrivePlayer.html id=page.driveId21 %}
+
 ## 流行歌曲
 
-其实流行歌曲听的不多, 总共没几首. 
+其实流行歌曲听的不多
 
 ### 春に揺られど君想う feat. こぴ
 
 {% include googleDrivePlayer.html id=page.driveId17 %}
+
+### ヨルシカ  だから僕は音楽を辞めた(Covered by コバソロ & こぴ)
+
+{% include googleDrivePlayer.html id=page.driveId19 %}
+
 ### To be 
 
-滨崎步是天后啊. 纪念日本曾经的那个时代
+滨崎步是天后 纪念日本曾经的那个时代
 
 {% include googleDrivePlayer.html id=page.driveId9 %}
 
+### 椎名林檎 - 熱愛発覚中from百鬼夜行
+
+{% include googleDrivePlayer.html id=page.driveId %}
+
+### 降雨概率
+
+台湾近几年的新乐团, 非常看好
+
+{% include googleDrivePlayer.html id=page.driveId18 %}
+
+### 守望麦田 - 王菲
+
+{% include googleDriveMp3Player.html id=page.driveMp3Id2 %}
