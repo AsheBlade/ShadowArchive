@@ -26,5 +26,9 @@ Please note that we should try to avoid using local or Youtube files as much as 
 
 **不能按照教程之中说的那样, 直接把driveId放在等于号后边. 这样是行不通的, 必须init变量然后引用.** 
 
+另: 关于以上黑体字的部分, 我已经尝试过各种相关的方法了(id之后加空格不加空格之类). 不可用!! 切莫继续常识. 
+
+另: 这个video是需要cookie的, chrome比较好用. safari和其他有时候没有允许cookie的话, 视频是放不出来的. 
+
 ## Google Drive Mp3
 {% include googleDriveMp3Player.html id=page.driveMp3Id %}
