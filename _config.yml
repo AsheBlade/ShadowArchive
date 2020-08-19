@@ -37,7 +37,7 @@ navigation:
   - name: About
     url: /about
   - name: 归档
-    url: /archive
+    url: /archi
   - name: 付箋
     url: /tags
 
@@ -53,10 +53,10 @@ footer-links:
   weibo: #frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<>
   dribbble: # https://dribbble.com/<>
-  email: #fromendworld@outlook.com 
+  email: contactshadowsong@gmail.com
   facebook: #https://www.facebook.com/<>
   flickr: #https://www.flickr.com/<>
-  github: #FromEndWorld/loffer #https://github.com/<>
+  github: https://github.com/easonback26?tab=repositories
   instagram: #https://instagram.com/<>
   linkedin: #https://www.linkedin.com/in/<>
   pinterest: #https://www.pinterest.com/<>
@@ -74,7 +74,7 @@ footer-text: Copyright (c) 2020 Shadow Walker
 #
 
 # 输入Disqus shortname，即可添加评论区
-disqus: loffer #shortname
+disqus: shadow #shortname
 
 # 输入Gitalk相关设定，即可添加评论区，具体请看教程
 gitalk:
