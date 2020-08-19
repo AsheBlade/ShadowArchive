@@ -37,7 +37,7 @@ navigation:
   - name: About
     url: /about
   - name: 归档
-    url: /archi
+    url: /archive
   - name: 付箋
     url: /tags
 
