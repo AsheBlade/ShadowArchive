@@ -35,6 +35,7 @@ I have a Japanese friend. <br>
 日本人の友達（友だち）がいます<br><br>
 
 ### Describe where things are 
+
 JAPN | ENG 
 --- | --- 
 X は　あそこです.|  			X is overe there. 　　　
@@ -49,6 +50,7 @@ X は Yの　上（うえ）です| 	X is on/above Y.
 X は Yの　下（した）です| X is under/beneath Y. 
 X は Yの　近く（ちかく）です| X is near Y. 
 X は Yの　隣（となり）です| X is next to Y. 
+
 <br><br>
 
 The bank is next to the library. <br>
