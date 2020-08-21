@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting
-date: 2020-08-20
+title: Sorting Algorithms
+date: 2020-08-21
 author: Shadow Walker
 tags: [Algorithm, Interview]
 toc: true
