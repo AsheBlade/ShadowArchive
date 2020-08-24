@@ -12,6 +12,10 @@ toc: true
 
 This tutorial helps people to quickly getting started with Latex.  Most of the content from this article is from [here](https://www.latex-tutorial.com/tutorials/first-document/) .
 
+## Latex Sample Template
+
+Some very useful latex sample template I downloaded from Internet: [here](https://drive.google.com/drive/folders/1yoXO_5o08kadeHUEZfI4Fb7vhDJD_Q_Q?usp=sharing)
+
 ## Hello World
 
 ### Very Basic
@@ -104,3 +108,56 @@ This shows what is valid and what is not.
 \end{environment}
 ```
 
+## 插入代码
+
+**header插入**
+
+```latex
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+```
+
+**Code block**
+
+```latex
+\begin{lstlisting}
+// Hello.java
+import javax.swing.JApplet;
+import java.awt.Graphics;
+
+public class Hello extends JApplet {
+    public void paintComponent(Graphics g) {
+        g.drawString("Hello, world!", 65, 95);
+    }    
+}
+\end{lstlisting}
+```
+
+**效果**
+
+![](https://i.stack.imgur.com/wKKMy.png)
+
+**来源**
+
+[stackoverflow](https://stackoverflow.com/questions/3175105/inserting-code-in-this-latex-document-with-indentation)
