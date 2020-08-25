@@ -112,6 +112,8 @@ This shows what is valid and what is not.
 
 **header插入**
 
+其中language=Java, 可以根据具体程序语言更改, 其他字号和颜色都是可以按喜好自有更改. 
+
 ```latex
 \usepackage{listings}
 \usepackage{color}
@@ -161,3 +163,45 @@ public class Hello extends JApplet {
 **来源**
 
 [stackoverflow](https://stackoverflow.com/questions/3175105/inserting-code-in-this-latex-document-with-indentation)
+
+## Pseudocode
+
+**Header**
+
+```latex
+\usepackage{algorithm}
+\usepackage{algorithmic}
+```
+**example**
+
+```latex
+\begin{algorithm}
+\caption{Calculate $y = x^n$}
+\begin{algorithmic}
+\REQUIRE $n \geq 0 \vee x \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \leftarrow 1$
+\IF{$n < 0$}
+\STATE $X \leftarrow 1 / x$
+\STATE $N \leftarrow -n$
+\ELSE
+\STATE $X \leftarrow x$
+\STATE $N \leftarrow n$
+\ENDIF
+\WHILE{$N \neq 0$}
+\IF{$N$ is even}
+\STATE $X \leftarrow X \times X$
+\STATE $N \leftarrow N / 2$
+\ELSE[$N$ is odd]
+\STATE $y \leftarrow y \times X$
+\STATE $N \leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+```
+
+**Reference**
+
+[Math-Linux.com](https://www.math-linux.com/latex-26/faq/latex-faq/article/how-to-write-algorithm-and-pseudocode-in-latex-usepackage-algorithm-usepackage-algorithmic)
+
