@@ -126,6 +126,10 @@ for (int i = 0; i < mat.length; i++) 
 ```java
 Map<Integer, Integer> map = new HashMap<>();
 ```
+### Set
+```java
+Set<String> hash_Set = new HashSet<String>(); 
+```
 
 ### ArrayList
 ```java
