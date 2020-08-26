@@ -15,6 +15,12 @@ toc: true
 
 这个指南会比较详尽一点, 适合在很长时间都没碰题的时候, 在对相应算法比较生疏的时候拿出来用. 
 
+# Syntax
+
+Syntax的总结在这个[guide](https://easonback26.github.io/ShadowArchive/Java_Syntax/)之中.  
+
+Syntax是需要刷一下的, 不然总当场google多少是会减分. 
+
 # Arrays
 
 Array这一块表面上很基础, 其实Interview的时候并不基础. 现在基本不考, 如果考的话, 就都是一些奇淫技巧. 
@@ -34,9 +40,11 @@ Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于
 
 **这一块时间紧可以不刷.**
 
-# Hash Tables
+# HashMap
 
 这块是重点. 可以说是重点之中的重点, 而且比较灵活.   HashMap是提升RunTime的必备, 这一块必须掌握. 
+
+详细的总结看这个[guide](https://easonback26.github.io/ShadowArchive/HashMap/)
 
 # Trees
  **关于Tree的问题都是递归问题.**    这一块表面很难, 但是考的话, 一般只会考察一些基本的, 不会考太高级的变化. 在于理解也在于背, 理解不了就背下来. 主要看这个[guide](https://easonback26.github.io/ShadowArchive/Tree/), 写的非常详细了. 
