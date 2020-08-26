@@ -3,7 +3,7 @@ layout: post
 title: Java Syntax
 date: 2020-08-25
 author: Shadow Walker
-tags: [Interview,  Algorithm, Java]
+tags: [Interview, Algorithm, Java]
 toc: true
 ---
 
