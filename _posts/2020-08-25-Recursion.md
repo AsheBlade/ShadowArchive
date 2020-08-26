@@ -1,4 +1,19 @@
-### Number of Islands
+---
+layout: post
+title: Recursion
+date: 2020-08-25
+author: Shadow Walker
+tags: [Interview,  Algorithm]
+toc: true
+---
+
+##Overview
+
+递归在于理解, 也在于多刷. 理解不了的时候可以背下来刷刷, 刷刷也能促进理解. 
+
+## Problems
+
+### LC200_Number of Islands
 
 ```java
 public class Solution {

@@ -1,3 +1,19 @@
+---
+layout: post
+title: MySQL Command
+date: 2020-08-25
+author: Shadow Walker
+tags: [MySQL]
+toc: true
+---
+
+## Overview
+
+这是2020年1月在Banyaan课上用过的MySQL command. 直接在terminal里面跑的, 还挺常用的, 记下来. 
+
+## Command
+
+```SQL
 
 Shadows-Mac-mini:~ shadowsong$ sudo mysql -u root -p
 Enter password: 
@@ -198,3 +214,5 @@ mysql> select * from pet;
 2 rows in set (0.00 sec)
 
 mysql> 
+
+```
