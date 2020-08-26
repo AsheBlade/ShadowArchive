@@ -26,15 +26,13 @@ Array这一块表面上很基础, 其实Interview的时候并不基础. 现在�
 
 其他的话, 就是一些基本的, 比如构建ArrayList, 高级ArrayList里面套个Matrix之类的. 一些语法问题了.. 这一块可以以后总结, 目前没有总结这一块面试题的打算, 因为一眼望去尽是奇淫技巧, 背这种技巧的意义,,,,, 唉.
 
-以上 - Aug 25th, 2020. 
+**这一块的题可以不刷, 但考前需要熟悉一下ArrayList的构建相关Syntax. 不要小看syntax.**
 
 # Linked Lists
 
 Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于构建. 能把constructor写出来, 能写一下基本的操作, 还能掌握其特性就可以. 
 
 **这一块时间紧可以不刷.**
-
-以上 - Aug 25th, 2020. 
 
 # Hash Tables
 
@@ -48,6 +46,12 @@ Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于
 
 # Graphs
 
+**图论是重点.** 这一块需要花时间掌握, 主要分三块:  
+
+1. 对于基本概念的掌握. 这一块相比几个的话, 概念有很多. 基本的constructor构建, 还有一些变体, 有方向的edge, 和没方向的. 关于这一块可以看这个[guide](https://easonback26.github.io/ShadowArchive/Graph/).  
+2. 只掌握一个图还不行, 还要掌握各种最短路径的搜索方法. 最知名的当然是Dijkstra. 
+3. 熟练掌握前两项之后就可以刷题了. 
+
 # Sorting
 
 Sorting 这一块其实没什么多说的. 就看这个[guide](https://easonback26.github.io/ShadowArchive/Sorting/), 写的非常详尽了. 
@@ -57,5 +61,7 @@ Sorting 这一块其实没什么多说的. 就看这个[guide](https://easonback
 # Recursion
 
 # Dynamic Programming
+
+**Dynamic是重点, 总结就一个词"刷题".** 没有其他的捷径. 
 
 
