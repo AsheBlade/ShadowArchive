@@ -110,22 +110,16 @@ String[][] cities = new String[3][3];  // 2D String array with 3 rows
 **Traverse**
 
 ```java
-
-        int[][] matrix = new int[rows][column];
-
-        // Loop through all rows 
-        for (int i = 0; i < mat.length; i++) 
-        {
-
-    
-        // Loop through all elements of current row 
-            for (int j = 0; j < mat[i].length; j++) 
-            {
-            	System.out.print(mat[i][j] + " "); 
-            }
-                
-    	}
-
+int[][] matrix = new int[rows][column];
+// Loop through all rows 
+for (int i = 0; i < mat.length; i++) 
+{    
+	// Loop through all elements of current row 
+	for (int j = 0; j < mat[i].length; j++) 
+	{
+		System.out.print(mat[i][j] + " "); 
+	}                
+}
 ```
 
 ### HashMap
