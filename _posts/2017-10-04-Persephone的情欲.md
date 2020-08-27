@@ -4,7 +4,6 @@ title: persephone 的情欲
 date: 2017-10-04
 author: Shadow Song
 tags: [Matrix]
-toc: true
 ---
 
 Persephone 第一眼见到 Merovingine的时候就爱上了他。他乳白色的皮肤，他那高挑的鼻子，深蓝色的瞳孔.  特别的是那张脸，没有一丝忧郁，没有一丝欣喜，没有一丝恐惧，只有平静。 平静的像静止的数列:
