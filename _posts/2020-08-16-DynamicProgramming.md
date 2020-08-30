@@ -12,9 +12,15 @@ toc: true
 
 DP相关的问题一直是我比较吃力和难以理解的一块. 希望通过总结知识点和相关题目能够增强对DP问题的理解. 
 
+特点: 
+
+1. DP 有一个basic case, 从basic case扩展出一个general case
+2. DP从头递增/递减才能够计算. 不存在从中间或者什么奇怪的地方突然冒出来的DP
+3. DP基本都会涉及到Max 和 Min, 在Java之中用的是: `Math.max(a,b)`
+
 ## Fibonacci 类问题
 
-Fibonacci类的DP有一系列问题. 这种问题的特点有两点: 
+Fibonacci类的DP有一系列问题. 这种问题的特点有几点: 
 
 1. 都是那种通过前后叠加去解决. 就是上楼梯问题. 
 2. 可以通过 Divide-Conquer 化解成 basic problem, 然后解决. 
