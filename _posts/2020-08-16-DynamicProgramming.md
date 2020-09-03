@@ -212,7 +212,7 @@ class Solution {
 
 ![](../uploads/img/Screen Shot 2020-08-31 at 12.41.14 PM.png)
 
-如下, 是考虑了三中情况(图中1,3,4)而写出的答案.  但其实标准答案之中只考虑了三个量, 没有考虑A的存在, 因为A已经被其他dp包含了. **但其实并不用过度担心这种多写**. 因为Max这个方法是不会增加算力的. 即便多考虑几种情况放到max之中, 在LC之中依然是比100%的人跑得快.  
+如下, 是考虑了三中情况(图中1,3,4)而写出的答案.  但其实标准答案之中只考虑了三个量, 没有考虑A的存在, 因为A已经被其他dp包含了. **但其实并不用过度担心这种多写**. 因为Max这个方法是不会增加算力的. 即便多考虑几种情况放到max之中, 在LC之中依然是比100%的人跑得快.  所以这里也是DP的一个特点, **DP看起来都很吓人, 但多动笔写写base case其实很容易出来**. 
 
 另, **这也就是Max问题和单纯Fibonacci的区别.**  Fibonacci类需要考虑所有情况, 而Max类只需要考虑Max就可以. 
 
@@ -247,3 +247,134 @@ class Solution {
     }
 }
 ```
+
+## Matrix dp 问题
+
+这个类型的dp, 我还没想好是否单独分一个类. 其主要的特点就是由一个matrix dp去解决, 出现了二维化, 而不仅仅是前面的一维. 
+
+这一块是比较难了. 即使能想明白, 也不一定能写对, 即使能写对也不一定能在规定的时间内写对.  对这一块目前来说还是学习和了解为主, 不需要完全掌握. 
+
+其实如果真理解的话, 其实这一套和一维的也不见得有很大区别.**最大区别也就是多了一个capacity的给定量**. 上边的题目没有限制, 只要去max就可以了, 而这个不同, 在一个有限的范围内给出max. 从而要不断去track这个给定量. 只要抓住这个关键点, 思路就清晰了很多. 
+
+### Non-Fractional Knapsack
+
+关于这个问题, 这个[guide](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60#bottom-up-dynamic-programming)写的最好了. 我下面的东西基本都是从这个guide里面来的, 改动很小. 
+
+**Problem Description**
+
+Given the weights and profits of ‘N’ items, we are asked to put these items in a knapsack which has a capacity ‘C’. The goal is to get the maximum profit from the items in the knapsack. Each item can only be selected once, as we don’t have multiple quantities of any item.
+
+Constraints: 
+
+1. an item cannot be used more than twice.    
+2. In the list, there is only one item for each weights.    
+3. If you take an item, you have to take it as a whole (non-fractional).    
+
+Example:    
+
+Items: { Apple, Orange, Banana, Melon }   
+Weights: { 2, 3, 1, 4 }   
+Profits: { 4, 5, 3, 7 }   
+Knapsack capacity: 5   
+
+We can have the following combinations:   
+
+Apple + Orange (total weight 5) => 9 profit   
+Apple + Banana (total weight 3) => 7 profit   
+Orange + Banana (total weight 4) => 8 profit   
+Banana + Melon (total weight 5) => 10 profit   
+
+**Algorithm**
+
+Essentially, we want to find the maximum profit for every sub-array and for every possible capacity. **This means, `dp[i][c]` will represent the maximum knapsack profit for capacity `‘c’` calculated from the first `‘i’` items.**
+
+So, for each item at index `‘i’ (0 <= i < items.length)` and capacity`‘c’ (0 <= c <= capacity) `, we have two options:
+
+1. Exclude the item at index ‘i’. In this case, we will take whatever profit we get from the sub-array excluding this `item => dp[i-1][c]`
+2. Include the item at index ‘i’ if its weight is not more than the capacity. In this case, we include its profit plus whatever profit we get from the remaining capacity and from remaining `items => profits[i] + dp[i-1][c-weights[i]]`
+
+其实从这里我们就可以看出, 二维和一维的情况是一样的, 无非两种情况, 选或者不选.  只不过多了一个capacity的量而已, 需要根据不同的capacity去track而已, 多了一个维度. 
+
+Finally, our optimal solution will be maximum of the above two values:
+
+    dp[i][c] = max (dp[i-1][c], profits[i] + dp[i-1][c-weights[i]]) 
+    
+  
+  Given input of :        ` int[] profits = {1, 6, 10, 16};   int[] weights = {1, 2, 3, 5};`, we have a matrix dp of such: 
+  
+  ![](../uploads/img/Screen Shot 2020-09-02 at 8.51.32 PM.png)
+  
+  **Code**
+  
+  1. 这个code没有递归的, 我觉得是我看过的比较简洁易懂的, 只用一个方法. traverse一遍而已. 没有浪费memory
+  2. 这个方法是从前往后走, 即从前往后走. 
+  3. 这个guide之中给的例子的两个list都是sorted, 我不确定unsorted的时候这个方法还能不能用. 应该是不行. 
+  2. basic case 分为三步,  
+  	- check edge case, 各种等于0. 
+	- set column 0, 
+	- set row 0. 
+  3. general case 就像前面说过的, 无非两种情况, traverse 到 ith item的时候只有两种情况: 选或者不选, 然后取max. 
+  4. 代码很吓人, 但像之前说的其实只有两种情况, 多看几分钟结合那个图看自然就看懂了. 可以去[guide](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60#bottom-up-dynamic-programming)看一眼, 里面有动画. 
+
+
+  
+  ```java
+  public class KnapSack {
+
+    public int solveKnapsack(int[] profits, int[] weights, int capacity) {
+        // dp[i][c] will represent the maximum knapsack profit for capacity ‘c’ calculated from the first ‘i’ items.
+
+        // basic checks
+        if (capacity <= 0 || profits.length == 0 || weights.length != profits.length)
+            return 0;
+
+        int n = profits.length;
+        int[][] dp = new int[n][capacity + 1];
+
+        // populate the capacity=0 columns, with '0' capacity we have '0' profit
+        for(int i=0; i < n; i++)
+            dp[i][0] = 0;
+	
+	  // Set row 0, i=0 means we are only allowed to take 0th item which is the first itme. 
+        // if we can only take the first item, we will take it if it is not more than the capacity
+        if(weights[0] <= capacity)
+        {
+            for(int c=weights[0] ; c <= capacity; c++) {
+                dp[0][c] = profits[0];
+            }
+        }
+
+
+        // process all sub-arrays for all the capacities
+        for(int i=1; i < n; i++) {
+            for(int c=1; c <= capacity; c++) {
+                int profit1= 0, profit2 = 0;
+                // include the item, if it is not more than the capacity
+                if(weights[i] <= c)
+                    profit1 = profits[i] + dp[i-1][c-weights[i]];
+                // exclude the item
+                profit2 = dp[i-1][c];
+                // take maximum
+                dp[i][c] = Math.max(profit1, profit2);
+            }
+        }
+
+        // maximum profit will be at the bottom-right corner.
+        return dp[n-1][capacity];
+    }
+
+    public static void main(String[] args) {
+        KnapSack ks = new KnapSack();
+        int[] profits = {1, 6, 10, 16};
+        int[] weights = {1, 2, 3, 5};
+
+        int maxProfit = ks.solveKnapsack(profits, weights, 7);
+        System.out.println("Total knapsack profit ---> " + maxProfit);
+
+        maxProfit = ks.solveKnapsack(profits, weights, 6);
+        System.out.println("Total knapsack profit ---> " + maxProfit);
+    }
+}
+```
+
+### Coin Machine
