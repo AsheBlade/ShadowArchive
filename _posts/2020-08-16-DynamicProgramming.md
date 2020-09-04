@@ -377,4 +377,123 @@ Finally, our optimal solution will be maximum of the above two values:
 }
 ```
 
+### Longest Palindromic Substring LC_005
+
+**Problem Description**
+
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.  
+
+Example 1:
+
+> Input: "babad"  
+> Output: "bab"  
+> Note: "aba" is also a valid answer.  
+
+Example 2:
+
+> Input: "cbbd"  
+> Output: "bb"
+
+**Algorithm**
+
+code来自于[GeeksforGeeks](https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/). 
+
+这一道的难点在于这个DP general case即使从一开始一个一个从base case开始写也想不出来.  不过其实这种问题很多Matrix DP都是存在的. 上一道其实还容易想一点, 因为是先把column0, row0 都set之后才开始做general case, 不用担心不存在的情况. 这道的话, 是从对角线开始set的, 如果从矩阵的层面去思考的话, 想半天可能都想不明白为什么能保证后面的dp一定被set. 
+
+换个思路, 这么想: **先set所有长度是1的, 然后是所有长度是2的.** 后面从3开始, 自然会track以前1和2的, 然而1和2的都已经被set了. 4的话从3开始track, 而3都被set了.  这么想就容易很多.  这道的切入点是从每个subString的length, 这个思路很难想到. 
+
+最后想说这个不管怎么说还是没有递归的, 拿笔写几下会想的会更清楚. 干看的话看半天也不一定能看明白. 
+
+**Solution**
+
+```java
+// Java Solution 
+public class LongestPalinSubstring { 
+	// A utility function to print 
+	// a substring str[low..high] 
+	static void printSubStr( 
+		String str, int low, int high) 
+	{ 
+		System.out.println( 
+			str.substring( 
+				low, high + 1)); 
+	} 
+
+	// This function prints the longest 
+	// palindrome substring of str[]. 
+	// It also returns the length of the 
+	// longest palindrome 
+	static int longestPalSubstr(String str) 
+	{ 
+		// get length of input string 
+		int n = str.length(); 
+
+		// table[i][j] will be false if 
+		// substring str[i..j] is not palindrome. 
+		// Else table[i][j] will be true 
+		boolean table[][] = new boolean[n][n]; 
+
+		// All substrings of length 1 are palindromes 
+		// 把对角线set, 每个dp[i][i] 里面只有一个元素肯定是true的
+		int maxLength = 1; 
+		for (int i = 0; i < n; ++i) 
+			table[i][i] = true; 
+
+		// check for sub-string of length 2. 
+		// 一个元素的set之后, 去set二元素的, 因为一个元素都解决了, 两个元素都是在一个元素基础之上的, 肯定是存在的. 
+		int start = 0; 
+		for (int i = 0; i < n - 1; ++i) { 
+			if (str.charAt(i) == str.charAt(i + 1)) { 
+				table[i][i + 1] = true; 
+				start = i; 
+				maxLength = 2; 
+			} 
+		} 
+
+		// Check for lengths greater than 2. 
+		// k is length of substring  k是长度
+
+		for (int k = 3; k <= n; ++k) { 
+			// Fix the starting index 
+			// 这个算法比较特别, 是从每个string的长度去track的. 长度从小到大. 简而言之是check每个给定长度的所有可能的substring. 
+			for (int i = 0; i < n - k + 1; ++i) { 
+				// Get the ending index of substring from 
+				// starting index i and length k 
+				int j = i + k - 1; 
+
+				// checking for sub-string from ith index to 
+				// jth index iff str.charAt(i+1) to 
+				// str.charAt(j-1) is a palindrome 
+				if (table[i + 1][j - 1] 
+					&& str.charAt(i) == str.charAt(j)) { 
+					table[i][j] = true; 
+
+					if (k > maxLength) { 
+						start = i; 
+						maxLength = k; 
+					} 
+				} 
+			} 
+		} 
+		System.out.print("Longest palindrome substring is; "); 
+		printSubStr(str, start, 
+					start + maxLength - 1); 
+
+		// return length of LPS 
+		return maxLength; 
+	} 
+
+	// Driver program to test above functions 
+	public static void main(String[] args) 
+	{ 
+
+		String str = "forgeeksskeegfor"; 
+		System.out.println("Length is: " + longestPalSubstr(str)); 
+	} 
+} 
+
+// This code is contributed by Sumit Ghosh 
+
+```
+
 ### Coin Machine
