@@ -310,9 +310,11 @@ Finally, our optimal solution will be maximum of the above two values:
   2. 这个方法是从前往后走, 即从前往后走. 
   3. 这个guide之中给的例子的两个list都是sorted, 我不确定unsorted的时候这个方法还能不能用. 应该是不行. 
   2. basic case 分为三步,  
+ 
   	- check edge case, 各种等于0. 
 	- set column 0, 
 	- set row 0. 
+	
   3. general case 就像前面说过的, 无非两种情况, traverse 到 ith item的时候只有两种情况: 选或者不选, 然后取max. 
   4. 代码很吓人, 但像之前说的其实只有两种情况, 多看几分钟结合那个图看自然就看懂了. 可以去[guide](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60#bottom-up-dynamic-programming)看一眼, 里面有动画. 
 
