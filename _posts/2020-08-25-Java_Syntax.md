@@ -38,7 +38,7 @@ s = “99”
 OR
 
 ```java
-String s = String.valueOf(s);
+String s = String.valueOf(i);
 ```
 
 ### String to Char Array
