@@ -92,3 +92,44 @@ class Solution {
 	其实实际上没有必要. **关键在于这个尺子里面的元素是不可重复的**, 也就是说尺子内部的元素是绝对干净的. 这个时候没有必要收尺子, 尺子左端已经在正确的位置, 只要继续挪动右端就可以了. 
 	
 还有一些更快的解法, 游标卡尺加上hashmap的解法, 不想去学了. 这种奇淫技巧学的差不多就可以. 目前阶段没必要学最优解, 现在主要是大量刷. 
+
+## Container With Most Water LC_011
+
+**Problem Description**
+
+题目不放了, 因为需要看图才能看懂, 直接去[LeetCode](https://leetcode.com/problems/container-with-most-water/)上面看吧. 
+
+**Algorithm**
+
+这道题我拿来首先想到的就是dynamic programming, 但越想越觉得不符合dynamic的求和原则, 因为需要考虑之前的所有边.   
+
+算法是游标卡尺, 这一次的游标卡尺是从首尾两端开始卡, 慢慢往里面收. 由于题目的特殊性而使用木桶原理.  
+
+**这种特殊的题目没什么好说的, 唯有刷脸.**
+
+<br>
+
+**Code**
+
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0, left = 0, right = height.length -1;
+        
+        while(right>left)
+        {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right])*(right-left));
+            //System.out.println(left + " , " + right + " , " + maxArea);
+            if(height[left]>height[right])
+            {
+                right--;
+            }
+            else
+            {
+                left ++;
+            }
+        }
+        return maxArea;
+    }
+}
+```
