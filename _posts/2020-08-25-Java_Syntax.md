@@ -88,17 +88,15 @@ int[] array = list.stream().mapToInt(i->i).toArray();
 ```
 
 
+## Array
 
-
-## Initilization
-
-### Array
+**init**
 ```java
 int[] arr = new int[n]; 
 int[] arr = {1,2,3};
 ```
 
-### 2D Array (Matrix)
+**2D Array (Matrix)**
 
 ```java
 int[][] multiples = new int[4][2];     // 2D integer array with 4 rows 
@@ -107,7 +105,7 @@ String[][] cities = new String[3][3];  // 2D String array with 3 rows
                                           and 3 
 ```
 
-**Traverse**
+**Traverse 2D**
 
 ```java
 int[][] matrix = new int[rows][column];
@@ -122,6 +120,19 @@ for (int i = 0; i < mat.length; i++) 
 }
 ```
 
+
+**ArrayList**
+```java
+List<Integer> intArray = new ArrayList<Integer>();
+
+```
+## Initilization
+
+
+
+
+
+
 ### HashMap
 ```java
 Map<Integer, Integer> map = new HashMap<>();
@@ -131,11 +142,6 @@ Map<Integer, Integer> map = new HashMap<>();
 Set<String> hash_Set = new HashSet<String>(); 
 ```
 
-### ArrayList
-```java
-List<Integer> intArray = new ArrayList<Integer>();
-
-```
 
 ### StringBuilder
 ```java
@@ -164,6 +170,16 @@ sbReverse = sb.reverse();
 output StringBuilder content to String
 ```java
 String s = sb.toString();
+```
+
+**Length**
+```java
+Array.length;
+```
+
+**Print**
+```java
+System.out.println(Arrays.toString(arr));
 ```
 
 ### HashMap
@@ -225,10 +241,6 @@ Integer.MIN_VALUE
 String.length();
 ```
 
-### Array
-```java
-Array.length;
-```
 
 ## Sorting
 
