@@ -25,11 +25,7 @@ Date:   Thu Sep 10 10:56:01 2020 -0500
 需要的配置: 
 主要的配置跟上面那个guide走, 这里主要说一下每次新建一个相册需要做的事情. 
 
-1. Markdown 文档之中的插入: 
-
-	```
-	{% include gallery-layout.html gallery=site.data.galleries.san-francisco %}
-	```
+1. Markdown 文档之中的插入 include 内容显示相册. 这里不写了因为会乱码, 可有看md文件的最后一行. 
 2. yml 文件, 地址在这里: `_data/galleries/san-francisco.yml`要用`gallery_creator.py`处理之后生成
 3. 图片要存在: `assets/photography/san-francisco`
 
