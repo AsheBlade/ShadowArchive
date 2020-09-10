@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: post
 title: Madison 骑行拍照
 date: 2020-09-10
 author: Shadow Song
