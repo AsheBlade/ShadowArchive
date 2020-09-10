@@ -36,6 +36,7 @@ Date:   Thu Sep 10 10:56:01 2020 -0500
 
 我看原作者那个 Gallery Overview Page 也挺好的, 可以直接加到根目录里, 所有相册的集合. 
     
-At the end of our wonderful three week road trip at the West Coast of the US, we spent about four days in the wonderful city of San Francisco. The city's well known for the Golden Gate Bridge and it's fog, but has so much more up its sleeve!
+以下照片不是我拍的, 我就是举个例子
+
 
 {% include gallery-layout.html gallery=site.data.galleries.san-francisco %}

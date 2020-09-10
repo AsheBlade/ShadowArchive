@@ -4,4 +4,11 @@ title: 关于
 permalink: /about/
 ---
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+kodokuniayume akuonasatsu
+
+<form action="https://getsimpleform.com/messages?form_api_token=c7b404f97b2e45f982ffed4995bf42af" method="post">
+    <li class="contact-li">
+        <input type="email" placeholder="Your email" id="email"/>
+        <input type="submit" value="Subscribe" id="submit"/>
+    </li>
+</form>
