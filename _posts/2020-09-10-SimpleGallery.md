@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: post
 title: A Very Basic Example
 date: 2020-09-10
 author: Shadow Walker
@@ -28,6 +28,7 @@ Date:   Thu Sep 10 10:56:01 2020 -0500
 1. Markdown 文档之中的插入 include 内容显示相册. 这里不写了因为会乱码, 可有看md文件的最后一行. 
 2. yml 文件, 地址在这里: `_data/galleries/san-francisco.yml`要用`gallery_creator.py`处理之后生成
 3. 图片要存在: `assets/photography/san-francisco`
+4. 不用完全按照guide来, 不需要在layout之中加入 layout.html这个文件. 只需要在post.html最上面加入 `support: [jquery, gallery]` 即可
 
 
 
