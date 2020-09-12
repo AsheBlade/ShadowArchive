@@ -6,9 +6,10 @@ permalink: /about/
 
 kodokuniayume akuonasatsu
 
-<form action="https://getsimpleform.com/messages?form_api_token=c7b404f97b2e45f982ffed4995bf42af" method="post">
-    <li class="contact-li">
-        <input type="email" placeholder="Your email" id="email"/>
-        <input type="submit" value="Subscribe" id="submit"/>
-    </li>
-</form>
+
+如果你无法查看这个网站之中的任何图片和视频, 那么多半是因为你需要科学上网. 
+
+站点之中的很多视频资源存在Google Drive. 
+
+
+如果可以访问Goolge之后仍然无法看到本站之中的某些资源, 请联系我. 
