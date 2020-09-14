@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: encrypted
 title: 加密文档试验
 date: 2020-09-13
 author: Shadow Walker
