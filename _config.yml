@@ -7,7 +7,7 @@
 # 井号后面的文字是说明文档，不会被程序读取。
 
 # 描述/签名
-name: SHADOW ARCHIVE
+name: Jericho
 description: 「さて、どこへ行こうかしらね。ネットは広大だわ」
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
@@ -34,7 +34,7 @@ favicon: https://github.com/easonback26/ShadowArchive/blob/master/images/favicon
 navigation:
   - name: ホーム
     url: /
-  - name: About
+  - name: 関連
     url: /about
   - name: 归档
     url: /archive
