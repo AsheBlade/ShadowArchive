@@ -5,7 +5,7 @@ permalink: /photo/
 ---
 
 
-<p>Below are all the albums that are currently hosted on this website.ccc </p>
+<p>Below are all the albums that are currently hosted on this website.ddd</p>
 
 {% assign count = 0 %}
 {% assign align = "left" %}
@@ -14,7 +14,7 @@ permalink: /photo/
   <div class="half-width gallery-preview {{ align }}">
     <h1>{{ gallery.title }}</h1>
     <a href="/ShadowArchive/{{ gallery.postDirectory }}/">
-      <img alt="{{ gallery.title }}" src="test.jpg" />
+      <img alt="{{ gallery.title }}" src="/ShadowArchive/test.jpg" />
     </a>
   </div>
 {% if count == 1 %}</div>{% endif %}
