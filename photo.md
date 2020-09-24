@@ -15,8 +15,8 @@ permalink: /photo/
 {% if count == 0 %}<div class="row">{% endif %}
   <div class="half-width gallery-preview {{ align }}">
     <h1>{{ gallery.title }}</h1>
-    <a href="/photography/{{ gallery.directory }}.html">
-      <img alt="{{ gallery.title }}" src="/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+    <a href="/ShadowArchive/{{ gallery.postDirectory }}">
+      <img alt="{{ gallery.title }}" src="/assets/photography/{{ gallery.preview.filename}}" />
     </a>
   </div>
 {% if count == 1 %}</div>{% endif %}

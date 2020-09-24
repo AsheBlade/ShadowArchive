@@ -1,6 +1,7 @@
 
 -
  title: A Very Basic Example Gallery
+ directory: SimpleGallery
  directory: san-francisco
  preview:
   filename: VS-2012-6088
