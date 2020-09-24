@@ -5,11 +5,15 @@
  preview:
   filename: VS-2012-6088
   original: VS-2012-6088-6000x4000.jpg
-  thumbnail: VS-2012-6088-6000x4000.jpg
--
- title: Madison Bike Ride
- directory: Madison-Bike
- preview:
-  filename: IMG_4067.jp-4032x3024
-  original: IMG_4067.jp-4032x3024.jpg
-  thumbnail: IMG_4067.jp-4032x3024.jpg
+  sizes:
+  - VS-2012-6088-4242x2828.jpg
+  - VS-2012-6088-2121x1414.jpg
+  - VS-2012-6088-2999x1999.jpg
+  thumbnail: VS-2012-6088-thumbnail.jpg
+# -
+#  title: Madison Bike Ride
+#  directory: Madison-Bike
+#  preview:
+#   filename: IMG_4067.jp-4032x3024
+#   original: IMG_4067.jp-4032x3024.jpg
+#   thumbnail: IMG_4067.jp-4032x3024.jpg
