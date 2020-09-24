@@ -5,8 +5,6 @@ permalink: /photo/
 ---
 
 
-<h1>{{ page.title }}</h1>
-
 <p>Below are all the albums that are currently hosted on this website. </p>
 
 {% assign count = 0 %}
