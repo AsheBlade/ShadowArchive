@@ -3,8 +3,13 @@
  title: A Very Basic Example Gallery
  postDirectory: SimpleGallery
  directory: san-francisco
- preview:
-  filename: VS-2012-6088-6000x4000.jpg
+ preview: VS-2012-6088-6000x4000.jpg
+
+-
+ title: Madison Bike Ride
+ postDirectory: MadisonBike
+ directory: Madison-Bike
+ preview: IMG_4067.jp-4032x3024.jpg
   # original: VS-2012-6088-6000x4000.jpg
   # sizes:
   # - VS-2012-6088-4242x2828.jpg
