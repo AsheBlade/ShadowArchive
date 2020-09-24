@@ -34,27 +34,6 @@ support: [jquery, gallery]
   {% include gitalk.html %}
 </article>
 
-<div class="pagination">
-  {% if page.previous.url %}
-    <span class="prev" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-        ← 前に
-      </a>
-    </span>
-  {% endif %}
-  {% if page.next.url %}
-    <span class="next" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-        次に →
-      </a>
-    </span>
-  {% endif %}
-</div>
-
-{% include open-embed.html %}
-
-
-
 <!-- Static Man Comments -->
 {% if site.data.comments[page.slug] %}
     <h3>
@@ -93,3 +72,25 @@ support: [jquery, gallery]
       <small>Comments will appear after moderation.</small>
       <button type="submit">Submit comment</button>
   </form>
+
+<div class="pagination">
+  {% if page.previous.url %}
+    <span class="prev" >
+      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
+        ← 前に
+      </a>
+    </span>
+  {% endif %}
+  {% if page.next.url %}
+    <span class="next" >
+      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
+        次に →
+      </a>
+    </span>
+  {% endif %}
+</div>
+
+{% include open-embed.html %}
+
+
+
