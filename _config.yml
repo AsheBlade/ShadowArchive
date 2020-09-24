@@ -18,12 +18,6 @@ url:
 # 那么就写成 "/repository-name"
 baseurl: /ShadowArchive
 
-# gitalk setup
-gitalk:
-  clientID: ecd5f9ca822b01f65e22
-  clientSecret: 954fc161c6daece1d5d57bfc82d593a045d18551
-  repo: ShadowArchive
-  owner: easonback26
 
 #
 # 下面的设定都是可选的
@@ -80,14 +74,14 @@ footer-text: Copyright (c) 2020 Shadow Walker
 #
 
 # 输入Disqus shortname，即可添加评论区
-#disqus: shadow #shortname
+disqus: shadow #shortname
 
 # 输入Gitalk相关设定，即可添加评论区，具体请看教程
 gitalk:
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
+  clientID: ecd5f9ca822b01f65e22
+  clientSecret: 954fc161c6daece1d5d57bfc82d593a045d18551
+  repo: ShadowArchive
+  owner: easonback26
 
 # 输入Google Analytics web tracking code
 google_analytics:
