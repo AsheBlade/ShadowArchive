@@ -5,7 +5,7 @@ permalink: /photo/
 ---
 
 
-<p>Below are all the albums that are currently hosted on this website.aa</p>
+<p>Below are all the albums that are currently hosted on this website.ere</p>
 
 {% assign count = 0 %}
 {% assign align = "left" %}
