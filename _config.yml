@@ -18,6 +18,12 @@ url:
 # 那么就写成 "/repository-name"
 baseurl: /ShadowArchive
 
+# gitalk setup
+gitalk:
+  clientID: ecd5f9ca822b01f65e22
+  clientSecret: 954fc161c6daece1d5d57bfc82d593a045d18551
+  repo: ShadowArchive
+  owner: easonback26
 
 #
 # 下面的设定都是可选的
