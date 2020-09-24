@@ -80,7 +80,7 @@ footer-text: Copyright (c) 2020 Shadow Walker
 gitalk:
   clientID: ecd5f9ca822b01f65e22
   clientSecret: 954fc161c6daece1d5d57bfc82d593a045d18551
-  repo: https://github.com/easonback26/ShadowArchive
+  repo: ShadowArchive
   owner: easonback26
 
 # 输入Google Analytics web tracking code
