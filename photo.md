@@ -5,7 +5,7 @@ permalink: /photo/
 ---
 
 
-<p>Below are all the albums that are currently hosted on this website.fff </p>
+<p>Below are all the albums that are currently hosted on this website.ccc </p>
 
 {% assign count = 0 %}
 {% assign align = "left" %}
@@ -14,7 +14,7 @@ permalink: /photo/
   <div class="half-width gallery-preview {{ align }}">
     <h1>{{ gallery.title }}</h1>
     <a href="/ShadowArchive/{{ gallery.postDirectory }}/">
-      <img alt="{{ gallery.title }}" src="/assets/photography/{{ gallery.directory }}/{{ gallery.preview.filename}}" />
+      <img alt="{{ gallery.title }}" src="test.jpg" />
     </a>
   </div>
 {% if count == 1 %}</div>{% endif %}
@@ -29,3 +29,5 @@ permalink: /photo/
 {% if count != 1 %}
 </div>
 {% endif %}
+
+<!--            <img alt="{{ gallery.title }}" src="/assets/photography/{{ gallery.directory }}/{{ gallery.preview.filename}}/" />-->
