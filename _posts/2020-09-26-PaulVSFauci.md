@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RAND PAUL 对 FAUCI 质疑纽约的隔离措施对病毒无效. 
+title: Fauci fires back at Sen. Paul: You're not listening to the CDC director
 date: 2020-09-26
 author: Shadow Song
 tags: [News]
