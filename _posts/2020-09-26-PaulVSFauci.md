@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll Video and Audio Setup
+title: RAND PAUL 对 FAUCI 声称隔离措施对病毒无效. 
 date: 2020-09-26
 author: Shadow Song
 tags: [News]
