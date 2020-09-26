@@ -11,6 +11,8 @@ fork之后已经陆续加入了相册功能和加密功能, 还设置了评论�
 
 这大概是近期内最后一次加入新功能, latex和照片列表.   latex如下
 
+## Latex
+
 ```
 $$
 \begin{align*}
@@ -39,6 +41,8 @@ y = y(x,t) &= A e^{i\theta} \\
 $$
 
 
+## PhotoList
+
 照片列表的话, 其实没弄完. 但是可能不想在弄了.  本来想模仿原作者做一个跟[这个](https://opieters.github.io/jekyll-image-gallery-example/photography/)一样的, 结果只有[这个](https://easonback26.github.io/ShadowArchive/photo/).  不想反复调CSS了. 前端的东西很繁琐, 觉得很无聊. 
 
 总结一下, 以便下次工作能够继续进行. 
@@ -62,4 +66,7 @@ $$
 
 总的来说并不是特别愿意做这种费时又无聊的工作. 本来觉得很简单, 结果却很耗时.  闲的时候可以玩玩. 
 
+## 另
+
+这个刚玩明白, 刚又看见[Hexo](https://www.npmjs.com/package/ayer?activeTab=readme)觉得好漂亮. 这个主题的优势就是简洁加载快. 要明确这个优势. 
 
