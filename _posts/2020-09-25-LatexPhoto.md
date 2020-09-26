@@ -13,6 +13,14 @@ fork之后已经陆续加入了相册功能和加密功能, 还设置了评论�
 
 ## Latex
 
+这里其实要说一下, 按照原作者的配置了一下, 发现根本出不来, 一开始还以为自己做错了, 反复看了好几遍.  然后查了一下[文档](https://github.com/mathjax/MathJax), 最后用官方的办法, 在head.html之中加入这一行:
+
+```
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+```
+就很简单做到了
+
+
 ```
 $$
 \begin{align*}
