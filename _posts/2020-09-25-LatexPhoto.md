@@ -60,7 +60,7 @@ $$
 1. `/layouts :  page2.html, default2.html`
 2. `/css: main.scss`
 3. `/sass: _base.scss,  _layout.scss,  _syntax-highlighting.scss`
-4. `/includes: head2.html , footer2.html`
+4. `/includes: head2.html , footer2.html, header.html`
 
 注意: /css: gallery.scss 与这个功能无关, 是有关相册的功能, 不要动也不要删除. 
 
