@@ -794,11 +794,11 @@ footer {
 //     }
 // }
 
-// @mixin media-query($device) {
-//     @media screen and (max-width: $device) {
-//         @content;
-//     }
-// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
 
 
 
@@ -808,6 +808,8 @@ footer {
 //         "layout",
 //         "syntax-highlighting"
 // ;
+
+$on-palm: 600px;
 
 .row {
     width:100%;
