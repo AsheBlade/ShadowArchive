@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fauci fires back at Sen. Paul: You're not listening to the CDC director
-date: 2020-09-26
+date: 2020-09-28
 author: Shadow Song
 tags: [News]
 comments: true
