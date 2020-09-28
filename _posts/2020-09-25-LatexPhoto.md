@@ -78,3 +78,7 @@ $$
 
 这个刚玩明白, 刚又看见[Hexo](https://www.npmjs.com/package/ayer?activeTab=readme)觉得好漂亮. 这个主题的优势就是简洁加载快. 要明确这个优势. 
 
+
+## 09-28 更新
+
+`footer.html` 是不会影响格式的, 这个加不加都无所谓. 但是新版和原版的footer代码并不兼容. 
