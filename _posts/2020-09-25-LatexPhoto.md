@@ -82,7 +82,7 @@ $$
 ## 09-28 更新
 
 - `footer.html` 是不会影响格式的, 这个加不加都无所谓. 但是新版和原版的footer代码并不兼容. 
-- `header.html` 和 `head.html` 必须同时存在于`default.html`之中, 缺一不可. 已经做了二者删除其一的测试, 都是不行的. head其实还好, 因为我们知道里面大概有用的段落只有那个main.css, 问题在于header. 我不知道header里面的东西是如何影响align的. 
+- `header.html` 可以没有. 关键在于`head.html`, 也就是说, 还是在于`head.html` 其中的 `main.css`, 把`main.css`整体copy到`style.css`之中, 正在测试. 
 - main.css 里面的东西都不能动. 目前删改测试了几次, 发现其实什么都不能删. 
 
 
