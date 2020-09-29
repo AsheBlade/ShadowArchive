@@ -82,7 +82,7 @@ $$
 ## 09-28 更新
 
 - `footer.html` 是不会影响格式的, 这个加不加都无所谓. 但是新版和原版的footer代码并不兼容. 
-- `header.html` 可以没有. 关键在于`head.html`, 也就是说, 还是在于`head.html` 
+- `header.html` 可以没有. 关键在于`head.html`, 也就是说, 还是在于`main.css` 
 - 已经确认CSS的更新是有有一定延迟的. 即使代码传上去了, CSS改变之后的更新也需要一段时间才能反映出来. 
 -  把main.css完整copy到style.css之后仍然存在align偏左的问题. 所以main.css里面的东西其实无关. 现在认为main.css其中的东西都没有用. 只留了作者在网路上post上面的那一段. 
 
