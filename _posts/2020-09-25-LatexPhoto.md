@@ -84,6 +84,6 @@ $$
 - `footer.html` 是不会影响格式的, 这个加不加都无所谓. 但是新版和原版的footer代码并不兼容. 
 - `header.html` 可以没有. 关键在于`head.html`, 也就是说, 还是在于`head.html` 
 - 已经确认CSS的更新是有有一定延迟的. 即使代码传上去了, CSS改变之后的更新也需要一段时间才能反映出来. 
-- 更新,  测试完整的main.css 的align问题. 
+- 更新,  测试把main.css完整copy到style.css之后是否还存在align问题
 
 
