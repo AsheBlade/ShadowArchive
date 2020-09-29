@@ -125,7 +125,7 @@ ol, ul {
       margin-left: -$li-bullets-width;
       display: inline-block;
       box-sizing: border-box;
-      text-align: right;
+      text-align: left;
     }
   }
 }
@@ -182,7 +182,7 @@ dt {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   clear: left;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
   font-weight: bold;
   margin-bottom: $li-bottom-space;
@@ -429,7 +429,7 @@ nav {
 // content
 
 .wrapper-content {
-  float: right;
+  float: left;
   width: 70%;
 
   @include mobile {
