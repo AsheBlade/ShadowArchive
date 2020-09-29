@@ -125,7 +125,7 @@ ol, ul {
       margin-left: -$li-bullets-width;
       display: inline-block;
       box-sizing: border-box;
-      text-align: left;
+      text-align: right;
     }
   }
 }
@@ -182,7 +182,7 @@ dt {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   clear: left;
-  text-align: left;
+  text-align: right;
   white-space: nowrap;
   font-weight: bold;
   margin-bottom: $li-bottom-space;
@@ -308,7 +308,7 @@ img {
 }
 
 .right {
-  text-align: left;
+  text-align: right
 }
 
 /*********************/
@@ -415,7 +415,7 @@ nav {
 
   a {
     margin: 0 10px;
-    text-align: left;
+    text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
@@ -429,7 +429,7 @@ nav {
 // content
 
 .wrapper-content {
-  float: left;
+  float: right;
   width: 70%;
 
   @include mobile {
@@ -596,8 +596,8 @@ nav {
   }
 
   > .next {
-    float: left;
-    text-align: left;
+    float: right;
+    text-align: right;
     width: 50%;
     a {
       color: $base-lighten-color;
