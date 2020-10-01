@@ -3,7 +3,7 @@ layout: post
 title: Jekyll Video and Audio Setup
 date: 2020-07-29
 author: Shadow Walker
-tags: [Tech]
+tags: [Tech, Shortcuts]
 comments: true
 toc: true
 youtubeId: H_nCw1WMFs4

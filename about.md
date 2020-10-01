@@ -17,3 +17,13 @@ kodokuniayume akuonasatsu
 
 
 如果可以访问Goolge之后仍然无法看到本站之中的某些资源, 请联系我.  我的邮箱在左下角. 
+
+[Jericho的来源](https://en.wikipedia.org/wiki/Jericho). 
+
+信仰是stoic. 
+
+政治观点以美国标准来看是偏右. 以中国来看偏左. 
+
+Backend Engineer, 主攻算法和后端框架. 最常用的Java 和 SpringBoot. 
+
+关于这个站点的代码. 致敬[原作者](https://himring.top/welcome-to-endworld/), 这个站点来自于根据此站点的fork. 
