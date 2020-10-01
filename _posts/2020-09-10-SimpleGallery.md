@@ -3,6 +3,7 @@ layout: post
 title: A Very Basic Example
 date: 2020-09-10
 author: Shadow Walker
+support: [jquery, gallery]
 tags: [Tech, Shortcuts]
 ---
 
@@ -38,7 +39,7 @@ tags: [Tech, Shortcuts]
 
 1. 图片要存在: `assets/photography/san-francisco`
 2. yml 文件, 地址在这里: `_data/galleries/san-francisco.yml`要用`gallery_creator.py`处理之后生成, 那个python file 位于 `_data/galleries`.   图片存好之后改一下python里面的路径然后 `python gallery_creator.py`
-4. 不用完全按照guide来, 不需要在layout之中加入 layout.html这个文件. 只需要在post.html抬头加入 `support: [jquery, gallery]` 即可. 
+4. 不用完全按照guide来, 不需要在layout之中加入 layout.html这个文件. 只需要在post.html和每一个使用相册功能的markdown抬头加入 `support: [jquery, gallery]` 即可. 
 4. Markdown 文档之中的插入 include 内容显示相册. 如下: 
 
 ```
