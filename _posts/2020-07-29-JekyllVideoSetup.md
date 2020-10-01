@@ -35,9 +35,9 @@ driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
 
 ## Youtube
 ```
-{% comment %}
+{% raw %}
 {% include youtubePlayer.html id=page.youtubeId %}
-{% endcomment %}
+{% endraw %}
 ```
 
 {% include youtubePlayer.html id=page.youtubeId %}
