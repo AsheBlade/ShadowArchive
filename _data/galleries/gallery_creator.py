@@ -11,13 +11,13 @@ from os import listdir, rename
 from os.path import isfile, join
 
 # configuration
-output_file = "Madison-Bike.yml"
+output_file = "Icebane_Drawing.yml"
 input_file = output_file
-image_path = "Madison-Bike"
-extensions= ['jpg', 'png']
+image_path = "Icebane_Drawing"
+extensions= ['jpg', 'jpeg']
 
 # set correct path
-path = join("assets/photography/", image_path)
+path = join("../../assets/photography/", image_path)
 
 # extract image files
 print('Collecting files...')
