@@ -44,7 +44,9 @@ driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
 
 ## Google Drive Video
 ```
+{% raw %}
 {% include googleDrivePlayer.html id=page.driveId %}
+{% endraw %}
 ```
 
 {% include googleDrivePlayer.html id=page.driveId %}
@@ -59,7 +61,9 @@ driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
 
 ## Google Drive Mp3
 ```
+{% raw %}
 {% include googleDriveMp3Player.html id=page.driveMp3Id %}
+{% endraw %}
 ```
 
 {% include googleDriveMp3Player.html id=page.driveMp3Id %}
