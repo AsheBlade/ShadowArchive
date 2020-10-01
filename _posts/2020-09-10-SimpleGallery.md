@@ -42,9 +42,9 @@ tags: [Tech, Shortcuts]
 4. 不用完全按照guide来, 不需要在layout之中加入 layout.html这个文件. 只需要在post.html和每一个使用相册功能的markdown抬头加入 `support: [jquery, gallery]` 即可. 
 4. Markdown 文档之中的插入 include 内容显示相册. 如下: 
 
-```
+
 {% include gallery-layout.html gallery=site.data.galleries.san-francisco %}
-```
+
 
 
 
