@@ -38,6 +38,8 @@ navigation:
     url: /photo
   - name: 関連
     url: /about
+  - name: 常備
+    url: /shortcuts
   - name: 归档
     url: /archive
   - name: 付箋

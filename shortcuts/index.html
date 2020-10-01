@@ -1,0 +1,32 @@
+---
+layout: page
+title: 常備
+permalink: /shortcuts/
+---
+
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+{% for tag in site.tags %}
+<h2 id="{{ tag[0] }}">
+  {{ tag[0] }}
+</h2>
+<ul class="tag">
+  {% for post in tag[1] %}
+    {% if post.title != null %}
+      <li>
+        {% if post.link %}
+          <a href="{{ post.link }}">
+        {% else %}
+          <a href="{{ site.baseurl }}{{ post.url }}">
+        {% endif %}
+            {{ post.title }}
+          </a>
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+</div>
