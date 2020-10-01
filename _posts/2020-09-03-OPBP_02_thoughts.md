@@ -2,7 +2,7 @@
 layout: post
 title: OPBP_02_thoughts
 date: 2020-09-03
-author: Shadow Walker
+author: Architect
 tags: [Operation, 密, C2, 宏]
 comments: false
 ---
