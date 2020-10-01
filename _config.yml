@@ -34,14 +34,14 @@ favicon: https://github.com/easonback26/ShadowArchive/blob/master/images/favicon
 navigation:
   - name: ホーム
     url: /
-  - name: 写真
-    url: /photo
   - name: 関連
     url: /about
   - name: 常備
     url: /shortcuts
   - name: 归档
     url: /archive
+  - name: 写真
+    url: /photo
   - name: 付箋
     url: /tags
 
