@@ -35,9 +35,9 @@ driveMp3Id: 11HyVcPGeCBGMKBNobLiR7M3KXPMMEnZu/preview
 
 ## Youtube
 
-> {% include youtubePlayer.html id=page.youtubeId %}
-
-`{% include youtubePlayer.html id=page.youtubeId %}`
+{% comment %}
+{% include youtubePlayer.html id=page.youtubeId %}
+{% endcomment %}
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
