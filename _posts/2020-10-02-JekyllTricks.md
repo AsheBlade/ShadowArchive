@@ -30,10 +30,11 @@ It's very important to use internal links, so we can use our website whenever we
 
 I know it will take a well to get used to it. But it's better for continous work. 
 
-// The stuff afer post_url is basically the md file name. 
-
 ```
+// The stuff afer post_url is basically the md file name. 
 {% raw %}
 [Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
 {% endraw %}
 ```
+
+{% post_url 2020-08-25-Java_Syntax.md %}
