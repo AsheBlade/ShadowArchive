@@ -37,24 +37,3 @@ I know it will take a well to get used to it. But it's better for continous work
 [Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
 {% endraw %}
 ```
-
-c
-
-
-{% post_url 2020-08-25-Java_Syntax.md %}
-
-## Raw liquid code
-
-To comment, liquid code, you have to use raw code parts, such as: 
-
-```
-{% raw %}
-{% raw %}
-{% endraw %}
-```
-
-
-## English
-
-Should use English whenever I can. A blog is not a blog if others cannot read it. Only use Chinese when it's better for understanding. 
-
