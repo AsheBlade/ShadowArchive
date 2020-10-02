@@ -36,9 +36,9 @@ I know it will take a well to get used to it. But it's better for continous work
 {% endraw %}
 ```
 
-[Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
+({% post_url 2020-08-25-Java_Syntax %})
 
-## raw liquid code
+## Raw liquid code
 
 To comment, liquid code, you have to use raw code parts, such as: 
 
