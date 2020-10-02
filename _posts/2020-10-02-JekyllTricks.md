@@ -38,5 +38,5 @@ I know it will take a well to get used to it. But it's better for continous work
 ```
 d
 
-[Link to a post]({% link _posts/2020-01-25-Icebane.md %})
+[Link to a post]({% link 2020-01-25-Icebane.md %})
 <!-- {% post_url 2020-01-25-Icebane.md %} -->
