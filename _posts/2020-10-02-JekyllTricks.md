@@ -35,7 +35,7 @@ I know it will take a well to get used to it. But it's better for continous work
 [Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
 {% endraw %}
 ```
-
+c
 
 
 {% post_url 2020-08-25-Java_Syntax.md %}
