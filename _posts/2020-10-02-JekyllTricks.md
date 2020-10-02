@@ -27,13 +27,16 @@ comments: true
 
 It's very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links.  To use internal links, you have to use: 
 
+I know it will take a well to get used to it. But it's better for continous work. 
+
 ```
 {% raw %}
-[Some Link]({% post_url 2010-07-21-name-of-post %})
+// The stuff afer post_url is basically the md file name. 
+[Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
 {% endraw %}
 ```
 
-[Some Link]({% post_url 2010-08-25-Java_Syntax %})
+[Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
 
 ## raw liquid code
 
