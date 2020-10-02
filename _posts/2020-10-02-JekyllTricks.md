@@ -14,43 +14,5 @@ In order to make my code extensible and viable for future use, I should comply w
 ## FrontHead
 Since I always have to copy and paste this, I just put it here: 
 
-```
-layout: post
-title: Jekyll Tricks
-date: 2020-10-02
-author: Shadow Walker
-tags: [Tech, Shortcuts, Jekyll]
-comments: true
-```
 
-## Internal Links
-
-It's very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links.  To use internal links, you have to use: 
-
-I know it will take a well to get used to it. But it's better for continous work. 
-
-// The stuff afer post_url is basically the md file name. 
-
-
-
-c
-
-
-{% post_url 2020-08-25-Java_Syntax.md %}
-
-## Raw liquid code
-
-To comment, liquid code, you have to use raw code parts, such as: 
-
-```
-{% raw %}
-{% raw %}
-{% endraw %}
-{% endraw %}
-```
-
-
-## English
-
-Should use English whenever I can. A blog is not a blog if others cannot read it. Only use Chinese when it's better for understanding. 
 
