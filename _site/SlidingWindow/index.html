@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>游标卡尺 – Jericho – 「さて、どこへ行こうかしらね。ネットは広大だわ」</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Overview
+
+这一篇是关于sliding window这个奇淫技巧的. 现在其实对于Array的考察非常烦人. 这一块比较简单所以没什么可考的, 一旦考的话, 就是这种奇淫技巧. 其实这种技巧工作和学习之中用途基本没有, 而且适用的题型也很少.
+
+之所以想记录一下这个技巧是觉得其还是有一定的适用性, 也许以后能够用到.
+
+Longest Substring Without Repeating Characters LC_03
+
+就是这道题其实当时baanyan第一天还跟老师怼上了. 因为我当时说我用hashmap能解而且算力上并不慢. 现在想想应该是我错了. 我今天想了半天也没想到hashmap怎么能做出和这个标准答案算力一样的解法. 所以说, 做人做学问还是应该虚心一点, 尾巴收起来. 我当时之所以瞧不上老师的解法是因为我当时(其实现在也存在)打心底瞧不起这种只适用于一道或者几道题的奇淫技巧, 觉得这种东西花拳绣腿, 学的比较鸡肋.
+
+老师当时称这个解法为”双指针”, LC称这个解法为Sliding Window, 我更喜欢称之为游标卡尺.
+
+Problem Description
+
+Given a string s, find the length of the longest substring without repeating characters.
+
+Example 1:
+
+
+  Input: s = “abcabcbb”
+Output: 3
+Explanation: The answer is “abc”, with the length of 3.
+
+
+Example 2:
+
+
+  Input: s = “bbbbb”
+Output: 1
+Explanation: The answer is “b”, with the length of 1.
+
+
+Code
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        Set&lt;Character&gt; hs = new HashSet&lt;&gt;();
+        int answer=0, i=0, j=0;
+        
+        while(i&lt;n &amp;&amp; j&lt;n)
+        {
+            if(!hs.contains(s.charAt(j)))
+            {
+                hs.add(s.charAt(j));
+                j++;
+                if(hs.size()&gt;answer)
+                {
+                    answer = hs.size();
+                }
+            }
+            else{
+                hs.remove(s.charAt(i));
+                i++;
+            }
+        }
+        return answer;
+    }
+}
+
+
+Algorithm
+
+直接看以上这个code会比较迷, 我当时看答案也是看了很久没看明白. 其实自己在纸上写了一下很容易想明白.
+
+其实这个算法并不难, 也不玄乎, 反而比较实际, 容易理解.  把Set hs想象成一把游标卡尺, 卡尺的左端是i, 右端是j. 
+假设我们有一个String  ABCDAE
+
+从A点出发, i和j都在0, 也就是A, 只要下一个char没有重复, 游标卡尺的右端就不断往下一个char走. 如上面的例子, 游标卡尺走到ABCDA, j = 4的时候会停住.  这个时候从A点出发的不重复subString已经到了Max. 这个时候把尺子右端不动, 把卡尺左端往后挪一位. 我们得到 BCDA. 之后下一位还是不重复的E, 再挪右端j, 左端i不动. 得到BCDAE. 这个过程中keep tracking 卡尺的max长度. 最后得到答案5.
+
+两点:
+
+
+  一开始会考虑要不要向前track, 其实想一下完全没有必要. 这个理解就是和DP是一样的, 因为之前的元素已经被卡尺求过了, 没有必要向前. 所有的subString都是向后track.
+  
+    一开始是在想是不是要在每个字母上卡一下, 是不是一旦出现了重复元素之后, 就立刻要把尺子收紧把左端右端合在一起然后重新测量, 会把else写成这样:
+
+     else{
+     hs = new HashSet&lt;&gt;();
+     i++;
+     j=i;
+ }
+    
+
+    举个例子: ABCBD 这个, 一开始尺子卡在ABC, 然后在B发现重复, 尺子收起来, 从B(i=1)开始重新卡. 我会这么想, 其实这么想也比较直观.
+
+    其实实际上没有必要. 关键在于这个尺子里面的元素是不可重复的, 也就是说尺子内部的元素是绝对干净的. 这个时候没有必要收尺子, 尺子左端已经在正确的位置, 只要继续挪动右端就可以了.
+  
+
+
+还有一些更快的解法, 游标卡尺加上hashmap的解法, 不想去学了. 这种奇淫技巧学的差不多就可以. 目前阶段没必要学最优解, 现在主要是大量刷.
+
+Container With Most Water LC_011
+
+Problem Description
+
+题目不放了, 因为需要看图才能看懂, 直接去LeetCode上面看吧.
+
+Algorithm
+
+这道题我拿来首先想到的就是dynamic programming, 但越想越觉得不符合dynamic的求和原则, 因为需要考虑之前的所有边.
+
+算法是游标卡尺, 这一次的游标卡尺是从首尾两端开始卡, 慢慢往里面收. 由于题目的特殊性而使用木桶原理.
+
+这种特殊的题目没什么好说的, 唯有刷脸.
+
+
+
+Code
+
+class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0, left = 0, right = height.length -1;
+        
+        while(right&gt;left)
+        {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right])*(right-left));
+            //System.out.println(left + " , " + right + " , " + maxArea);
+            if(height[left]&gt;height[right])
+            {
+                right--;
+            }
+            else
+            {
+                left ++;
+            }
+        }
+        return maxArea;
+    }
+}
+
+" />
+    <meta property="og:description" content="Overview
+
+这一篇是关于sliding window这个奇淫技巧的. 现在其实对于Array的考察非常烦人. 这一块比较简单所以没什么可考的, 一旦考的话, 就是这种奇淫技巧. 其实这种技巧工作和学习之中用途基本没有, 而且适用的题型也很少.
+
+之所以想记录一下这个技巧是觉得其还是有一定的适用性, 也许以后能够用到.
+
+Longest Substring Without Repeating Characters LC_03
+
+就是这道题其实当时baanyan第一天还跟老师怼上了. 因为我当时说我用hashmap能解而且算力上并不慢. 现在想想应该是我错了. 我今天想了半天也没想到hashmap怎么能做出和这个标准答案算力一样的解法. 所以说, 做人做学问还是应该虚心一点, 尾巴收起来. 我当时之所以瞧不上老师的解法是因为我当时(其实现在也存在)打心底瞧不起这种只适用于一道或者几道题的奇淫技巧, 觉得这种东西花拳绣腿, 学的比较鸡肋.
+
+老师当时称这个解法为”双指针”, LC称这个解法为Sliding Window, 我更喜欢称之为游标卡尺.
+
+Problem Description
+
+Given a string s, find the length of the longest substring without repeating characters.
+
+Example 1:
+
+
+  Input: s = “abcabcbb”
+Output: 3
+Explanation: The answer is “abc”, with the length of 3.
+
+
+Example 2:
+
+
+  Input: s = “bbbbb”
+Output: 1
+Explanation: The answer is “b”, with the length of 1.
+
+
+Code
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        Set&lt;Character&gt; hs = new HashSet&lt;&gt;();
+        int answer=0, i=0, j=0;
+        
+        while(i&lt;n &amp;&amp; j&lt;n)
+        {
+            if(!hs.contains(s.charAt(j)))
+            {
+                hs.add(s.charAt(j));
+                j++;
+                if(hs.size()&gt;answer)
+                {
+                    answer = hs.size();
+                }
+            }
+            else{
+                hs.remove(s.charAt(i));
+                i++;
+            }
+        }
+        return answer;
+    }
+}
+
+
+Algorithm
+
+直接看以上这个code会比较迷, 我当时看答案也是看了很久没看明白. 其实自己在纸上写了一下很容易想明白.
+
+其实这个算法并不难, 也不玄乎, 反而比较实际, 容易理解.  把Set hs想象成一把游标卡尺, 卡尺的左端是i, 右端是j. 
+假设我们有一个String  ABCDAE
+
+从A点出发, i和j都在0, 也就是A, 只要下一个char没有重复, 游标卡尺的右端就不断往下一个char走. 如上面的例子, 游标卡尺走到ABCDA, j = 4的时候会停住.  这个时候从A点出发的不重复subString已经到了Max. 这个时候把尺子右端不动, 把卡尺左端往后挪一位. 我们得到 BCDA. 之后下一位还是不重复的E, 再挪右端j, 左端i不动. 得到BCDAE. 这个过程中keep tracking 卡尺的max长度. 最后得到答案5.
+
+两点:
+
+
+  一开始会考虑要不要向前track, 其实想一下完全没有必要. 这个理解就是和DP是一样的, 因为之前的元素已经被卡尺求过了, 没有必要向前. 所有的subString都是向后track.
+  
+    一开始是在想是不是要在每个字母上卡一下, 是不是一旦出现了重复元素之后, 就立刻要把尺子收紧把左端右端合在一起然后重新测量, 会把else写成这样:
+
+     else{
+     hs = new HashSet&lt;&gt;();
+     i++;
+     j=i;
+ }
+    
+
+    举个例子: ABCBD 这个, 一开始尺子卡在ABC, 然后在B发现重复, 尺子收起来, 从B(i=1)开始重新卡. 我会这么想, 其实这么想也比较直观.
+
+    其实实际上没有必要. 关键在于这个尺子里面的元素是不可重复的, 也就是说尺子内部的元素是绝对干净的. 这个时候没有必要收尺子, 尺子左端已经在正确的位置, 只要继续挪动右端就可以了.
+  
+
+
+还有一些更快的解法, 游标卡尺加上hashmap的解法, 不想去学了. 这种奇淫技巧学的差不多就可以. 目前阶段没必要学最优解, 现在主要是大量刷.
+
+Container With Most Water LC_011
+
+Problem Description
+
+题目不放了, 因为需要看图才能看懂, 直接去LeetCode上面看吧.
+
+Algorithm
+
+这道题我拿来首先想到的就是dynamic programming, 但越想越觉得不符合dynamic的求和原则, 因为需要考虑之前的所有边.
+
+算法是游标卡尺, 这一次的游标卡尺是从首尾两端开始卡, 慢慢往里面收. 由于题目的特殊性而使用木桶原理.
+
+这种特殊的题目没什么好说的, 唯有刷脸.
+
+
+
+Code
+
+class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0, left = 0, right = height.length -1;
+        
+        while(right&gt;left)
+        {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right])*(right-left));
+            //System.out.println(left + " , " + right + " , " + maxArea);
+            if(height[left]&gt;height[right])
+            {
+                right--;
+            }
+            else
+            {
+                left ++;
+            }
+        }
+        return maxArea;
+    }
+}
+
+" />
+    
+    <meta name="author" content="Jericho" />
+
+    
+    <meta property="og:title" content="游标卡尺" />
+    <meta property="twitter:title" content="游标卡尺" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<!--adobe fonts-->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'vbt3gjx',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script> 
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/ShadowArchive/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Jericho - 「さて、どこへ行こうかしらね。ネットは広大だわ」" href="/ShadowArchive/feed.xml" />
+  <link rel="shortcut icon" href="https://github.com/easonback26/ShadowArchive/blob/master/images/favicon.png?raw=true">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+
+  <!-- Here for the Light Gallery-->
+  
+
+  
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/ShadowArchive/" class="site-avatar"><img src="https://github.com/easonback26/ShadowArchive/blob/master/images/Black_Trinity_Logo.png?raw=true" /></a>
+       
+      <h1 class="site-name"><a href="/ShadowArchive/">Jericho</a></h1>
+      <p class="site-description">「さて、どこへ行こうかしらね。ネットは広大だわ」</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/ShadowArchive/">ホーム</a>
+      
+      
+      
+      <a href="/ShadowArchive/about">関連</a>
+      
+      
+      
+      <a href="/ShadowArchive/shortcuts">常備</a>
+      
+      
+      
+      <a href="/ShadowArchive/archive">归档</a>
+      
+      
+      
+      <a href="/ShadowArchive/photo">写真</a>
+      
+      
+      
+      <a href="/ShadowArchive/tags">付箋</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:contactshadowsong@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/easonback26" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2020 Shadow Walker</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+      <aside class="toc">
+        <ul>
+  <li><a href="#">游标卡尺</a>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#longest-substring-without-repeating-characters-lc_03">Longest Substring Without Repeating Characters LC_03</a></li>
+      <li><a href="#container-with-most-water-lc_011">Container With Most Water LC_011</a></li>
+    </ul>
+  </li>
+</ul>
+      </aside>
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>游标卡尺</h1>
+
+  <div clsss="meta">
+    <span class="author">
+      Shadow Walker
+    </span>
+
+    <span class="date">
+      2020-09-03
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/ShadowArchive/tags#Algorithm">
+          Algorithm
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/ShadowArchive/tags#Interview">
+          Interview
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h2 id="overview">Overview</h2>
+
+<p>这一篇是关于sliding window这个奇淫技巧的. 现在其实对于Array的考察非常烦人. 这一块比较简单所以没什么可考的, 一旦考的话, 就是这种奇淫技巧. 其实这种技巧工作和学习之中用途基本没有, 而且适用的题型也很少.</p>
+
+<p>之所以想记录一下这个技巧是觉得其还是有一定的适用性, 也许以后能够用到.</p>
+
+<h2 id="longest-substring-without-repeating-characters-lc_03">Longest Substring Without Repeating Characters LC_03</h2>
+
+<p>就是这道题其实当时baanyan第一天还跟老师怼上了. 因为我当时说我用hashmap能解而且算力上并不慢. 现在想想应该是我错了. 我今天想了半天也没想到hashmap怎么能做出和这个标准答案算力一样的解法. <strong>所以说, 做人做学问还是应该虚心一点, 尾巴收起来</strong>. 我当时之所以瞧不上老师的解法是因为我当时(其实现在也存在)打心底瞧不起这种只适用于一道或者几道题的奇淫技巧, 觉得这种东西花拳绣腿, 学的比较鸡肋.</p>
+
+<p>老师当时称这个解法为”双指针”, LC称这个解法为Sliding Window, 我更喜欢称之为游标卡尺.</p>
+
+<p><strong>Problem Description</strong></p>
+
+<p>Given a string s, find the length of the longest substring without repeating characters.</p>
+
+<p>Example 1:</p>
+
+<blockquote>
+  <p>Input: s = “abcabcbb”<br />
+Output: 3<br />
+Explanation: The answer is “abc”, with the length of 3.</p>
+</blockquote>
+
+<p>Example 2:</p>
+
+<blockquote>
+  <p>Input: s = “bbbbb”<br />
+Output: 1<br />
+Explanation: The answer is “b”, with the length of 1.</p>
+</blockquote>
+
+<p><strong>Code</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">lengthOfLongestSubstring</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+        <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Character</span><span class="o">&gt;</span> <span class="n">hs</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+        <span class="kt">int</span> <span class="n">answer</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+        
+        <span class="k">while</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="k">if</span><span class="o">(!</span><span class="n">hs</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)))</span>
+            <span class="o">{</span>
+                <span class="n">hs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">));</span>
+                <span class="n">j</span><span class="o">++;</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">hs</span><span class="o">.</span><span class="na">size</span><span class="o">()&gt;</span><span class="n">answer</span><span class="o">)</span>
+                <span class="o">{</span>
+                    <span class="n">answer</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="k">else</span><span class="o">{</span>
+                <span class="n">hs</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+                <span class="n">i</span><span class="o">++;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Algorithm</strong></p>
+
+<p>直接看以上这个code会比较迷, 我当时看答案也是看了很久没看明白. 其实自己在纸上写了一下很容易想明白.</p>
+
+<p>其实这个算法并不难, 也不玄乎, 反而比较实际, 容易理解.  把Set hs想象成一把游标卡尺, 卡尺的左端是i, 右端是j. 
+假设我们有一个String  ABCDAE</p>
+
+<p>从A点出发, i和j都在0, 也就是A, 只要下一个char没有重复, 游标卡尺的右端就不断往下一个char走. 如上面的例子, 游标卡尺走到ABCDA, j = 4的时候会停住.  这个时候从A点出发的不重复subString已经到了Max. 这个时候把尺子右端不动, 把卡尺左端往后挪一位. 我们得到 BCDA. 之后下一位还是不重复的E, 再挪右端j, 左端i不动. 得到BCDAE. 这个过程中keep tracking 卡尺的max长度. 最后得到答案5.</p>
+
+<p>两点:</p>
+
+<ol>
+  <li>一开始会考虑要不要向前track, 其实想一下完全没有必要. 这个理解就是和DP是一样的, 因为之前的元素已经被卡尺求过了, 没有必要向前. 所有的subString都是向后track.</li>
+  <li>
+    <p>一开始是在想是不是要在每个字母上卡一下, 是不是一旦出现了重复元素之后, 就立刻要把尺子收紧把左端右端合在一起然后重新测量, 会把else写成这样:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">else</span><span class="o">{</span>
+     <span class="n">hs</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+     <span class="n">i</span><span class="o">++;</span>
+     <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>举个例子: ABCBD 这个, 一开始尺子卡在ABC, 然后在B发现重复, 尺子收起来, 从B(i=1)开始重新卡. 我会这么想, 其实这么想也比较直观.</p>
+
+    <p>其实实际上没有必要. <strong>关键在于这个尺子里面的元素是不可重复的</strong>, 也就是说尺子内部的元素是绝对干净的. 这个时候没有必要收尺子, 尺子左端已经在正确的位置, 只要继续挪动右端就可以了.</p>
+  </li>
+</ol>
+
+<p>还有一些更快的解法, 游标卡尺加上hashmap的解法, 不想去学了. 这种奇淫技巧学的差不多就可以. 目前阶段没必要学最优解, 现在主要是大量刷.</p>
+
+<h2 id="container-with-most-water-lc_011">Container With Most Water LC_011</h2>
+
+<p><strong>Problem Description</strong></p>
+
+<p>题目不放了, 因为需要看图才能看懂, 直接去<a href="https://leetcode.com/problems/container-with-most-water/">LeetCode</a>上面看吧.</p>
+
+<p><strong>Algorithm</strong></p>
+
+<p>这道题我拿来首先想到的就是dynamic programming, 但越想越觉得不符合dynamic的求和原则, 因为需要考虑之前的所有边.</p>
+
+<p>算法是游标卡尺, 这一次的游标卡尺是从首尾两端开始卡, 慢慢往里面收. 由于题目的特殊性而使用木桶原理.</p>
+
+<p><strong>这种特殊的题目没什么好说的, 唯有刷脸.</strong></p>
+
+<p><br /></p>
+
+<p><strong>Code</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">maxArea</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">maxArea</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">height</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        
+        <span class="k">while</span><span class="o">(</span><span class="n">right</span><span class="o">&gt;</span><span class="n">left</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="n">maxArea</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">maxArea</span><span class="o">,</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">height</span><span class="o">[</span><span class="n">left</span><span class="o">],</span> <span class="n">height</span><span class="o">[</span><span class="n">right</span><span class="o">])*(</span><span class="n">right</span><span class="o">-</span><span class="n">left</span><span class="o">));</span>
+            <span class="c1">//System.out.println(left + " , " + right + " , " + maxArea);</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">height</span><span class="o">[</span><span class="n">left</span><span class="o">]&gt;</span><span class="n">height</span><span class="o">[</span><span class="n">right</span><span class="o">])</span>
+            <span class="o">{</span>
+                <span class="n">right</span><span class="o">--;</span>
+            <span class="o">}</span>
+            <span class="k">else</span>
+            <span class="o">{</span>
+                <span class="n">left</span> <span class="o">++;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">maxArea</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+  </div>
+
+
+  <!-- 现在不用disqus评论了, 想用可以加上 评论区只有最上面comment true的时候才能用-->
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "ecd5f9ca822b01f65e22",
+          clientSecret: "954fc161c6daece1d5d57bfc82d593a045d18551",
+          repo: "ShadowArchive",
+          owner: "easonback26",
+          admin: ["easonback26"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "游标卡尺",
+          language: "ja",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/ShadowArchive/SetPath/">
+        ← 前に
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="http://localhost:4000/ShadowArchive/War3%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        次に →
+      </a>
+    </span>
+  
+</div>
+
+<style>
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.333%;
+	height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+          el.innerHTML = theInnerHTML;
+        }
+      }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+
+
+
+
+
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:contactshadowsong@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/easonback26" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2020 Shadow Walker</p>
+
+    </footer>
+
+
+</html>

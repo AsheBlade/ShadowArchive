@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ShadowArchive/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ShadowArchive/" rel="alternate" type="text/html" /><updated>2020-10-02T12:44:54-05:00</updated><id>http://localhost:4000/ShadowArchive/feed.xml</id><title type="html">Jericho</title><subtitle>「さて、どこへ行こうかしらね。ネットは広大だわ」</subtitle><entry><title type="html">Jekyll Tricks</title><link href="http://localhost:4000/ShadowArchive/JekyllTricks/" rel="alternate" type="text/html" title="Jekyll Tricks" /><published>2020-10-02T00:00:00-05:00</published><updated>2020-10-02T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/JekyllTricks</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/JekyllTricks/">&lt;p&gt;I didn’t start to realize this as a problem, until recently when I think about changing the domain name or use a custom server to hold my Github Pages and this problem comes out.&lt;/p&gt;
+
+&lt;p&gt;In order to make my code extensible and viable for future use, I should comply with the Jekyll rules and stop freely do whatever I wanted to.&lt;/p&gt;
+
+&lt;h2 id=&quot;fronthead&quot;&gt;FrontHead&lt;/h2&gt;
+&lt;p&gt;Since I always have to copy and paste this, I just put it here:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;layout: post
+title: Jekyll Tricks
+date: 2020-10-02
+author: Shadow Walker
+tags: [Tech, Shortcuts, Jekyll]
+comments: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;internal-links&quot;&gt;Internal Links&lt;/h2&gt;
+
+&lt;p&gt;It’s very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links.  To use internal links, you have to use:&lt;/p&gt;
+
+&lt;p&gt;I know it will take a while to get used to it. But it’s better for continous work.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// The stuff afer post_url is basically the md file name. 
+
+[Name of Link]({% post_url 2020-08-25-Java_Syntax %})
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ShadowArchive/Java_Syntax/&quot;&gt;Name of Link&lt;/a&gt;&lt;/p&gt;</content><author><name>Shadow Walker</name></author><category term="Tech" /><category term="Shortcuts" /><category term="Jekyll" /><summary type="html">I didn’t start to realize this as a problem, until recently when I think about changing the domain name or use a custom server to hold my Github Pages and this problem comes out. In order to make my code extensible and viable for future use, I should comply with the Jekyll rules and stop freely do whatever I wanted to. FrontHead Since I always have to copy and paste this, I just put it here: layout: post title: Jekyll Tricks date: 2020-10-02 author: Shadow Walker tags: [Tech, Shortcuts, Jekyll] comments: true Internal Links It’s very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links. To use internal links, you have to use: I know it will take a while to get used to it. But it’s better for continous work. // The stuff afer post_url is basically the md file name. [Name of Link]({% post_url 2020-08-25-Java_Syntax %}) Name of Link</summary></entry><entry><title type="html">给Icebane的画</title><link href="http://localhost:4000/ShadowArchive/Icebane_drawing/" rel="alternate" type="text/html" title="给Icebane的画" /><published>2020-10-01T00:00:00-05:00</published><updated>2020-10-01T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/Icebane_drawing</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/Icebane_drawing/">&lt;p&gt;Icebane 你好, 我是&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/Icebane/&quot;&gt;此文&lt;/a&gt;的作者, 希望你还记得我.  我找了一些人根据你龙母的头像给你画了一些画, 希望你能喜欢.&lt;/p&gt;
+
+&lt;p&gt;我真的很喜欢你的龙母版Icebane头像+ 背景.  + “我与我仇凛若冰凌, 所卫所爱唯以忠贞” 签名.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;img width=&quot;700&quot; src=&quot;../images/WechatIMG50.jpeg&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;我没有什么更多的可以跟你说, 就一句 : 很高兴认识你&lt;/p&gt;
+
+&lt;div id=&quot;image-gallery&quot; class=&quot;image-gallery&quot;&gt;
+  &lt;div id=&quot;gallery-sizer&quot; class=&quot;gallery-sizer&quot;&gt;&lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3367.jp-1080x1207.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3367.jp-1080x1207.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3399.jp-3264x2272.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3399.jp-3264x2272.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3960.jp-1119x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3960.jp-1119x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3465.jp-1560x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3465.jp-1560x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3373.jp-1080x1263.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3373.jp-1080x1263.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3372.jp-1085x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3372.jp-1085x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3377.jp-1085x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3377.jp-1085x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3365.jp-800x734.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3365.jp-800x734.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3923.jp-1140x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3923.jp-1140x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3966.jp-2448x2148.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3966.jp-2448x2148.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3964.jp-1080x1296.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3964.jp-1080x1296.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3979.jp-812x974.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3979.jp-812x974.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3464.jp-1100x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3464.jp-1100x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3462.jp-1352x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3462.jp-1352x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3922.jp-1092x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3922.jp-1092x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3366.jp-1325x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3366.jp-1325x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3963.jp-1669x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3963.jp-1669x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3416.jp-1080x1083.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3416.jp-1080x1083.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3400.jp-1440x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3400.jp-1440x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3463.jp-1158x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3463.jp-1158x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/WechatIMG48.jpe-1080x1201.jpeg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/WechatIMG48.jpe-1080x1201.jpeg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3368.jp-1080x1440.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3368.jp-1080x1440.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3466.jp-1396x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3466.jp-1396x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3392.jp-1112x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3392.jp-1112x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3924.jp-1098x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3924.jp-1098x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3965.jp-1702x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3965.jp-1702x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3369.jp-1080x1450.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3369.jp-1080x1450.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/WechatIMG49.jpe-1080x2439.jpeg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/WechatIMG49.jpe-1080x2439.jpeg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3959.jp-1478x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3959.jp-1478x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3375.jp-1080x1275.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3375.jp-1080x1275.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3401.jp-1471x1080.jpg&quot; data-responsive=&quot;&quot; class=&quot;image&quot;&gt;
+      &lt;img alt=&quot;&quot; src=&quot;http://localhost:4000/ShadowArchive/assets/photography/Icebane_Drawing/IMG_3401.jp-1471x1080.jpg&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+  var $gallery = $(&quot;#image-gallery&quot;).lightGallery({
+    thumbnail: false,
+    selector: '.image'
+  });
+});
+
+// init isotope
+var $grid = $('#image-gallery').isotope({
+  percentPosition: true,
+  columnWidth: '#gallery-sizer',
+  itemSelector: '.image-wrapper',
+  layoutMode: &quot;masonry&quot;
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry();
+});
+
+&lt;/script&gt;</content><author><name>Shadow Song</name></author><category term="Album" /><summary type="html">Icebane 你好, 我是此文的作者, 希望你还记得我. 我找了一些人根据你龙母的头像给你画了一些画, 希望你能喜欢. 我真的很喜欢你的龙母版Icebane头像+ 背景. + “我与我仇凛若冰凌, 所卫所爱唯以忠贞” 签名. 我没有什么更多的可以跟你说, 就一句 : 很高兴认识你</summary></entry><entry><title type="html">2020年9月_ERA_三周</title><link href="http://localhost:4000/ShadowArchive/ERA_SEPT_2020/" rel="alternate" type="text/html" title="2020年9月_ERA_三周" /><published>2020-10-01T00:00:00-05:00</published><updated>2020-10-01T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/ERA_SEPT_2020</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/ERA_SEPT_2020/">&lt;h2 id=&quot;起源&quot;&gt;起源&lt;/h2&gt;
+
+&lt;p&gt;大概因为三国全战发布了南蛮入侵的DLC开始. 全战是很容易沉进去的游戏.&lt;/p&gt;
+
+&lt;p&gt;从sprint上面查的记录来看, Unit4-discussion Board的提交日期是9月11日, 大概没这么早, 估计开始有可能是最晚14日开始. 也就是说, 9月11日到现在将近三周. 不过不管怎么说, 最后一个assignment我是卡着点儿提交的, 也就是9月23日.  也就是说, 严重的ERA至少也是23日之后才开始的.&lt;/p&gt;
+
+&lt;h2 id=&quot;持续&quot;&gt;持续&lt;/h2&gt;
+
+&lt;p&gt;根据以上, &lt;strong&gt;此ERA至少持续了两周, 根据记录来看, 最多持续了三周整.   重度的期间不会超过一周.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;根据以往的经验来说,并不算严重. 其实随着生活中的乐趣越来越少, ERA发生的可能性也随之降低了.&lt;/p&gt;
+
+&lt;h2 id=&quot;后记&quot;&gt;后记&lt;/h2&gt;
+
+&lt;p&gt;记载ERA只是为了记录而已, 没有其他目的. 在目前这种对抗ERA不存在很好方式的情况之下, 这种记录是必须的.&lt;/p&gt;
+
+&lt;h2 id=&quot;更多&quot;&gt;更多&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/ERA%E7%AE%80%E8%BF%B0/&quot;&gt;ERA简述&lt;/a&gt;&lt;/p&gt;</content><author><name>Architect</name></author><category term="ERA" /><category term="体系" /><category term="密" /><summary type="html">起源 大概因为三国全战发布了南蛮入侵的DLC开始. 全战是很容易沉进去的游戏. 从sprint上面查的记录来看, Unit4-discussion Board的提交日期是9月11日, 大概没这么早, 估计开始有可能是最晚14日开始. 也就是说, 9月11日到现在将近三周. 不过不管怎么说, 最后一个assignment我是卡着点儿提交的, 也就是9月23日. 也就是说, 严重的ERA至少也是23日之后才开始的. 持续 根据以上, 此ERA至少持续了两周, 根据记录来看, 最多持续了三周整. 重度的期间不会超过一周. 根据以往的经验来说,并不算严重. 其实随着生活中的乐趣越来越少, ERA发生的可能性也随之降低了. 后记 记载ERA只是为了记录而已, 没有其他目的. 在目前这种对抗ERA不存在很好方式的情况之下, 这种记录是必须的. 更多 ERA简述</summary></entry><entry><title type="html">C2和宏度</title><link href="http://localhost:4000/ShadowArchive/C2%E5%92%8C%E5%AE%8F%E5%BA%A6/" rel="alternate" type="text/html" title="C2和宏度" /><published>2020-10-01T00:00:00-05:00</published><updated>2020-10-01T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/C2%E5%92%8C%E5%AE%8F%E5%BA%A6</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/C2%E5%92%8C%E5%AE%8F%E5%BA%A6/">&lt;p&gt;关于之前写过一篇有关&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/OPBP_02_thoughts/&quot;&gt;C2引发宏度上升的文档&lt;/a&gt;. 现在已经将近一个多月, 如今曾经的宏度已经褪去, 如今再来看这篇文章不禁唏嘘.  文章里面说的一切都是有道理的, 只不过事实证明C类是无法依赖的, 因为其来源是不稳定的. 除非你能够找到一个稳定持续的C类去对供给体系的运转, 不然这种宏的提升其实是意义不大的.&lt;/p&gt;
+
+&lt;p&gt;我不知道之前有没有做过类似的讨论, 只不过大概, 有了这个tag功能之后至少可以把这些讨论集中起来.&lt;/p&gt;
+
+&lt;p&gt;从这两篇文档, 我们可以得出以下结论:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;C2可以提升宏度&lt;/li&gt;
+  &lt;li&gt;C2对宏度的提升并不稳定.&lt;/li&gt;
+  &lt;li&gt;除非可以找到稳定来源的C2, 不然这种提升实则没什么意义.&lt;/li&gt;
+  &lt;li&gt;不过其实稳定来源的C2也不是完全不可能.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Architect</name></author><category term="体系" /><category term="密" /><category term="C2" /><category term="宏" /><summary type="html">关于之前写过一篇有关C2引发宏度上升的文档. 现在已经将近一个多月, 如今曾经的宏度已经褪去, 如今再来看这篇文章不禁唏嘘. 文章里面说的一切都是有道理的, 只不过事实证明C类是无法依赖的, 因为其来源是不稳定的. 除非你能够找到一个稳定持续的C类去对供给体系的运转, 不然这种宏的提升其实是意义不大的. 我不知道之前有没有做过类似的讨论, 只不过大概, 有了这个tag功能之后至少可以把这些讨论集中起来. 从这两篇文档, 我们可以得出以下结论: C2可以提升宏度 C2对宏度的提升并不稳定. 除非可以找到稳定来源的C2, 不然这种提升实则没什么意义. 不过其实稳定来源的C2也不是完全不可能.</summary></entry><entry><title type="html">向来自中世界致敬</title><link href="http://localhost:4000/ShadowArchive/%E8%87%B4%E6%95%AC/" rel="alternate" type="text/html" title="向来自中世界致敬" /><published>2020-10-01T00:00:00-05:00</published><updated>2020-10-01T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/%E8%87%B4%E6%95%AC</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/%E8%87%B4%E6%95%AC/">&lt;p&gt;来自中世界 你好:&lt;/p&gt;
+
+&lt;p&gt;因为用了您的代码, 早就想对您表示敬意. 但真正想写这一篇的原因是因为看到了&lt;a href=&quot;https://himring.top/about-loffer/&quot;&gt;您对fork的质量失望.&lt;/a&gt; .  基于此, 怀着无比忐忑的心情, 我加入了很多新的功能, 我像一个学生一样, 面对老师的审视, 不知道这一份答卷能否让老师满意.&lt;/p&gt;
+
+&lt;p&gt;以下是我新加入的功能的一些罗列:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/SimpleGallery/&quot;&gt;相册功能&lt;/a&gt;, 用的是目前比较受欢迎的lightGallery&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/TryEncrypted/&quot;&gt;加密文档&lt;/a&gt;功能.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/photo/&quot;&gt;相册目录功能&lt;/a&gt;. 这个功能比较简陋, 简单来说就是一个页面展示所有的相册.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/MusicIEnjoy/&quot;&gt;音乐播放功能&lt;/a&gt;. 同样比较简陋. 其实就是把google drive 和youtube embed而已.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;其他还有一些边边角角的小功能就不细说了. 譬如加入一个&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/shortcuts/&quot;&gt;常用tab&lt;/a&gt;快速拿出一些经常用的文档之类的.  我没有更改整个网站的外观, 因为我很喜欢这个极简主义的风格, 这也正是我fork您的project的原因.&lt;/p&gt;
+
+&lt;p&gt;我自以为第一二条(相册和加密), 是我引以为傲并且值得炫耀的两个功能. 尤其是那个相册功能, 我看您也发了很多图片, 也许您也会需要那个功能. 其他的功能都不是必须. 即便如此, 这两条功能的代码我也没有写过一条, 只是单纯移植而已.  我也没能移植出您那样干净的代码, 我没能直接在最顶端加一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;encrypted: true&lt;/code&gt;去解决问题, 相反的, 这两个功能的实现都相对繁琐.  也许以后我有时间的时候会尝试, 但短时间内不会了.&lt;/p&gt;
+
+&lt;p&gt;短时间内, 我应该不会加入新的功能了, 其实加入的功能越多就越有悖于这个极简主义的主题. 唯一我还期待的功能就是一个本地的视频音乐播放器. 因为这个站点在国内是存在镜像的, 所以最好能有一个local的播放器去播放一些视频, 这样国内就不需要科学上网才能观看这个站点的视频.&lt;/p&gt;
+
+&lt;p&gt;看了您的文档, 我越来越发觉我和你有一些共同点. 关于评论区那一块, 我也是第一时间去找了valine, 但是当valine需要实名制注册的时候我就放弃了. 于是还是跟您一样, 用了Github.  实名制是绝对不能忍的, 到现在我的微信还没有实名制, 不能收红包和转账.&lt;/p&gt;
+
+&lt;p&gt;我很钦佩您去给非技术人员写那种无门槛都能看懂的入门文档. 至少我是不会去写的. 但是我很赞同你的这种行为. 现在互联网的这种发展方向是我所不喜欢的. 社交网络应该是自由的, 去中心化的, 而不是被什么Facebok和微博所掌控, 打开手机就是今日热点之类的东西. 正如我签名之中写的一样: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;「さて、どこへ行こうかしらね。ネットは広大だわ」&lt;/code&gt;. 网路是无限广大的.  我眼中的网路应该是自由到极致的, 而不是被几家门户所把控制约. 我说的并不是中国的墙, 这种状况不仅存在于中国, 同样存在于美国和世界其他地方.  放眼世界, 各国的互联网生态呈现的并不是互联, 而是割裂的区域性.   真的很希望jekyll 和 latex 这么好的东西能被更多的非技术人员所掌握使用.&lt;/p&gt;
+
+&lt;p&gt;您提到了敏感审查的问题. 这只是言论上的自由. 我想对于我来说更深一层的自由则是在于对自己的代码完全掌控. 对自己的文档完全掌控, 没有任何限制. 以至于某一天Github完蛋了, 我可以轻而易举移植到其他平台. 17岁以前在QQ空间上写了大概几百篇文档, 我想那些大概也就烂在那里了, 没有时间去拿出来, 而QQ空间早晚有一天会完蛋的, 苹果明年就不支持flash了.&lt;/p&gt;
+
+&lt;p&gt;最后想说对这个project唯一感到不好用的一点. 作为一个后端程序员(java, Spring框架), 其实我对于CSS和node的接触非常局限. 我不知道是不是我的能力有限, 亦或是其他原因. 根目录之下的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style.scss&lt;/code&gt; 对于我来说很难用. 具体地说这个css文件缺乏可工作性和延展性.  第一个问题在于注释不是很充分, 第二个问题在于所有的css都在一块.  就我的后端经验而言, 这并不是一个很好的设计. 如果是我的话, 会把css分成好几个文件, 各个文件给不同的区域. 这样可以方便做一些改动.  当然了, 话说回来, 我没有干过前端, 这只是我的一点想法.&lt;/p&gt;
+
+&lt;p&gt;希望您看到我的这个fork还有一些新的功能加入能够满意. 作为一个技术人员, 我想应该高兴看到自己的代码被别人使用并且扩展吧.  如果您喜欢的作品, 希望您能在此文章的评论区留言, 我将不胜荣幸. 
+现在正好是2020年的国庆中秋. 祝您中秋快乐, 生活工作顺利.&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;/p&gt;
+
+&lt;p&gt;Shadow Walker&lt;/p&gt;</content><author><name>Shadow Walker</name></author><category term="手記" /><summary type="html">来自中世界 你好: 因为用了您的代码, 早就想对您表示敬意. 但真正想写这一篇的原因是因为看到了您对fork的质量失望. . 基于此, 怀着无比忐忑的心情, 我加入了很多新的功能, 我像一个学生一样, 面对老师的审视, 不知道这一份答卷能否让老师满意. 以下是我新加入的功能的一些罗列: 相册功能, 用的是目前比较受欢迎的lightGallery 加密文档功能. 相册目录功能. 这个功能比较简陋, 简单来说就是一个页面展示所有的相册. 音乐播放功能. 同样比较简陋. 其实就是把google drive 和youtube embed而已. 其他还有一些边边角角的小功能就不细说了. 譬如加入一个常用tab快速拿出一些经常用的文档之类的. 我没有更改整个网站的外观, 因为我很喜欢这个极简主义的风格, 这也正是我fork您的project的原因. 我自以为第一二条(相册和加密), 是我引以为傲并且值得炫耀的两个功能. 尤其是那个相册功能, 我看您也发了很多图片, 也许您也会需要那个功能. 其他的功能都不是必须. 即便如此, 这两条功能的代码我也没有写过一条, 只是单纯移植而已. 我也没能移植出您那样干净的代码, 我没能直接在最顶端加一个encrypted: true去解决问题, 相反的, 这两个功能的实现都相对繁琐. 也许以后我有时间的时候会尝试, 但短时间内不会了. 短时间内, 我应该不会加入新的功能了, 其实加入的功能越多就越有悖于这个极简主义的主题. 唯一我还期待的功能就是一个本地的视频音乐播放器. 因为这个站点在国内是存在镜像的, 所以最好能有一个local的播放器去播放一些视频, 这样国内就不需要科学上网才能观看这个站点的视频. 看了您的文档, 我越来越发觉我和你有一些共同点. 关于评论区那一块, 我也是第一时间去找了valine, 但是当valine需要实名制注册的时候我就放弃了. 于是还是跟您一样, 用了Github. 实名制是绝对不能忍的, 到现在我的微信还没有实名制, 不能收红包和转账. 我很钦佩您去给非技术人员写那种无门槛都能看懂的入门文档. 至少我是不会去写的. 但是我很赞同你的这种行为. 现在互联网的这种发展方向是我所不喜欢的. 社交网络应该是自由的, 去中心化的, 而不是被什么Facebok和微博所掌控, 打开手机就是今日热点之类的东西. 正如我签名之中写的一样: 「さて、どこへ行こうかしらね。ネットは広大だわ」. 网路是无限广大的. 我眼中的网路应该是自由到极致的, 而不是被几家门户所把控制约. 我说的并不是中国的墙, 这种状况不仅存在于中国, 同样存在于美国和世界其他地方. 放眼世界, 各国的互联网生态呈现的并不是互联, 而是割裂的区域性. 真的很希望jekyll 和 latex 这么好的东西能被更多的非技术人员所掌握使用. 您提到了敏感审查的问题. 这只是言论上的自由. 我想对于我来说更深一层的自由则是在于对自己的代码完全掌控. 对自己的文档完全掌控, 没有任何限制. 以至于某一天Github完蛋了, 我可以轻而易举移植到其他平台. 17岁以前在QQ空间上写了大概几百篇文档, 我想那些大概也就烂在那里了, 没有时间去拿出来, 而QQ空间早晚有一天会完蛋的, 苹果明年就不支持flash了. 最后想说对这个project唯一感到不好用的一点. 作为一个后端程序员(java, Spring框架), 其实我对于CSS和node的接触非常局限. 我不知道是不是我的能力有限, 亦或是其他原因. 根目录之下的 style.scss 对于我来说很难用. 具体地说这个css文件缺乏可工作性和延展性. 第一个问题在于注释不是很充分, 第二个问题在于所有的css都在一块. 就我的后端经验而言, 这并不是一个很好的设计. 如果是我的话, 会把css分成好几个文件, 各个文件给不同的区域. 这样可以方便做一些改动. 当然了, 话说回来, 我没有干过前端, 这只是我的一点想法. 希望您看到我的这个fork还有一些新的功能加入能够满意. 作为一个技术人员, 我想应该高兴看到自己的代码被别人使用并且扩展吧. 如果您喜欢的作品, 希望您能在此文章的评论区留言, 我将不胜荣幸. 现在正好是2020年的国庆中秋. 祝您中秋快乐, 生活工作顺利. Sincerely, Shadow Walker</summary></entry><entry><title type="html">Fauci fires back at Sen. Paul</title><link href="http://localhost:4000/ShadowArchive/Fauci/" rel="alternate" type="text/html" title="Fauci fires back at Sen. Paul" /><published>2020-09-28T00:00:00-05:00</published><updated>2020-09-28T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/Fauci</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/Fauci/">&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/Yk2p2oyXxTc&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Video Transcript
+RAND PAUL: Dr. Fauci, today you said you are not for economic lockdown, yet your mitigation recommendations, from dating to baseball to restaurants to movie theaters, have led to this economic lockdown. Do you have any second thoughts about your mitigation recommendations, considering the evidence that, despite all of the things we’ve done in the US, our death rate is essentially worse than Sweden, equivalent to the less developed world that is unable to do any of the things that you’ve been promoting?&lt;/p&gt;
+
+&lt;p&gt;ANTHONY FAUCI: You know, Senator, I’d be happy at a different time to sit down and go over the detail. You’ve said a lot of different things. You’ve compared us to Sweden, and there are a lot of differences. And you said, well, you know, there are a lot of differences between Sweden, but compare Sweden’s death rate to other comparable Scandinavian countries. It’s worse. So I don’t think it’s appropriate to compare Sweden with us.&lt;/p&gt;
+
+&lt;p&gt;Yes, we have– I think, in the beginning, we’ve done things based on the knowledge we had at the time. And hopefully, and I am, and my colleagues are humble enough and modest enough to realize that, as new data comes, you make different recommendations. But I don’t regret saying that the only way we could have really stopped the explosion of infection was by essentially– and when I say shutting down, I mean essentially having the physical separation and the kinds of recommendations that we’ve made.&lt;/p&gt;
+
+&lt;p&gt;RAND PAUL: You’ve been a big fan of Cuomo and the shutdown in New York. You’ve lauded New York for their policy. New York had the highest death rate in the world. How can we possibly be jumping up and down and saying, oh, Governor Cuomo did a great job? He had the worst death rate in the world.&lt;/p&gt;
+
+&lt;p&gt;ANTHONY FAUCI: No, you’ve misconstrued that, Senator, and you’ve done that repetitively in the past. They got hit very badly. They made some mistakes. Right now, if you look at what’s going on right now, the things that are going on in New York to get their test positivity 1% or less is because they are looking at the guidelines that we have put together from the task force of the four or five things of masks, social distancing, outdoors more than indoors, avoiding crowds, and washing hands.&lt;/p&gt;
+
+&lt;p&gt;RAND PAUL: Or they’ve developed enough community immunity that they’re no longer having the pandemic because they have enough immunity in New York City to actually stop it.&lt;/p&gt;
+
+&lt;p&gt;ANTHONY FAUCI: I challenge that, Senator–&lt;/p&gt;
+
+&lt;p&gt;[INTERPOSING VOICES]&lt;/p&gt;
+
+&lt;p&gt;–please, sir, I would like to be able to do this because this happens with Senator Rand all the time. You were not listening to what the director of the CDC said that, in New York, it’s about 22%. If you believe 22% is herd immunity, I believe you’re alone in that.&lt;/p&gt;</content><author><name>Shadow Song</name></author><category term="News" /><summary type="html">Video Transcript RAND PAUL: Dr. Fauci, today you said you are not for economic lockdown, yet your mitigation recommendations, from dating to baseball to restaurants to movie theaters, have led to this economic lockdown. Do you have any second thoughts about your mitigation recommendations, considering the evidence that, despite all of the things we’ve done in the US, our death rate is essentially worse than Sweden, equivalent to the less developed world that is unable to do any of the things that you’ve been promoting? ANTHONY FAUCI: You know, Senator, I’d be happy at a different time to sit down and go over the detail. You’ve said a lot of different things. You’ve compared us to Sweden, and there are a lot of differences. And you said, well, you know, there are a lot of differences between Sweden, but compare Sweden’s death rate to other comparable Scandinavian countries. It’s worse. So I don’t think it’s appropriate to compare Sweden with us. Yes, we have– I think, in the beginning, we’ve done things based on the knowledge we had at the time. And hopefully, and I am, and my colleagues are humble enough and modest enough to realize that, as new data comes, you make different recommendations. But I don’t regret saying that the only way we could have really stopped the explosion of infection was by essentially– and when I say shutting down, I mean essentially having the physical separation and the kinds of recommendations that we’ve made. RAND PAUL: You’ve been a big fan of Cuomo and the shutdown in New York. You’ve lauded New York for their policy. New York had the highest death rate in the world. How can we possibly be jumping up and down and saying, oh, Governor Cuomo did a great job? He had the worst death rate in the world. ANTHONY FAUCI: No, you’ve misconstrued that, Senator, and you’ve done that repetitively in the past. They got hit very badly. They made some mistakes. Right now, if you look at what’s going on right now, the things that are going on in New York to get their test positivity 1% or less is because they are looking at the guidelines that we have put together from the task force of the four or five things of masks, social distancing, outdoors more than indoors, avoiding crowds, and washing hands. RAND PAUL: Or they’ve developed enough community immunity that they’re no longer having the pandemic because they have enough immunity in New York City to actually stop it. ANTHONY FAUCI: I challenge that, Senator– [INTERPOSING VOICES] –please, sir, I would like to be able to do this because this happens with Senator Rand all the time. You were not listening to what the director of the CDC said that, in New York, it’s about 22%. If you believe 22% is herd immunity, I believe you’re alone in that.</summary></entry><entry><title type="html">Latex和 Photo List</title><link href="http://localhost:4000/ShadowArchive/LatexPhoto/" rel="alternate" type="text/html" title="Latex和 Photo List" /><published>2020-09-25T00:00:00-05:00</published><updated>2020-09-25T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/LatexPhoto</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/LatexPhoto/">&lt;p&gt;fork之后已经陆续加入了相册功能和加密功能, 还设置了评论区,影音播放和国内的镜像迁移.&lt;/p&gt;
+
+&lt;p&gt;这大概是近期内最后一次加入新功能, latex和照片列表.   latex如下&lt;/p&gt;
+
+&lt;h2 id=&quot;latex&quot;&gt;Latex&lt;/h2&gt;
+
+&lt;p&gt;这里其实要说一下, 按照原作者的配置了一下, 发现根本出不来, 一开始还以为自己做错了, 反复看了好几遍.  然后查了一下&lt;a href=&quot;https://github.com/mathjax/MathJax&quot;&gt;文档&lt;/a&gt;, 最后用官方的办法, 在head.html之中加入这一行:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script id=&quot;MathJax-script&quot; async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&amp;gt;&amp;lt;/script&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;就很简单做到了&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$
+\begin{align*}
+y = y(x,t) &amp;amp;= A e^{i\theta} \\
+&amp;amp;= A (\cos \theta + i \sin \theta) \\
+&amp;amp;= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\
+&amp;amp;= A\cos(kx - \omega t) + i A\sin(kx - \omega t)  \\
+&amp;amp;= A\cos \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) + i A\sin \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big)  \\
+&amp;amp;= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t)
+\end{align*}
+$$
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- more --&gt;
+
+\[\begin{align*}
+y = y(x,t) &amp;amp;= A e^{i\theta} \\
+&amp;amp;= A (\cos \theta + i \sin \theta) \\
+&amp;amp;= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\
+&amp;amp;= A\cos(kx - \omega t) + i A\sin(kx - \omega t)  \\
+&amp;amp;= A\cos \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) + i A\sin \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big)  \\
+&amp;amp;= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t)
+\end{align*}\]
+
+&lt;h2 id=&quot;photolist&quot;&gt;PhotoList&lt;/h2&gt;
+
+&lt;p&gt;照片列表的话, 其实没弄完. 但是可能不想在弄了.  本来想模仿原作者做一个跟&lt;a href=&quot;https://opieters.github.io/jekyll-image-gallery-example/photography/&quot;&gt;这个&lt;/a&gt;一样的, 结果只有&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/photo/&quot;&gt;这个&lt;/a&gt;.  不想反复调CSS了. 前端的东西很繁琐, 觉得很无聊.&lt;/p&gt;
+
+&lt;p&gt;总结一下, 以便下次工作能够继续进行.&lt;/p&gt;
+
+&lt;p&gt;原版的文件位于:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/layouts :  page2.html, default2.html&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/css: main.scss&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/sass: _base.scss,  _layout.scss,  _syntax-highlighting.scss&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/includes: head2.html , footer2.html, header.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;注意: /css: gallery.scss 与这个功能无关, 是有关相册的功能, 不要动也不要删除.&lt;/p&gt;
+
+&lt;p&gt;如果想要看出区别的话, 只要把根目录下的photo.html, 最上面的page改成default2, 就会追随原版, 立刻就能看出区别. 
+其实这里我们能看出来原版的CSS非常繁琐, 地点分布甚广.  相比之下, 原作者使用的CSS只有根目录下面的style.css.&lt;/p&gt;
+
+&lt;p&gt;想要把这个相册列表功能完全嵌入无非只有两种办法.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;根据原版的所有CSS逐行查找相关的字体设置, 然后粘贴到新版的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style.css&lt;/code&gt;之中. 这一做法的缺陷也很明显, 有覆盖代码的风险, 污染了其他的部分.&lt;/li&gt;
+  &lt;li&gt;复制style.css, 重命名, 然后再做第一项. 比较无风险. 缺陷是光改这个也是显然不够. 还要复制一套新的default.html, 或者还需要更多.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;总的来说并不是特别愿意做这种费时又无聊的工作. 本来觉得很简单, 结果却很耗时.  闲的时候可以玩玩.&lt;/p&gt;
+
+&lt;h2 id=&quot;另&quot;&gt;另&lt;/h2&gt;
+
+&lt;p&gt;这个刚玩明白, 刚又看见&lt;a href=&quot;https://www.npmjs.com/package/ayer?activeTab=readme&quot;&gt;Hexo&lt;/a&gt;觉得好漂亮. 这个主题的优势就是简洁加载快. 要明确这个优势.&lt;/p&gt;
+
+&lt;h2 id=&quot;09-28-更新&quot;&gt;09-28 更新&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;footer.html&lt;/code&gt; 是不会影响格式的, 这个加不加都无所谓. 但是新版和原版的footer代码并不兼容.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;header.html&lt;/code&gt; 可以没有. 关键在于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head.html&lt;/code&gt;, 也就是说, 还是在于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.css&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;已经确认CSS的更新是有有一定延迟的. 即使代码传上去了, CSS改变之后的更新也需要一段时间才能反映出来.&lt;/li&gt;
+  &lt;li&gt;把main.css完整copy到style.css之后仍然存在align偏左的问题. 所以main.css里面的东西其实无关. 现在认为main.css其中的东西都没有用. 只留了作者在网路上post上面的那一段.&lt;/li&gt;
+  &lt;li&gt;最新, 现在认为不是我缺了原作者的某一行代码, 而是我的style.css之中的某一行影响了我的align, 换句话说, 我不缺, 而是多了.&lt;/li&gt;
+  &lt;li&gt;我把style.css之中所有的right值改成了left. 结果还是无济于事. 我放弃了. 不想再搞CSS了. 我很疲惫. 我不知道哪一块代码导致了这个错误的align, 但是我不想再弄下去了. 强迫症弄这个真的没什么意义.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;09-28-912pm&quot;&gt;09-28 9:12PM&lt;/h2&gt;
+
+&lt;p&gt;按上面的, 我走了第一条路即把代码粘贴到原style.css之中. 但是走了好久之后还是回到原地. 具体记录都在上面.  我目前的推测是style.css之中的某一块影响了这个align, 导致了偏右. 但我已经无力去查找影响的部分到底在哪. 就这样吧.&lt;/p&gt;</content><author><name></name></author><category term="Tech" /><summary type="html">fork之后已经陆续加入了相册功能和加密功能, 还设置了评论区,影音播放和国内的镜像迁移. 这大概是近期内最后一次加入新功能, latex和照片列表. latex如下 Latex 这里其实要说一下, 按照原作者的配置了一下, 发现根本出不来, 一开始还以为自己做错了, 反复看了好几遍. 然后查了一下文档, 最后用官方的办法, 在head.html之中加入这一行: &amp;lt;script id=&quot;MathJax-script&quot; async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&amp;gt;&amp;lt;/script&amp;gt; 就很简单做到了 $$ \begin{align*} y = y(x,t) &amp;amp;= A e^{i\theta} \\ &amp;amp;= A (\cos \theta + i \sin \theta) \\ &amp;amp;= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\ &amp;amp;= A\cos(kx - \omega t) + i A\sin(kx - \omega t) \\ &amp;amp;= A\cos \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) + i A\sin \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) \\ &amp;amp;= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t) \end{align*} $$</summary></entry><entry><title type="html">应郭姑娘要求设评论区</title><link href="http://localhost:4000/ShadowArchive/gitTalk/" rel="alternate" type="text/html" title="应郭姑娘要求设评论区" /><published>2020-09-24T00:00:00-05:00</published><updated>2020-09-24T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/gitTalk</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/gitTalk/">&lt;p&gt;应你的要求, 我做了评论区.  用的是Gitalk, 需要用GitHub账号登录. 有点是比较简洁,缺点是需要用github登录, 大概对手机用户和没有github账号的人很不友好.&lt;/p&gt;
+
+&lt;p&gt;用的是这个&lt;a href=&quot;https://easonback26.github.io/ShadowArchive/document/&quot;&gt;guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoy it.&lt;/p&gt;</content><author><name>Shadow Walker</name></author><category term="Tech" /><summary type="html">应你的要求, 我做了评论区. 用的是Gitalk, 需要用GitHub账号登录. 有点是比较简洁,缺点是需要用github登录, 大概对手机用户和没有github账号的人很不友好. 用的是这个guide. Hope you enjoy it.</summary></entry><entry><title type="html">N4文章搜集</title><link href="http://localhost:4000/ShadowArchive/N4%E6%96%87%E7%AB%A0/" rel="alternate" type="text/html" title="N4文章搜集" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/N4%E6%96%87%E7%AB%A0</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/N4%E6%96%87%E7%AB%A0/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;以后应该经常补充这些东西. 要跳出已有的课本, 多搞一些这种课外阅读的东西, 以提高阅读能力和词汇量.&lt;/p&gt;
+
+&lt;h2 id=&quot;田中さんの手紙&quot;&gt;田中さんの手紙&lt;/h2&gt;
+
+&lt;p&gt;田中（たなか）さん、お元気ですか。　わたしは　先週（せんしゅう）、大学の　近く（ちかく）に　ひっこしを　しました。前はアパートから　大学まで　電車と　バスで　一時間半ぐらい　かかりました。でも、今のアパート&lt;strong&gt;は&lt;/strong&gt;大学まで　歩いて　１０分ぐらいです。それで、ここに　ひっこす　ことにしました。少し（すこし）　せまいですが、新し（あたらし）くて　されいだし、近所（きんじょ）に　アーパーも　あります。　駅からも　近くて、生活（せいかつ）が　とても便利（べんり）に　ありました。それに、アパートの　へやの　まどから　見える　けしきも　いいです。　だから、ひっこしを　して　本当に　良かったと思って　います。　この　手紙と　一緒に、わたしの　部屋の　窓から　見た　景色（けしき）の　写真を　送り（おくり）ます。それでは、また。　&lt;/p&gt;</content><author><name>Shadow Song</name></author><category term="Japanese" /><summary type="html">Overview 以后应该经常补充这些东西. 要跳出已有的课本, 多搞一些这种课外阅读的东西, 以提高阅读能力和词汇量. 田中さんの手紙 田中（たなか）さん、お元気ですか。　わたしは　先週（せんしゅう）、大学の　近く（ちかく）に　ひっこしを　しました。前はアパートから　大学まで　電車と　バスで　一時間半ぐらい　かかりました。でも、今のアパートは大学まで　歩いて　１０分ぐらいです。それで、ここに　ひっこす　ことにしました。少し（すこし）　せまいですが、新し（あたらし）くて　されいだし、近所（きんじょ）に　アーパーも　あります。　駅からも　近くて、生活（せいかつ）が　とても便利（べんり）に　ありました。それに、アパートの　へやの　まどから　見える　けしきも　いいです。　だから、ひっこしを　して　本当に　良かったと思って　います。　この　手紙と　一緒に、わたしの　部屋の　窓から　見た　景色（けしき）の　写真を　送り（おくり）ます。それでは、また。　</summary></entry><entry><title type="html">单刀会_关汉卿_周郎</title><link href="http://localhost:4000/ShadowArchive/%E5%8D%95%E5%88%80%E4%BC%9A/" rel="alternate" type="text/html" title="单刀会_关汉卿_周郎" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>http://localhost:4000/ShadowArchive/%E5%8D%95%E5%88%80%E4%BC%9A</id><content type="html" xml:base="http://localhost:4000/ShadowArchive/%E5%8D%95%E5%88%80%E4%BC%9A/">&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://drive.google.com/file/d/1iLgFaaKYUNSv_DnjRHt_g1XoC9ScBRZU/preview&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;戏文&quot;&gt;戏文&lt;/h2&gt;
+
+&lt;p&gt;这一段戏文来自于关汉卿的«单刀会»:&lt;/p&gt;
+
+&lt;p&gt;　　【驻马听】水涌山叠，年少周郎何处也？不觉的灰飞烟灭，可怜黄盖转伤嗟。破曹的樯橹一时绝，鏖兵的江水犹然热，好教我情惨切！&lt;/p&gt;
+
+&lt;p&gt;　　（带云）这也不是江水，&lt;/p&gt;
+
+&lt;p&gt;　　（唱）二十年流不尽的英雄血！
+　　
+　　&lt;/p&gt;
+&lt;h2 id=&quot;感想&quot;&gt;感想&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;这一段戏文来自于元代, 元代对周郎还是正面形象, 到了明代三国演义之后就已经变成了心胸狭小之人.&lt;/li&gt;
+  &lt;li&gt;值得一提的是这段唱词来自于关羽, 关羽感伤周瑜英年早逝. 这个形象在如今是不可想象的. 三国演义之中的关羽称江东是一群鼠辈.  现代人想象关羽走在江边上感慨周郎英年早逝, 这个感觉就很违和. 可知, 从宋元带如今, 三国人物的形象早已不同了.&lt;/li&gt;
+  &lt;li&gt;单刀会的主角本是鲁肃, 而这里已经从鲁肃变成了关羽.  元代的散曲之中三国的故事已经悄悄变了.&lt;/li&gt;
+  &lt;li&gt;接上一条, 宋代«赤壁赋» 之中的”羽扇纶巾” 说的是周瑜, 到了明代清代, 羽扇纶巾就成了诸葛亮.  我看诗词之中对周瑜评价最高的还是宋代, 无尽溢美之词. “想當時、周郎年少，氣吞區宇。萬騎臨江貔虎噪，千艘列炬魚龍怒。卷長波、一鼓困曹瞞，今如許。”&lt;/li&gt;
+  &lt;li&gt;很喜欢这种昆曲的调调, 尤其是苏州话的昆曲.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;关于周瑜&quot;&gt;关于周瑜&lt;/h2&gt;
+
+&lt;p&gt;周瑜是中国历史上少数完美的人物.  大帅哥, 又精通音律, 年少有为. 但这种完美在死的早的人之中并不少见.  每当有人跟我说某某人40几岁就死了很可惜之类的, 我都会跟他们提起36岁英年早逝的周瑜. 一个人想要建功立业, 活到36岁已经足够了. 活到40已经不能算夭.&lt;/p&gt;
+
+&lt;p&gt;有能耐的人在历史上并不少, 但有才之人却又不至于功高震主实属难得.  正史记载周瑜能妥善处理和孙权之间的关系.  但如果周瑜真的活到了50岁, 还能跟孙权妥善处理关系吗?  从孙权的为人来看, 我表示怀疑.&lt;/p&gt;
+
+&lt;h2 id=&quot;其他一些对周瑜的评价&quot;&gt;其他一些对周瑜的评价&lt;/h2&gt;
+
+&lt;p&gt;曹操：「赤壁之役，值有疾病，孤烧船自退，横使周瑜虚获此名。」&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这段就很有意思. 曹操很酸, 说赤壁是自己把船烧了, 周瑜是虚名.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;劉備：「公瑾文武籌略，萬人之英，顧其器量廣大，恐不久為人臣耳。」&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这段就是我之前提到的. 刘备说周瑜不久为人臣, 我相信孙权也必然有此忧虑.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;孫權：「公瑾有王佐之資，今忽短命，孤何賴哉！」、「孤非周公瑾，不帝矣。」&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这段翻译成白话就是说, 如果没有周公瑾, 我孙权当不上皇帝.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Shadow Song</name></author><category term="诗词" /><summary type="html">戏文 这一段戏文来自于关汉卿的«单刀会»: 　　【驻马听】水涌山叠，年少周郎何处也？不觉的灰飞烟灭，可怜黄盖转伤嗟。破曹的樯橹一时绝，鏖兵的江水犹然热，好教我情惨切！ 　　（带云）这也不是江水， 　　（唱）二十年流不尽的英雄血！ 　　 　　 感想 这一段戏文来自于元代, 元代对周郎还是正面形象, 到了明代三国演义之后就已经变成了心胸狭小之人. 值得一提的是这段唱词来自于关羽, 关羽感伤周瑜英年早逝. 这个形象在如今是不可想象的. 三国演义之中的关羽称江东是一群鼠辈. 现代人想象关羽走在江边上感慨周郎英年早逝, 这个感觉就很违和. 可知, 从宋元带如今, 三国人物的形象早已不同了. 单刀会的主角本是鲁肃, 而这里已经从鲁肃变成了关羽. 元代的散曲之中三国的故事已经悄悄变了. 接上一条, 宋代«赤壁赋» 之中的”羽扇纶巾” 说的是周瑜, 到了明代清代, 羽扇纶巾就成了诸葛亮. 我看诗词之中对周瑜评价最高的还是宋代, 无尽溢美之词. “想當時、周郎年少，氣吞區宇。萬騎臨江貔虎噪，千艘列炬魚龍怒。卷長波、一鼓困曹瞞，今如許。” 很喜欢这种昆曲的调调, 尤其是苏州话的昆曲. 关于周瑜 周瑜是中国历史上少数完美的人物. 大帅哥, 又精通音律, 年少有为. 但这种完美在死的早的人之中并不少见. 每当有人跟我说某某人40几岁就死了很可惜之类的, 我都会跟他们提起36岁英年早逝的周瑜. 一个人想要建功立业, 活到36岁已经足够了. 活到40已经不能算夭. 有能耐的人在历史上并不少, 但有才之人却又不至于功高震主实属难得. 正史记载周瑜能妥善处理和孙权之间的关系. 但如果周瑜真的活到了50岁, 还能跟孙权妥善处理关系吗? 从孙权的为人来看, 我表示怀疑. 其他一些对周瑜的评价 曹操：「赤壁之役，值有疾病，孤烧船自退，横使周瑜虚获此名。」 这段就很有意思. 曹操很酸, 说赤壁是自己把船烧了, 周瑜是虚名. 劉備：「公瑾文武籌略，萬人之英，顧其器量廣大，恐不久為人臣耳。」 这段就是我之前提到的. 刘备说周瑜不久为人臣, 我相信孙权也必然有此忧虑. 孫權：「公瑾有王佐之資，今忽短命，孤何賴哉！」、「孤非周公瑾，不帝矣。」 这段翻译成白话就是说, 如果没有周公瑾, 我孙权当不上皇帝.</summary></entry></feed>

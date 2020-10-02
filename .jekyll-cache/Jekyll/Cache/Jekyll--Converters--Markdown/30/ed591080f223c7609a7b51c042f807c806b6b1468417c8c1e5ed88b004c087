@@ -1,0 +1,125 @@
+I"5<h2 id="overview">Overview</h2>
+
+<p>Today I would like to spend some time to talk about KnapSack problem, as it is a perfect problem to practice greedy algorithm and dynamic programming.</p>
+
+<p>As we know, there are two kinds of knapSack problem:</p>
+
+<ol>
+  <li>Fractional Knapsack Problem</li>
+  <li>non-Fractional Knapsack Problem</li>
+</ol>
+
+<p>The Fractional Knapsack Problem is a very easy greedy algorithm example, while the non-fractional one is a very hard problem that <strong>cannot</strong> be solved by Greedy algorithm.  Even using dynamic programming, I would say it is a hard.</p>
+
+<h3 id="fractional-knapsack-problem">Fractional Knapsack Problem</h3>
+
+<p>Fractional knapsack problem allows us to take fractional weight from the item.</p>
+
+<p><strong>其实Greedy没什么可以学的必要</strong>, 简单的greedy很容易想出来, 难的greedy也想不出来, 而且不安全. 这里仅以这一道greedy做个例子, 以便于以后忘了greedy是啥的时候回来看看.</p>
+
+<p>For example:</p>
+
+<blockquote>
+  <p>We have 3 items, A, B, C.  A{60, 10}, B{100, 20}, C{120,30} with the first number as weight, second as value.<br />
+For a knapsack of capacity 50, we need to maximize the value we can carry.</p>
+</blockquote>
+
+<p>Since in fractional we can take only a fraction of item, we can easily solve this by using greedy algorithm. 
+We use value/weight to calculate the cost for each item Put the highest cost item in the knapsack first, the second and so on.  It is a simple and straightforward apporach. The time complexity pretty much depends on the sorting, with merge sort we will get time complexity of <code class="language-plaintext highlighter-rouge">O(nlogn)</code>.</p>
+
+<p><strong>Code</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">KnapSack</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">weights</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">};</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">values</span> <span class="o">=</span> <span class="o">{</span><span class="mi">60</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">120</span><span class="o">};</span>
+        <span class="kt">int</span> <span class="n">capacity</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span>
+
+        <span class="kt">double</span> <span class="n">maxValue</span> <span class="o">=</span> <span class="n">getMaxValue</span><span class="o">(</span><span class="n">weights</span><span class="o">,</span> <span class="n">values</span><span class="o">,</span> <span class="n">capacity</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Maximum value we can obtain = "</span> <span class="o">+</span>
+                <span class="n">maxValue</span><span class="o">);</span>
+
+    <span class="o">}</span>
+
+    <span class="c1">// function to get maximum value</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getMaxValue</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">weights</span><span class="o">,</span>
+                                      <span class="kt">int</span><span class="o">[]</span> <span class="n">values</span><span class="o">,</span> <span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">double</span> <span class="n">totalValue</span> <span class="o">=</span> <span class="mi">0</span><span class="n">d</span><span class="o">;</span>
+
+        <span class="c1">// init an itemList to contain all the elements.</span>
+        <span class="nc">Item</span><span class="o">[]</span> <span class="n">itemList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Item</span><span class="o">[</span><span class="n">weights</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">weights</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+        <span class="o">{</span>
+            <span class="n">itemList</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Item</span><span class="o">(</span><span class="n">weights</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">i</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="n">selectionSort</span><span class="o">(</span><span class="n">itemList</span><span class="o">,</span> <span class="n">itemList</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">itemList</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+        <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">capacity</span> <span class="o">-</span> <span class="n">itemList</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">weight</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="o">)</span>
+            <span class="o">{</span>
+                <span class="n">totalValue</span> <span class="o">=</span> <span class="n">totalValue</span> <span class="o">+</span> <span class="n">itemList</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">value</span><span class="o">;</span>
+                <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span> <span class="o">-</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">itemList</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">weight</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">else</span>
+            <span class="o">{</span>
+                <span class="n">totalValue</span> <span class="o">=</span> <span class="n">totalValue</span> <span class="o">+</span> <span class="n">itemList</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">cost</span> <span class="o">*</span> <span class="n">capacity</span><span class="o">;</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="c1">// We need to sort this itemList by each item's cost.</span>
+        <span class="c1">// For here, I will just use selection sort, because it's easy to use.</span>
+        <span class="c1">// If we want to improve time complexity, we can always use other faster sortings.</span>
+
+        <span class="k">return</span> <span class="n">totalValue</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Item</span>
+    <span class="o">{</span>
+        <span class="kt">double</span> <span class="n">cost</span><span class="o">,</span> <span class="n">weight</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="n">index</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">Item</span><span class="o">(</span><span class="kt">int</span> <span class="n">weight</span><span class="o">,</span> <span class="kt">int</span> <span class="n">value</span><span class="o">,</span> <span class="kt">int</span> <span class="n">index</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">weight</span> <span class="o">=</span> <span class="n">weight</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">index</span> <span class="o">=</span> <span class="n">index</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">cost</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">value</span><span class="o">/</span><span class="k">this</span><span class="o">.</span><span class="na">weight</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">selectionSort</span><span class="o">(</span><span class="nc">Item</span> <span class="n">arr</span><span class="o">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">maxIndex</span><span class="o">;</span>
+
+        <span class="c1">// One by one move boundary of unsorted subarray</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+        <span class="o">{</span>
+            <span class="c1">// Find the minimum element in unsorted array</span>
+            <span class="n">maxIndex</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">].</span><span class="na">cost</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">maxIndex</span><span class="o">].</span><span class="na">cost</span><span class="o">)</span>
+                    <span class="n">maxIndex</span> <span class="o">=</span> <span class="n">j</span><span class="o">;</span>
+
+            <span class="c1">// Swap the found minimum element with the first</span>
+            <span class="c1">// element</span>
+            <span class="nc">Item</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">maxIndex</span><span class="o">];</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">maxIndex</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="non-fractional-knapsack-problem">Non-Fractional Knapsack Problem</h3>
+
+<p>Non-Fractional knapsack problem cannot be solved by greedy method, we have to use dynamic programming.</p>
+
+<p>关于 Non-Fractional 移步去看dynamic programming, 里面有写.  Greedy不重要, 可以不掌握. 更多关于Greedy可以看这个<a href="../uploads/files/Unit 3 - Discussion Board.pdf">文档</a>, 里面有更多总结和例子.</p>
+:ET

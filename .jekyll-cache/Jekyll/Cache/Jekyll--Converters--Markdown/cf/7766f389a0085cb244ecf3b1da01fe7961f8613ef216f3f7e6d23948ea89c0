@@ -1,0 +1,190 @@
+I"�)<h2 id="overview">Overview</h2>
+
+<p>This tutorial helps people to quickly getting started with Latex.  Most of the content from this article is from <a href="https://www.latex-tutorial.com/tutorials/first-document/">here</a> .</p>
+
+<h2 id="latex-sample-template">Latex Sample Template</h2>
+
+<p>Some very useful latex sample template I downloaded from Internet: <a href="https://drive.google.com/drive/folders/1yoXO_5o08kadeHUEZfI4Fb7vhDJD_Q_Q?usp=sharing">here</a></p>
+
+<h2 id="hello-world">Hello World</h2>
+
+<h3 id="very-basic">Very Basic</h3>
+
+<p>This will give a very basic Hello World page.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+  Hello World!
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<h3 id="add-a-title-page">Add a title page</h3>
+
+<p>This add a title page to the previous one.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\title</span><span class="p">{</span>My first document<span class="p">}</span>
+<span class="k">\date</span><span class="p">{</span>2013-09-01<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>John Doe<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+  <span class="k">\maketitle</span>
+  <span class="k">\newpage</span>
+
+  Hello World!
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<h3 id="add-page-number">Add page number</h3>
+
+<p>This add page numbers to the previous one.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\title</span><span class="p">{</span>My first document<span class="p">}</span>
+<span class="k">\date</span><span class="p">{</span>2013-09-01<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>John Doe<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+  <span class="k">\pagenumbering</span><span class="p">{</span>gobble<span class="p">}</span>
+  <span class="k">\maketitle</span>
+  <span class="k">\newpage</span>
+  <span class="k">\pagenumbering</span><span class="p">{</span>arabic<span class="p">}</span>
+
+  Hello World!
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<h2 id="syntax">Syntax</h2>
+
+<p>Latex is like python. Spaces do matter.<br />
+This shows what is valid and what is not.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% Valid:</span>
+
+<span class="nt">\begin{document}</span>
+  <span class="nt">\begin{environment1}</span>
+    <span class="nt">\begin{environment2}</span>
+    <span class="nt">\end{environment2}</span>
+  <span class="nt">\end{environment1}</span>
+<span class="nt">\end{document}</span>
+
+<span class="c">%Invalid:</span>
+
+<span class="nt">\begin{document}</span>
+  <span class="nt">\begin{environment1}</span>
+    <span class="nt">\begin{environment2}</span>
+  <span class="nt">\end{environment1}</span>
+    <span class="nt">\end{environment2}</span>
+<span class="nt">\end{document}</span>
+
+<span class="c">% Invalid:</span>
+
+<span class="nt">\begin{document}</span>
+  <span class="nt">\begin{environment1}</span>
+<span class="nt">\end{document}</span>
+  <span class="nt">\end{environment1}</span>
+
+<span class="c">% Also invalid:</span>
+
+<span class="nt">\begin{environment}</span>
+  <span class="nt">\begin{document}</span>
+  <span class="nt">\end{document}</span>
+<span class="nt">\end{environment}</span>
+</code></pre></div></div>
+
+<h2 id="插入代码">插入代码</h2>
+
+<p><strong>header插入</strong></p>
+
+<p>其中language=Java, 可以根据具体程序语言更改, 其他字号和颜色都是可以按喜好自有更改.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>listings<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>color<span class="p">}</span>
+
+<span class="k">\definecolor</span><span class="p">{</span>dkgreen<span class="p">}{</span>rgb<span class="p">}{</span>0,0.6,0<span class="p">}</span>
+<span class="k">\definecolor</span><span class="p">{</span>gray<span class="p">}{</span>rgb<span class="p">}{</span>0.5,0.5,0.5<span class="p">}</span>
+<span class="k">\definecolor</span><span class="p">{</span>mauve<span class="p">}{</span>rgb<span class="p">}{</span>0.58,0,0.82<span class="p">}</span>
+
+<span class="k">\lstset</span><span class="p">{</span>frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle=<span class="p">{</span><span class="k">\small\ttfamily</span><span class="p">}</span>,
+  numbers=none,
+  numberstyle=<span class="k">\tiny\color</span><span class="p">{</span>gray<span class="p">}</span>,
+  keywordstyle=<span class="k">\color</span><span class="p">{</span>blue<span class="p">}</span>,
+  commentstyle=<span class="k">\color</span><span class="p">{</span>dkgreen<span class="p">}</span>,
+  stringstyle=<span class="k">\color</span><span class="p">{</span>mauve<span class="p">}</span>,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Code block</strong></p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{lstlisting}</span>
+// Hello.java
+import javax.swing.JApplet;
+import java.awt.Graphics;
+
+public class Hello extends JApplet <span class="p">{</span>
+    public void paintComponent(Graphics g) <span class="p">{</span>
+        g.drawString("Hello, world!", 65, 95);
+    <span class="p">}</span>    
+<span class="p">}</span>
+<span class="nt">\end{lstlisting}</span>
+</code></pre></div></div>
+
+<p><strong>效果</strong></p>
+
+<p><img src="https://i.stack.imgur.com/wKKMy.png" alt="" /></p>
+
+<p><strong>来源</strong></p>
+
+<p><a href="https://stackoverflow.com/questions/3175105/inserting-code-in-this-latex-document-with-indentation">stackoverflow</a></p>
+
+<h2 id="pseudocode">Pseudocode</h2>
+
+<p><strong>Header</strong></p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>algorithm<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>algorithmic<span class="p">}</span>
+</code></pre></div></div>
+<p><strong>example</strong></p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{algorithm}</span>
+<span class="k">\caption</span><span class="p">{</span>Calculate <span class="p">$</span><span class="nb">y </span><span class="o">=</span><span class="nb"> x</span><span class="p">^</span><span class="nb">n</span><span class="p">$}</span>
+<span class="nt">\begin{algorithmic}</span>
+<span class="k">\REQUIRE</span> <span class="p">$</span><span class="nb">n </span><span class="nv">\geq</span><span class="nb"> </span><span class="m">0</span><span class="nb"> </span><span class="nv">\vee</span><span class="nb"> x </span><span class="nv">\neq</span><span class="nb"> </span><span class="m">0</span><span class="p">$</span>
+<span class="k">\ENSURE</span> <span class="p">$</span><span class="nb">y </span><span class="o">=</span><span class="nb"> x</span><span class="p">^</span><span class="nb">n</span><span class="p">$</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">y </span><span class="nv">\leftarrow</span><span class="nb"> </span><span class="m">1</span><span class="p">$</span>
+<span class="k">\IF</span><span class="p">{$</span><span class="nb">n &lt; </span><span class="m">0</span><span class="p">$}</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">X </span><span class="nv">\leftarrow</span><span class="nb"> </span><span class="m">1</span><span class="nb"> </span><span class="o">/</span><span class="nb"> x</span><span class="p">$</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">N </span><span class="nv">\leftarrow</span><span class="nb"> </span><span class="o">-</span><span class="nb">n</span><span class="p">$</span>
+<span class="k">\ELSE</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">X </span><span class="nv">\leftarrow</span><span class="nb"> x</span><span class="p">$</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">N </span><span class="nv">\leftarrow</span><span class="nb"> n</span><span class="p">$</span>
+<span class="k">\ENDIF</span>
+<span class="k">\WHILE</span><span class="p">{$</span><span class="nb">N </span><span class="nv">\neq</span><span class="nb"> </span><span class="m">0</span><span class="p">$}</span>
+<span class="k">\IF</span><span class="p">{$</span><span class="nb">N</span><span class="p">$</span> is even<span class="p">}</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">X </span><span class="nv">\leftarrow</span><span class="nb"> X </span><span class="nv">\times</span><span class="nb"> X</span><span class="p">$</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">N </span><span class="nv">\leftarrow</span><span class="nb"> N </span><span class="o">/</span><span class="nb"> </span><span class="m">2</span><span class="p">$</span>
+<span class="k">\ELSE</span><span class="na">[$N$ is odd]</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">y </span><span class="nv">\leftarrow</span><span class="nb"> y </span><span class="nv">\times</span><span class="nb"> X</span><span class="p">$</span>
+<span class="k">\STATE</span> <span class="p">$</span><span class="nb">N </span><span class="nv">\leftarrow</span><span class="nb"> N </span><span class="o">-</span><span class="nb"> </span><span class="m">1</span><span class="p">$</span>
+<span class="k">\ENDIF</span>
+<span class="k">\ENDWHILE</span>
+<span class="nt">\end{algorithmic}</span>
+<span class="nt">\end{algorithm}</span>
+</code></pre></div></div>
+
+<p><strong>Reference</strong></p>
+
+<p><a href="https://www.math-linux.com/latex-26/faq/latex-faq/article/how-to-write-algorithm-and-pseudocode-in-latex-usepackage-algorithm-usepackage-algorithmic">Math-Linux.com</a></p>
+
+:ET

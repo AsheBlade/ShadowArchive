@@ -1,0 +1,390 @@
+I"��<h2 id="overview">Overview</h2>
+
+<p>我目前认为图论这一部分表面上虽然很难, 但其实结构和算法就只有那么几种. 其实只要把一道题的脉络梳理清楚, 建立合适的模型, 所有的东西也就迎刃而解.  对这一部分要理清概念和结构为主, 刷题为次.</p>
+
+<p>Graph可以理解为高级的tree, 熟练掌握tree的相关知识会对这一部分有很大帮助.</p>
+
+<h2 id="constructor">Constructor</h2>
+
+<p>构建Graph只有两种途径:</p>
+
+<ol>
+  <li>Adjacency Matrix</li>
+  <li>Adjacency List</li>
+</ol>
+
+<p>这里使用Adjacency List, 如图:</p>
+
+<p><img src="../uploads/graph1.jpg" alt="" /></p>
+
+<p>转化成Adjacency List:</p>
+
+<p><img src="../uploads/graph5.jpg" alt="" /></p>
+
+<p>以下和 DFS/BFS 代码来自 <a href="https://www.baeldung.com/java-graphs">Baeldung</a></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Collectors</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Graph</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">adjVertices</span><span class="o">;</span>
+
+    <span class="nc">Graph</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">adjVertices</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;();</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">addVertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">adjVertices</span><span class="o">.</span><span class="na">putIfAbsent</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">),</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;());</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">removeVertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Vertex</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">);</span>
+        <span class="n">adjVertices</span><span class="o">.</span><span class="na">values</span><span class="o">().</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">v</span><span class="o">));</span>
+        <span class="n">adjVertices</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">addEdge</span><span class="o">(</span><span class="nc">String</span> <span class="n">label1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">label2</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Vertex</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label1</span><span class="o">);</span>
+        <span class="nc">Vertex</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">);</span>
+        <span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">v1</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">v2</span><span class="o">);</span>
+        <span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">v2</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">v1</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">removeEdge</span><span class="o">(</span><span class="nc">String</span> <span class="n">label1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">label2</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Vertex</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label1</span><span class="o">);</span>
+        <span class="nc">Vertex</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">);</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;</span> <span class="n">eV1</span> <span class="o">=</span> <span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">v1</span><span class="o">);</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;</span> <span class="n">eV2</span> <span class="o">=</span> <span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">v2</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">eV1</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">eV1</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">v2</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">eV2</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">eV2</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">v1</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;</span> <span class="nf">getAdjVertices</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">));</span>
+    <span class="o">}</span>
+    
+    <span class="nc">String</span> <span class="nf">printGraph</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
+        <span class="k">for</span><span class="o">(</span><span class="nc">Vertex</span> <span class="n">v</span> <span class="o">:</span> <span class="n">adjVertices</span><span class="o">.</span><span class="na">keySet</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">v</span><span class="o">);</span>
+            <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">adjVertices</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">v</span><span class="o">));</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
+        <span class="nc">Vertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
+        <span class="o">}</span>
+        
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{</span>
+            <span class="kd">final</span> <span class="kt">int</span> <span class="n">prime</span> <span class="o">=</span> <span class="mi">31</span><span class="o">;</span>
+            <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">prime</span> <span class="o">*</span> <span class="n">result</span> <span class="o">+</span> <span class="n">getOuterType</span><span class="o">().</span><span class="na">hashCode</span><span class="o">();</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">prime</span> <span class="o">*</span> <span class="n">result</span> <span class="o">+</span> <span class="o">((</span><span class="n">label</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">label</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
+        
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="k">this</span> <span class="o">==</span> <span class="n">obj</span><span class="o">)</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">obj</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">!=</span> <span class="n">obj</span><span class="o">.</span><span class="na">getClass</span><span class="o">())</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="nc">Vertex</span> <span class="n">other</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Vertex</span><span class="o">)</span> <span class="n">obj</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">getOuterType</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">other</span><span class="o">.</span><span class="na">getOuterType</span><span class="o">()))</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">label</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">other</span><span class="o">.</span><span class="na">label</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+                    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(!</span><span class="n">label</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">other</span><span class="o">.</span><span class="na">label</span><span class="o">))</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">label</span><span class="o">;</span>
+        <span class="o">}</span>
+
+
+        <span class="kd">private</span> <span class="nc">Graph</span> <span class="nf">getOuterType</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="nc">Graph</span><span class="o">.</span><span class="na">this</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="traversal">Traversal</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.LinkedHashSet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Set</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baeldung.graph.Graph.Vertex</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GraphTraversal</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">depthFirstTraversal</span><span class="o">(</span><span class="nc">Graph</span> <span class="n">graph</span><span class="o">,</span> <span class="nc">String</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">visited</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashSet</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+        <span class="k">while</span> <span class="o">(!</span><span class="n">stack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">String</span> <span class="n">vertex</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">visited</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">vertex</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">visited</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">vertex</span><span class="o">);</span>
+                <span class="k">for</span> <span class="o">(</span><span class="nc">Vertex</span> <span class="n">v</span> <span class="o">:</span> <span class="n">graph</span><span class="o">.</span><span class="na">getAdjVertices</span><span class="o">(</span><span class="n">vertex</span><span class="o">))</span> <span class="o">{</span>              
+                    <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">visited</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">breadthFirstTraversal</span><span class="o">(</span><span class="nc">Graph</span> <span class="n">graph</span><span class="o">,</span> <span class="nc">String</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">visited</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashSet</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+        <span class="n">visited</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+        <span class="k">while</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">String</span> <span class="n">vertex</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+            <span class="k">for</span> <span class="o">(</span><span class="nc">Vertex</span> <span class="n">v</span> <span class="o">:</span> <span class="n">graph</span><span class="o">.</span><span class="na">getAdjVertices</span><span class="o">(</span><span class="n">vertex</span><span class="o">))</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(!</span><span class="n">visited</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">))</span> <span class="o">{</span>
+                    <span class="n">visited</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+                    <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">visited</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="dfs">DFS</h2>
+
+<p>概念并不难理解, 就是往深了走, 深到没有路之后, 再backtrack. 如果一时理解不了可以先看一下tree 的DFS.</p>
+
+<p><strong>Algorithm:</strong></p>
+
+<ol>
+  <li>Create a recursive function that takes the index of node and a visited array.</li>
+  <li>Mark the current node as visited and print the node.</li>
+  <li>Traverse all the adjacent and unmarked nodes and call the recursive function with index of adjacent node.</li>
+</ol>
+
+<p><strong>Implementation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Java program to print DFS traversal from a given given graph </span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span> 
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span> 
+
+<span class="c1">// This class represents a directed graph using adjacency list </span>
+<span class="c1">// representation </span>
+<span class="kd">class</span> <span class="nc">Graph</span> 
+<span class="o">{</span> 
+	<span class="kd">private</span> <span class="kt">int</span> <span class="no">V</span><span class="o">;</span> <span class="c1">// No. of vertices </span>
+
+	<span class="c1">// Array of lists for Adjacency List Representation </span>
+	<span class="kd">private</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">adj</span><span class="o">[];</span> 
+
+	<span class="c1">// Constructor </span>
+	<span class="nc">Graph</span><span class="o">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="no">V</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span> 
+		<span class="n">adj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">[</span><span class="n">v</span><span class="o">];</span> 
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">v</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> 
+			<span class="n">adj</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span> 
+	<span class="o">}</span> 
+
+	<span class="c1">//Function to add an edge into the graph </span>
+	<span class="kt">void</span> <span class="nf">addEdge</span><span class="o">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">,</span> <span class="kt">int</span> <span class="n">w</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="n">adj</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="n">w</span><span class="o">);</span> <span class="c1">// Add w to v's list. </span>
+	<span class="o">}</span> 
+
+	<span class="c1">// A function used by DFS </span>
+	<span class="kt">void</span> <span class="nf">DFSUtil</span><span class="o">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">visited</span><span class="o">[])</span> 
+	<span class="o">{</span> 
+		<span class="c1">// Mark the current node as visited and print it </span>
+		<span class="n">visited</span><span class="o">[</span><span class="n">v</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> 
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">v</span><span class="o">+</span><span class="s">" "</span><span class="o">);</span> 
+
+		<span class="c1">// Recur for all the vertices adjacent to this vertex </span>
+		<span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">adj</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">listIterator</span><span class="o">();</span> 
+		<span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> 
+		<span class="o">{</span> 
+			<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">();</span> 
+			<span class="k">if</span> <span class="o">(!</span><span class="n">visited</span><span class="o">[</span><span class="n">n</span><span class="o">])</span> 
+				<span class="nc">DFSUtil</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">visited</span><span class="o">);</span> 
+		<span class="o">}</span> 
+	<span class="o">}</span> 
+
+	<span class="c1">// The function to do DFS traversal. It uses recursive DFSUtil() </span>
+	<span class="kt">void</span> <span class="nf">DFS</span><span class="o">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="c1">// Mark all the vertices as not visited(set as </span>
+		<span class="c1">// false by default in java) </span>
+		<span class="kt">boolean</span> <span class="n">visited</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="no">V</span><span class="o">];</span> 
+
+		<span class="c1">// Call the recursive helper function to print DFS traversal </span>
+		<span class="nc">DFSUtil</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">visited</span><span class="o">);</span> 
+	<span class="o">}</span> 
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[])</span> 
+	<span class="o">{</span> 
+		<span class="nc">Graph</span> <span class="n">g</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Graph</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span> 
+
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span> 
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span> 
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span> 
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span> 
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span> 
+		<span class="n">g</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span> 
+
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Following is Depth First Traversal "</span><span class="o">+</span> 
+						<span class="s">"(starting from vertex 2)"</span><span class="o">);</span> 
+
+		<span class="n">g</span><span class="o">.</span><span class="na">DFS</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span> 
+	<span class="o">}</span> 
+<span class="o">}</span> 
+<span class="c1">// This code is contributed by Aakash Hasija </span>
+</code></pre></div></div>
+
+<h2 id="hiertual">Hiertual</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * Click `Run` to execute the snippet below!
+ */</span>
+
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="cm">/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */</span>
+
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    
+    
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">string</span> <span class="o">:</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  
+
+  
+  
+  <span class="kd">private</span> <span class="kt">int</span> <span class="nf">ShortestPath</span><span class="o">(</span><span class="nc">Graph</span> <span class="n">g</span><span class="o">,</span> <span class="nc">String</span> <span class="n">root</span><span class="o">,</span> <span class="nc">String</span> <span class="nc">Des</span><span class="o">)</span>
+      <span class="o">{</span>
+        
+        <span class="c1">// BFS search. </span>
+        <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        
+        <span class="c1">// Add root to queue. </span>
+        <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    
+        <span class="k">while</span><span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()){</span>
+          
+          <span class="nc">String</span> <span class="n">vertex</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+        
+          <span class="k">for</span><span class="o">(</span><span class="nc">Vertex</span> <span class="nl">v:</span> <span class="n">graph</span><span class="o">.</span><span class="na">getAdjVertices</span><span class="o">(</span><span class="n">vertex</span><span class="o">))</span>
+          <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span> <span class="o">==</span> <span class="nc">Des</span><span class="o">){</span>
+              <span class="n">distance</span> <span class="o">++;</span>
+              <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">else</span> <span class="nf">if</span><span class="o">(!</span><span class="n">visited</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">)){</span>
+              <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+              <span class="n">distance</span> <span class="o">++;</span>
+            <span class="o">}</span>
+          <span class="o">}</span>
+        <span class="o">}</span>
+          
+        <span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
+      <span class="o">}</span>
+      
+      <span class="cm">/* numV = number of vertex  numE
+      O(numV + numE)
+      
+}
+
+
+
+public class Graph{
+  private Map&lt;Vertex, List&lt;Vertex&gt;&gt; adjVertices;
+  
+  Graph()
+  {
+    this.adjVertices = new HashMap&lt;Vertex, List&lt;Vertex&gt;&gt;();
+  }
+  
+  private void addVertex(String s)
+  {
+    adjVertices.put(new Vertex(s), new ArrayList&lt;&gt;());
+  }
+  
+ 
+
+  
+}
+  
+  
+
+    /*
+init set to contain vertex
+init a int called distance. 
+
+starting from userid1, first put userid1 into set. 
+find all vertex that 
+/* 
+
+Set{A, B, C}
+A
+dist: 1
+
+
+
+Your previous Plain Text content is preserved below:
+
+Users have connection between each other, we need to know what is the connection level when given two users.
+
+given data like this:
+    user_ids = ['A', 'B', 'C', 'D', 'E', 'F']
+    connections = [('A', 'B'),
+           ('A', 'C'),
+           ('B', 'C'),
+           ('C', 'E'),
+           ('E', 'F'),
+           ('D', 'F')]
+  - write function:
+
+  def get_connection_level(user_id1, user_id2):
+    """
+    input are two users
+    return connection level, like 1st connection or 2nd or no connection
+
+    input A, B
+    return 1
+    input A, E
+    return 2
+    input A, G
+    return 0 no conneciton
+    """
+ */</span>
+</code></pre></div></div>
+:ET

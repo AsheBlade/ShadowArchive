@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Interview 临场复习指南 – Jericho – 「さて、どこへ行こうかしらね。ネットは広大だわ」</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Overview
+
+经常会面临收到大场面试需要在两三天之内集中复习刷题的情况. 这个指南的意义就是为了应付这种情况. 即在短期之内把该刷的题目集中复习. 每一个类别挑几个典型题出来集中刷. 这样的话, 就不用在临近面试的时候再去网上搜题刷了.
+
+如果时间充沛的话, 重新刷一遍codesignal, 或者集中刷一下该公司的面试题目也是个不错的选择.
+
+这个指南会比较详尽一点, 适合在很长时间都没碰题的时候, 在对相应算法比较生疏的时候拿出来用.
+
+Syntax
+
+Syntax的总结在这个guide之中.
+
+Syntax是需要刷一下的, 不然总当场google多少是会减分.
+
+Arrays
+
+Array这一块表面上很基础, 其实Interview的时候并不基础. 现在基本不考, 如果考的话, 就都是一些奇淫技巧.
+
+这一块基本上逃不出两个特点:
+
+
+  用hashmap追求 better runtime
+  奇淫技巧. 就是只能这一道题上用的一些技巧. 或者就是利用语言优势(比如python). 总之就是各种歪魔邪道.
+
+
+其他的话, 就是一些基本的, 比如构建ArrayList, 高级ArrayList里面套个Matrix之类的. 一些语法问题了.. 这一块可以以后总结, 目前没有总结这一块面试题的打算, 因为一眼望去尽是奇淫技巧, 背这种技巧的意义,,,,, 唉.
+
+这一块的题可以不刷, 但考前需要熟悉一下ArrayList的构建相关Syntax. 不要小看syntax.
+
+Linked Lists
+
+Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于构建. 能把constructor写出来, 能写一下基本的操作, 还能掌握其特性就可以.
+
+这一块时间紧可以不刷.
+
+HashMap
+
+这块是重点. 可以说是重点之中的重点, 而且比较灵活.   HashMap是提升RunTime的必备, 这一块必须掌握.
+
+详细的总结看这个guide
+
+Trees
+ 关于Tree的问题都是递归问题.    这一块表面很难, 但是考的话, 一般只会考察一些基本的, 不会考太高级的变化. 在于理解也在于背, 理解不了就背下来. 主要看这个guide, 写的非常详细了. 
+ 
+ 
+Heaps, Stacks, Queues
+
+Graphs
+
+图论是重点. 这一块需要花时间掌握, 主要分三块:
+
+
+  对于基本概念的掌握. 这一块相比几个的话, 概念有很多. 基本的constructor构建, 还有一些变体, 有方向的edge, 和没方向的. 关于这一块可以看这个guide.
+  只掌握一个图还不行, 还要掌握各种最短路径的搜索方法. 最知名的当然是Dijkstra.
+  熟练掌握前两项之后就可以刷题了.
+
+
+Sorting
+
+Sorting 这一块其实没什么多说的. 就看这个guide, 写的非常详尽了.
+
+其实就是两个, Merge Sort 和 Quick Sort, 重点掌握merge.  记不住默写下来. 刷题也可以是背题.
+
+Recursion
+
+Dynamic Programming
+
+Dynamic是重点, 总结就一个词”刷题”. 没有其他的捷径.
+
+" />
+    <meta property="og:description" content="Overview
+
+经常会面临收到大场面试需要在两三天之内集中复习刷题的情况. 这个指南的意义就是为了应付这种情况. 即在短期之内把该刷的题目集中复习. 每一个类别挑几个典型题出来集中刷. 这样的话, 就不用在临近面试的时候再去网上搜题刷了.
+
+如果时间充沛的话, 重新刷一遍codesignal, 或者集中刷一下该公司的面试题目也是个不错的选择.
+
+这个指南会比较详尽一点, 适合在很长时间都没碰题的时候, 在对相应算法比较生疏的时候拿出来用.
+
+Syntax
+
+Syntax的总结在这个guide之中.
+
+Syntax是需要刷一下的, 不然总当场google多少是会减分.
+
+Arrays
+
+Array这一块表面上很基础, 其实Interview的时候并不基础. 现在基本不考, 如果考的话, 就都是一些奇淫技巧.
+
+这一块基本上逃不出两个特点:
+
+
+  用hashmap追求 better runtime
+  奇淫技巧. 就是只能这一道题上用的一些技巧. 或者就是利用语言优势(比如python). 总之就是各种歪魔邪道.
+
+
+其他的话, 就是一些基本的, 比如构建ArrayList, 高级ArrayList里面套个Matrix之类的. 一些语法问题了.. 这一块可以以后总结, 目前没有总结这一块面试题的打算, 因为一眼望去尽是奇淫技巧, 背这种技巧的意义,,,,, 唉.
+
+这一块的题可以不刷, 但考前需要熟悉一下ArrayList的构建相关Syntax. 不要小看syntax.
+
+Linked Lists
+
+Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于构建. 能把constructor写出来, 能写一下基本的操作, 还能掌握其特性就可以.
+
+这一块时间紧可以不刷.
+
+HashMap
+
+这块是重点. 可以说是重点之中的重点, 而且比较灵活.   HashMap是提升RunTime的必备, 这一块必须掌握.
+
+详细的总结看这个guide
+
+Trees
+ 关于Tree的问题都是递归问题.    这一块表面很难, 但是考的话, 一般只会考察一些基本的, 不会考太高级的变化. 在于理解也在于背, 理解不了就背下来. 主要看这个guide, 写的非常详细了. 
+ 
+ 
+Heaps, Stacks, Queues
+
+Graphs
+
+图论是重点. 这一块需要花时间掌握, 主要分三块:
+
+
+  对于基本概念的掌握. 这一块相比几个的话, 概念有很多. 基本的constructor构建, 还有一些变体, 有方向的edge, 和没方向的. 关于这一块可以看这个guide.
+  只掌握一个图还不行, 还要掌握各种最短路径的搜索方法. 最知名的当然是Dijkstra.
+  熟练掌握前两项之后就可以刷题了.
+
+
+Sorting
+
+Sorting 这一块其实没什么多说的. 就看这个guide, 写的非常详尽了.
+
+其实就是两个, Merge Sort 和 Quick Sort, 重点掌握merge.  记不住默写下来. 刷题也可以是背题.
+
+Recursion
+
+Dynamic Programming
+
+Dynamic是重点, 总结就一个词”刷题”. 没有其他的捷径.
+
+" />
+    
+    <meta name="author" content="Jericho" />
+
+    
+    <meta property="og:title" content="Interview 临场复习指南" />
+    <meta property="twitter:title" content="Interview 临场复习指南" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<!--adobe fonts-->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'vbt3gjx',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script> 
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/ShadowArchive/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Jericho - 「さて、どこへ行こうかしらね。ネットは広大だわ」" href="/ShadowArchive/feed.xml" />
+  <link rel="shortcut icon" href="https://github.com/easonback26/ShadowArchive/blob/master/images/favicon.png?raw=true">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+
+  <!-- Here for the Light Gallery-->
+  
+
+  
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/ShadowArchive/" class="site-avatar"><img src="https://github.com/easonback26/ShadowArchive/blob/master/images/Black_Trinity_Logo.png?raw=true" /></a>
+       
+      <h1 class="site-name"><a href="/ShadowArchive/">Jericho</a></h1>
+      <p class="site-description">「さて、どこへ行こうかしらね。ネットは広大だわ」</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/ShadowArchive/">ホーム</a>
+      
+      
+      
+      <a href="/ShadowArchive/about">関連</a>
+      
+      
+      
+      <a href="/ShadowArchive/shortcuts">常備</a>
+      
+      
+      
+      <a href="/ShadowArchive/archive">归档</a>
+      
+      
+      
+      <a href="/ShadowArchive/photo">写真</a>
+      
+      
+      
+      <a href="/ShadowArchive/tags">付箋</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:contactshadowsong@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/easonback26" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2020 Shadow Walker</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+      <aside class="toc">
+        <ul>
+  <li><a href="#">Interview 临场复习指南</a></li>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#syntax">Syntax</a></li>
+  <li><a href="#arrays">Arrays</a></li>
+  <li><a href="#linked-lists">Linked Lists</a></li>
+  <li><a href="#hashmap">HashMap</a></li>
+  <li><a href="#trees">Trees</a></li>
+  <li><a href="#heaps-stacks-queues">Heaps, Stacks, Queues</a></li>
+  <li><a href="#graphs">Graphs</a></li>
+  <li><a href="#sorting">Sorting</a></li>
+  <li><a href="#recursion">Recursion</a></li>
+  <li><a href="#dynamic-programming">Dynamic Programming</a></li>
+</ul>
+      </aside>
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>Interview 临场复习指南</h1>
+
+  <div clsss="meta">
+    <span class="author">
+      Shadow Walker
+    </span>
+
+    <span class="date">
+      2020-08-25
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/ShadowArchive/tags#Interview">
+          Interview
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/ShadowArchive/tags#Algorithm">
+          Algorithm
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h1 id="overview">Overview</h1>
+
+<p>经常会面临收到大场面试需要在两三天之内集中复习刷题的情况. 这个指南的意义就是为了应付这种情况. 即在短期之内把该刷的题目集中复习. 每一个类别挑几个典型题出来集中刷. 这样的话, 就不用在临近面试的时候再去网上搜题刷了.</p>
+
+<p>如果时间充沛的话, 重新刷一遍codesignal, 或者集中刷一下该公司的面试题目也是个不错的选择.</p>
+
+<p>这个指南会比较详尽一点, 适合在很长时间都没碰题的时候, 在对相应算法比较生疏的时候拿出来用.</p>
+
+<h1 id="syntax">Syntax</h1>
+
+<p>Syntax的总结在这个<a href="https://easonback26.github.io/ShadowArchive/Java_Syntax/">guide</a>之中.</p>
+
+<p>Syntax是需要刷一下的, 不然总当场google多少是会减分.</p>
+
+<h1 id="arrays">Arrays</h1>
+
+<p>Array这一块表面上很基础, 其实Interview的时候并不基础. 现在基本不考, 如果考的话, 就都是一些奇淫技巧.</p>
+
+<p>这一块基本上逃不出<strong>两个特点</strong>:</p>
+
+<ol>
+  <li>用hashmap追求 better runtime</li>
+  <li>奇淫技巧. 就是只能这一道题上用的一些技巧. 或者就是利用语言优势(比如python). 总之就是各种歪魔邪道.</li>
+</ol>
+
+<p>其他的话, 就是一些基本的, 比如构建ArrayList, 高级ArrayList里面套个Matrix之类的. 一些语法问题了.. 这一块可以以后总结, 目前没有总结这一块面试题的打算, 因为一眼望去尽是奇淫技巧, 背这种技巧的意义,,,,, 唉.</p>
+
+<p><strong>这一块的题可以不刷, 但考前需要熟悉一下ArrayList的构建相关Syntax. 不要小看syntax.</strong></p>
+
+<h1 id="linked-lists">Linked Lists</h1>
+
+<p>Linked List这一块没什么技巧, 考的不多, 如果考的话, 主要在于构建. 能把constructor写出来, 能写一下基本的操作, 还能掌握其特性就可以.</p>
+
+<p><strong>这一块时间紧可以不刷.</strong></p>
+
+<h1 id="hashmap">HashMap</h1>
+
+<p>这块是重点. 可以说是重点之中的重点, 而且比较灵活.   HashMap是提升RunTime的必备, 这一块必须掌握.</p>
+
+<p>详细的总结看这个<a href="https://easonback26.github.io/ShadowArchive/HashMap/">guide</a></p>
+
+<h1 id="trees">Trees</h1>
+<p> <strong>关于Tree的问题都是递归问题.</strong>    这一块表面很难, 但是考的话, 一般只会考察一些基本的, 不会考太高级的变化. 在于理解也在于背, 理解不了就背下来. 主要看这个<a href="https://easonback26.github.io/ShadowArchive/Tree/">guide</a>, 写的非常详细了. 
+ 
+ </p>
+<h1 id="heaps-stacks-queues">Heaps, Stacks, Queues</h1>
+
+<h1 id="graphs">Graphs</h1>
+
+<p><strong>图论是重点.</strong> 这一块需要花时间掌握, 主要分三块:</p>
+
+<ol>
+  <li>对于基本概念的掌握. 这一块相比几个的话, 概念有很多. 基本的constructor构建, 还有一些变体, 有方向的edge, 和没方向的. 关于这一块可以看这个<a href="https://easonback26.github.io/ShadowArchive/Graph/">guide</a>.</li>
+  <li>只掌握一个图还不行, 还要掌握各种最短路径的搜索方法. 最知名的当然是Dijkstra.</li>
+  <li>熟练掌握前两项之后就可以刷题了.</li>
+</ol>
+
+<h1 id="sorting">Sorting</h1>
+
+<p>Sorting 这一块其实没什么多说的. 就看这个<a href="https://easonback26.github.io/ShadowArchive/Sorting/">guide</a>, 写的非常详尽了.</p>
+
+<p>其实就是两个, Merge Sort 和 Quick Sort, 重点掌握merge.  记不住默写下来. 刷题也可以是背题.</p>
+
+<h1 id="recursion">Recursion</h1>
+
+<h1 id="dynamic-programming">Dynamic Programming</h1>
+
+<p><strong>Dynamic是重点, 总结就一个词”刷题”.</strong> 没有其他的捷径.</p>
+
+
+  </div>
+
+
+  <!-- 现在不用disqus评论了, 想用可以加上 评论区只有最上面comment true的时候才能用-->
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "ecd5f9ca822b01f65e22",
+          clientSecret: "954fc161c6daece1d5d57bfc82d593a045d18551",
+          repo: "ShadowArchive",
+          owner: "easonback26",
+          admin: ["easonback26"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Interview 临场复习指南",
+          language: "ja",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/ShadowArchive/%E6%9B%B9%E6%93%8D%E8%AF%97/">
+        ← 前に
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="http://localhost:4000/ShadowArchive/Java_Syntax/">
+        次に →
+      </a>
+    </span>
+  
+</div>
+
+<style>
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.333%;
+	height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+          el.innerHTML = theInnerHTML;
+        }
+      }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+
+
+
+
+
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:contactshadowsong@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/easonback26" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2020 Shadow Walker</p>
+
+    </footer>
+
+
+</html>

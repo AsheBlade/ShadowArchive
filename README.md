@@ -42,27 +42,7 @@ LOFFER的默认状态是teal，要更换主题颜色，只要打开文件` _sass
 
 LOFFER只是容器，你的posts才是博客的核心。
 
-## 支持的功能
 
-使用Markdown文档在_post文件夹中发布博文，现有功能包括显示作者、置顶博文、添加目录。
-
-博文YAML举例：
-
-    ---
-    layout: post
-    title: Markdown语法简介
-    date: 2013-07-16
-    Author: Shengbin 
-    tags: [sample, markdown]
-    comments: true
-    toc: true
-    ---
-
-按照标签和日期查看博文归档。请查看/tags 和/archive 页面。
-
-链接博客主的社交媒体。请在_config.yml中填写。
-
-支持Disqus和Gitalk两种评论区。请在_config.yml中设置。
 
 
 ## 致谢
@@ -73,12 +53,4 @@ LOFFER只是容器，你的posts才是博客的核心。
 
 
 
-## 帮助这个项目
 
-介绍更多人来使用它，摆脱lofter自由飞翔！
-
-欢迎Issues和Pull Requests。
-
-给我点一个☆吧！
-
-![img](https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/givemefive.png)
