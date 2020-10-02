@@ -31,11 +31,7 @@ I know it will take a well to get used to it. But it's better for continous work
 
 // The stuff afer post_url is basically the md file name. 
 
-```
-{% raw %}
-[Java Syntax]({% post_url 2010-08-25-Java_Syntax %})
-{% endraw %}
-```
+
 
 c
 
