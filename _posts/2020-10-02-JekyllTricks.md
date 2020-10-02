@@ -36,7 +36,9 @@ I know it will take a well to get used to it. But it's better for continous work
 {% endraw %}
 ```
 
-{% post_url 2020-08-25-Java_Syntax %}
+
+
+{% post_url 2020-08-25-Java_Syntax.md %}
 
 ## Raw liquid code
 
