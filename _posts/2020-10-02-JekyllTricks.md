@@ -38,4 +38,4 @@ I know it will take a well to get used to it. But it's better for continous work
 ```
 d
 
-{% post_url ShadowArchive/2020-01-25-Icebane.md %}
+{% post_url /ShadowArchive/2020-01-25-Icebane.md %}
