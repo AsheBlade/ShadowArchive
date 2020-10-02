@@ -37,3 +37,4 @@ I know it will take a well to get used to it. But it's better for continous work
 {% endraw %}
 ```
 
+{% post_url 2020-01-25-Icebane %}
