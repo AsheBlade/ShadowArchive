@@ -16,12 +16,14 @@ Since I always have to copy and paste this, I just put it here:
 
 
 ```
+---
 layout: post
 title: Jekyll Tricks
 date: 2020-10-02
 author: Shadow Walker
 tags: [Tech, Shortcuts, Jekyll]
 comments: true
+---
 ```
 
 ## Internal Links
