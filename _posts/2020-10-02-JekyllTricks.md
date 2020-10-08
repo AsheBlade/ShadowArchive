@@ -11,7 +11,7 @@ I didn't start to realize this as a problem, until recently when I think about c
 
 In order to make my code extensible and viable for future use, I should comply with the Jekyll rules and stop freely do whatever I wanted to. 
 
-## FrontHead
+## Front Matters
 Since I always have to copy and paste this, I just put it here: 
 
 
@@ -38,5 +38,23 @@ I know it will take a while to get used to it. But it's better for continous wor
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
 {% endraw %}
 ```
-
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
+
+## raw Liquid comment
+
+```
+{% raw %}
+{% raw %}3
+{% endraw %}
+```
+
+## English
+
+Should use English whenever possible. A blog is not a blog if people have trouble reading it. Should only use Chinese when it's better for understanding. 
+
+## More resource about liquid formats
+
+It's always helpful to learn more about liquid formats from [jekyll official site](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts). 
+
+
+

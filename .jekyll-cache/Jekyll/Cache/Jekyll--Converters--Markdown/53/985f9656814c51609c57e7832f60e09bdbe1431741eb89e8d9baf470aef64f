@@ -1,0 +1,40 @@
+I"<p>I didn’t start to realize this as a problem, until recently when I think about changing the domain name or use a custom server to hold my Github Pages and this problem comes out.</p>
+
+<p>In order to make my code extensible and viable for future use, I should comply with the Jekyll rules and stop freely do whatever I wanted to.</p>
+
+<h2 id="front-matters">Front Matters</h2>
+<p>Since I always have to copy and paste this, I just put it here:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: Jekyll Tricks
+date: 2020-10-02
+author: Shadow Walker
+tags: [Tech, Shortcuts, Jekyll]
+comments: true
+---
+</code></pre></div></div>
+
+<h2 id="internal-links">Internal Links</h2>
+
+<p>It’s very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links.  To use internal links, you have to use:</p>
+
+<p>I know it will take a while to get used to it. But it’s better for continous work.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The stuff afer post_url is basically the md file name. 
+
+[Name of Link]({% post_url 2020-08-25-Java_Syntax %})
+
+</code></pre></div></div>
+<p><a href="/ShadowArchive/Java_Syntax/">Name of Link</a></p>
+
+<h2 id="raw-liquid-comment">raw Liquid comment</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% raw %}
+
+</code></pre></div></div>
+
+<p>cdcdfd</p>
+
+:ET
