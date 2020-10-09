@@ -18,10 +18,11 @@ Since I always have to copy and paste this, I just put it here:
 ```
 ---
 layout: post
-title: Jekyll Tricks
-date: 2020-10-02
+title: 
+date: 2020
 author: Shadow Walker
-tags: [Tech, Shortcuts, Jekyll]
+tags: []
+toc: true
 comments: true
 ---
 ```
@@ -44,7 +45,7 @@ I know it will take a while to get used to it. But it's better for continous wor
 
 ```
 {% raw %}
-{% raw %}3
+{% raw %}
 {% endraw %}
 ```
 
