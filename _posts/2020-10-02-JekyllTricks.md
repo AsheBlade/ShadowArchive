@@ -27,6 +27,12 @@ comments: true
 ---
 ```
 
+## 题目格式
+
+题目格式是, 日期加题目.md, 例: `2020-10-02-JekyllTricks.md`
+
+注意, 日期后面才是题目, 不允许有两个完全相同的题目, 比如2020-10-02-JekyllTricks.md 和 2020-12-31-JekyllTricks.md 虽然日期不同, 题目完全一样, 仍然视为是相同题目. 
+
 ## Internal Links
 
 It's very important to use internal links, so we can use our website whenever we want. Also, the Gitee mirror page would benefit from internal links.  To use internal links, you have to use: 
