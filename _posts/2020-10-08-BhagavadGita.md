@@ -184,11 +184,23 @@ Bhagavad-Gita 薄伽梵歌 之中的Kurukshetra 之战        — 写于公元�
 
 ### 三位一体核爆
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fc/Trinity_Detonation_T%26B.jpg)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Trinity_shot_color.jpg/800px-Trinity_shot_color.jpg)
+
+### Trinnity Site
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Trinity_Site_Obelisk_National_Historic_Landmark.jpg/1024px-Trinity_Site_Obelisk_National_Historic_Landmark.jpg)
+
+### 格罗夫斯将军和奥本海默在几周之后查看核试验塔的基座
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/61/Trinity_Test_-_Oppenheimer_and_Groves_at_Ground_Zero_001.jpg)
 
 ### 奥本海默证件照
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/73/J._R._Oppenheimer_Los_Alamos_ID.jpg)
+
+### 歐本海默拿著標誌性的香煙，攝於1946年
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Robert_Oppenheimer_1946.jpg/800px-Robert_Oppenheimer_1946.jpg)
 
 ### 奥本海默和爱因斯坦
 
@@ -206,3 +218,5 @@ Bhagavad-Gita 薄伽梵歌 之中的Kurukshetra 之战        — 写于公元�
 [薄伽梵歌講義和中文译本](http://www.earth-university.url.tw/new-site/images/Lecture-20.pdf)
 
 [Pinterest Shiva 相册](https://www.pinterest.com/david26apply/shiva/)
+
+['Now I am become Death, the destroyer of worlds'. The story of Oppenheimer's infamous quote](https://www.wired.co.uk/article/manhattan-project-robert-oppenheimer)
