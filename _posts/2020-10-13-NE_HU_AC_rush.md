@@ -10,6 +10,8 @@ driveId: 1U33S3fqH78Rn7gdmn32AN5nl-8FnynmJ/preview
 
 ## 【人人都玩弓箭手】魔兽争霸大帝解说 Check vs HawK LR
 
+这一场是目前职业选手中大热的爆AC打人族. 这一场打的比较流畅, 比较典型, 适合拿来作为范例. 
+
 {% include googleDrivePlayer.html id=page.driveId %}
 
 
