@@ -43,9 +43,11 @@ I know it will take a while to get used to it. But it's better for continous wor
 // The stuff afer post_url is basically the md file name. 
 {% raw %}
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
+[]({% post_url  %})
 {% endraw %}
 ```
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
+
 
 ## raw Liquid comment
 
@@ -65,3 +67,4 @@ It's always helpful to learn more about liquid formats from [jekyll official sit
 
 
 
+ d
