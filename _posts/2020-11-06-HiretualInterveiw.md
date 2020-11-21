@@ -23,6 +23,8 @@ hiretual的两轮面试都是图论题目, 也正是经过了hiretual的面试, 
 
 [Link to a post]({% link _posts/2020-11-06-UphillDownhill.md %})
 
+[xyx]({{site.baseurl}}{% link 2020-11-06-UphillDownhill.md %})
+
 这是一道比较有意义的题目, 考察也比较广泛. 是有一定复杂度的graph加上Dijkstra. 
 
 ## 第二轮
