@@ -234,6 +234,13 @@ Integer.MAX_VALUE
 Integer.MIN_VALUE
 ```
 
+### Compare MAX/MIN
+It's a common technique used in DP. 
+```java
+int a = Integer.MIN_VALUE;
+int b = input value 
+int output = Math.max(a, b);
+```
 ## Length
 
 ### String
