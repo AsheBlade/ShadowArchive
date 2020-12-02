@@ -12,6 +12,12 @@ toc: true
 
 总结一下 Java的常用Syntax, 方便查阅和背. 
 
+## lenth/size 用法
+
+- String 用 length()
+- Array 用  length (无括号)
+- 其他都用 size()
+
 ## Conversion
 
 ### String to Int
@@ -91,6 +97,7 @@ int[] array = list.stream().mapToInt(i->i).toArray();
 ## Array
 
 **init**
+
 ```java
 int[] arr = new int[n]; 
 int[] arr = {1,2,3};
@@ -120,30 +127,164 @@ for (int i = 0; i < mat.length; i++) 
 }
 ```
 
-
 **ArrayList**
+
 ```java
 List<Integer> intArray = new ArrayList<Integer>();
+```
+
+**Print**
+
+```java
+import java.util.*;
+int[] i = new int[1];
+System.out.println(Arrays.toString(i));
+```
+
+**fill**
+
+fill an array with certain integer
+
+```java
+int[] list = new int[100]
+Arrays.fill(list, 1);
+```
+
+## ArrayList
+
+**Init**
+
+```java
+ArrayList<String> list = new ArrayList<>();
+```
+
+**Conver to Array**
+
+这个工作中不常见, 刷题却经常需要用到. 因为一些题目输出的array不知道需要多大, 这个时候就需要用到arraylist, 然后最后输出转换成Array. 
 
 ```
+public static void main(String[] args) 
+{
+    ArrayList<String> list = new ArrayList<>(2);
+    list.add("A");
+     
+    //Convert to string array
+    String[] array = list.toArray(new String[list.size()]);
+}
+```
+
+
+## Queue
+
+First in, First out. 
+
+### Init
+
+```java
+Queue<String> queue = new LinkedList<>();
+```
+### Method
+
+Insert: `add(e)`  
+Remove: `poll()`  remove head  
+return: `peek()`  same as `poll()` but does not remove. 
+
+## HashMap
+
+### Init
+
+```java
+Map<Integer, Integer> map = new HashMap<>();
+```
+
+### Clone
+
+```java
+Map<Integer, Integer> cloneMap = new HashMap<>(oldMap);
+```
+
+### Contain
+
+```java
+map.containsKey(Object key)
+map.containsValue(Object value)
+```
+
+### Put
+
+```java
+map.put("vishal", 10);   //for String key, Integer value. 
+```
+
+### get/remove
+
+return/remove value based on key. 
+
+```java
+map.get(Object key)
+map.remove(Object key)
+```
+
+### traverse
+
+Both key and value
+
+```java
+for (Map.Entry mapElement : hm.entrySet()) { 
+    String key = (String)mapElement.getKey(); 
+  
+    // Add some bonus marks 
+    // to all the students and print it 
+    int value = ((int)mapElement.getValue() + 10); 
+  
+    System.out.println(key + " : " + value); 
+} 
+```
+
+Key: `hm.keySet()`  
+Value: `hm.values()`
+
+### Find max
+
+```java
+int max = Collections.max(set);
+int maxKey = Collections.max(map.keySet());
+int maxValue Collections.max(map.values());
+```
+
+
 ## Initilization
 
+### Queue
 
-
-
-
+```java
+Queue<String> queue = new LinkedList<>();
+```
 
 ### HashMap
+
 ```java
 Map<Integer, Integer> map = new HashMap<>();
 ```
 ### Set
+
 ```java
-Set<String> hash_Set = new HashSet<String>(); 
+Set<String> hash_Set = new HashSet<>(); 
+```
+### Queue
+
+```java
+Queue<String> queue = new LinkedList<>();
 ```
 
+### Stack
+
+```java
+Stack<String> stack = new Stack<>();
+```
 
 ### StringBuilder
+
 ```java
 StringBuilder sb = new StringBuilder();
 
@@ -262,7 +403,7 @@ for (int num: list)
 }
 ```
 
-### Find max in Array
+### Find average in Array
 
 ```java
 double[] arr = {19, 12.89, 16.5, 200, 13.7};
@@ -283,4 +424,28 @@ double average = total / arr.length;
  * after decimal point.
  */
 System.out.format("The average is: %.3f", average);
+```
+
+## Inner class
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        A a = new A(
+        System.out.println(a.getValue());
+    }
+
+    private static class A{
+        int value;
+        public A(int value){
+            this.value = value;
+        }
+        public void setValue(int value){
+            this.value = value;
+        }
+        public int getValue(){
+            return value;
+        }
+    }
+}
 ```
