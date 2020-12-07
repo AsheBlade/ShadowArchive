@@ -54,6 +54,24 @@ Address: Japan, 〒171-0014 Tokyo, Toshima City, Ikebukuro, 2 Chome−9−1 丸�
 
 上次去没能一睹真容. 遗憾. 
 
+## 仙台
+
+### 蔵王きつね村
+
+狐狸公园.  挺便宜的, 才一千日元. 里面都是狐狸, 可以抱狐狸, 还能随意投喂. 缺点是距离仙台和福冈都太远了. 需要开车或者搭车才能去, 时间紧的话, 其实不会去的, 我对狐狸确实感兴趣, 但大体上对动物的兴趣还是少的. 
+
+[Rachel and Jun's Visit](https://www.youtube.com/watch?v=92wtDKCtOiU&ab_channel=RachelandJun)
+
+[官网](http://zao-fox-village.com/en)
+
+Address & Contacts: 
+
+> Zao Fox Village (Miyagi Zao Kitsune Mura)
+> Address:
+> 11-3 Kawarago, Fukuokayatsumiya
+> Shiroishi-shi, Miyagi-ken 989-0733 Japan
+> Phone:
+> 0224-24-8812
 
 ## 巴黎
 
