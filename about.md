@@ -4,7 +4,9 @@ title: 関連
 permalink: /about/
 ---
 
-kodokuniayume akuonasatsu
+> 孤独に歩め、悪を成さず、  
+> 求めるところは少なく  
+> 林の中の像のように
 
 
 这个网站存在两个地点, [国内区Gitee](https://shadowfrost.gitee.io/shadowarchive/gitTalk/) 和 [国外区Github](https://easonback26.github.io/ShadowArchive/). 如果你无法查看这个网站之中的任何图片和视频, 那么多半是因为你需要科学上网. 
@@ -18,12 +20,17 @@ kodokuniayume akuonasatsu
 
 如果可以访问Goolge之后仍然无法看到本站之中的某些资源, 请联系我.  我的邮箱在左下角. 
 
+---
+
 [Jericho的来源](https://en.wikipedia.org/wiki/Jericho). 
 
 信仰是stoic. 
 
-政治观点以美国标准来看是偏右. 以中国来看偏左. 
+政治观点以美国标准来看是偏右. 以中国来看偏左.  共和党人, 反川普, 坚信共和党方能救美国. 
 
 Backend Engineer, 主攻算法和后端框架. 最常用的Java 和 SpringBoot. 
 
 关于这个站点的代码. 致敬[原作者](https://himring.top/welcome-to-endworld/), 这个站点来自于根据此站点的fork. 
+
+[What is Shadow Song?](https://www.youtube.com/watch?v=zzoh43oPUVE&ab_channel=YukaKitamura-Topic)
+
