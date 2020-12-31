@@ -14,12 +14,25 @@ In order to make my code extensible and viable for future use, I should comply w
 ## Front Matters
 Since I always have to copy and paste this, I just put it here: 
 
+### Simple One
 
 ```
 ---
 layout: post
 title: 
-date: 2020
+date: 2021
+author: 
+tags: []
+---
+```
+
+### With toc & comments
+
+```
+---
+layout: post
+title: 
+date: 2021
 author: Shadow Walker
 tags: []
 toc: true
