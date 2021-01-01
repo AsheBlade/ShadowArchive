@@ -16,6 +16,12 @@ This page is about how to embed video and audios into Jekyll.
 Everything on this page is from nathancy's work from [here](https://github.com/nathancy/jekyll-embed-video#embed-google-drive)  
 Please note that we should try to avoid using local or Youtube files as much as possible. Do use Google Drive!
 
+## 2020-12-31 最新更新
+
+其实这个办法基本没用. 其实可以直接embed code, 用不着这一套. 但无论是直接embed code, 还是用这个都存在移动端格式的问题. 
+
+目前在移动端这个东西并不好用. 格式会发生视频太长, 右端跳出屏幕边缘的问题. 虽然不影响使用, 终归是不好看的. 暂时没时间, 也没兴趣去解决这个问题. 
+
 ## FrontHead
 
 ```
