@@ -13,6 +13,10 @@ toc: true
 
 之所以想记录一下这个技巧是觉得其还是有一定的适用性, 也许以后能够用到. 
 
+**方法总结**
+
+一般游标卡尺类题目都是具有特殊性的. 一般都是两个指针, 从low和high, 头尾开始慢慢往里面卡. 这种题目通常都是array, 一般都具有一定特殊性. 
+
 ## Longest Substring Without Repeating Characters LC_03
 
 就是这道题其实当时baanyan第一天还跟老师怼上了. 因为我当时说我用hashmap能解而且算力上并不慢. 现在想想应该是我错了. 我今天想了半天也没想到hashmap怎么能做出和这个标准答案算力一样的解法. **所以说, 做人做学问还是应该虚心一点, 尾巴收起来**. 我当时之所以瞧不上老师的解法是因为我当时(其实现在也存在)打心底瞧不起这种只适用于一道或者几道题的奇淫技巧, 觉得这种东西花拳绣腿, 学的比较鸡肋. 
@@ -130,6 +134,44 @@ class Solution {
             }
         }
         return maxArea;
+    }
+}
+```
+
+## Two Sum II - Input array is sorted LC_167
+
+**Problem Description**
+
+[LC167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+
+**Algorithm**
+
+又是一道很巧妙的游标卡尺题.  array是sorted. 难点是要想明白这个卡尺不会漏掉解. 其实这也算不上什么难点, 游标卡尺就是这样, 主要在于背, 见过了, 记下来, 就能写出来, 没见过, 没印象, 想死也写不出来. 
+
+**Code**
+
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        
+        int low = 0; 
+        int high = numbers.length-1;
+        
+        while (high > low){
+            if(numbers[low] + numbers[high]==target){
+                return new int[] {low+1, high+1};
+            }
+            else if(numbers[low] + numbers[high] > target){
+                high --;
+                    
+            }
+            else{
+                low ++;
+            }
+        }
+        
+        return new int[] {0,0};
+        
     }
 }
 ```

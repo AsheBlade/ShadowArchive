@@ -39,6 +39,30 @@ toc: true
 comments: true
 ---
 ```
+## Templates
+
+### 庖厨
+
+```
+---
+layout: post
+title: 
+date: 2021-
+author: Shadow song
+tags: [庖厨]
+comments: true
+toc: true
+---
+## 前面
+## 材料采购
+## 材料准备
+## 步骤
+## 调味
+## 注意
+## 点评
+## 教学视频
+## 成品
+```
 
 ## 题目格式
 
@@ -62,6 +86,19 @@ I know it will take a while to get used to it. But it's better for continous wor
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
 
 
+When link to files, **Jekyll does not allow any file not directly under assets folder.**
+
+For example: 
+
+only this is allowed: 
+
+- /assets/c.pdf
+
+These are not allowed:
+
+- /assets/photo/c.pdf
+- /photo/c.pdf
+
 ## raw Liquid comment
 
 ```
@@ -79,5 +116,3 @@ Should use English whenever possible. A blog is not a blog if people have troubl
 It's always helpful to learn more about liquid formats from [jekyll official site](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts). 
 
 
-
- d
