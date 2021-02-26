@@ -43,9 +43,16 @@ Address: Japan, 〒171-0014 Tokyo, Toshima City, Ikebukuro, 2 Chome−9−1 丸�
 
 想吃很贵的铁板烧. 具体哪家店还没选好. 
 
-### 怀石料理
+## 龍吟
 
-一样没有选好店, 怀石料理好像京都更好一点? 
+大名鼎鼎的[龍吟](http://www.nihonryori-ryugin.com/), 近几年东京的怀石料理网红店餐厅. 
+
+Address: 7F Tokyo Midtown Hibiya, 1-1-2 Yurakucho,
+Chiyoda-Ku, Tokyo 100-0006
+
+〒100-0006
+東京都千代田区有楽町1-1-2
+東京ミッドタウン日比谷7階
 
 
 ## 关西

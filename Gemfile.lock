@@ -64,6 +64,7 @@ GEM
 
 PLATFORMS
   ruby
+  universal-darwin-19
 
 DEPENDENCIES
   jekyll (~> 4.1)
@@ -72,4 +73,4 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4)
 
 BUNDLED WITH
-   2.1.4
+   2.2.2
