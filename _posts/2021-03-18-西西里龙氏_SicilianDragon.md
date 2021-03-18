@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: 西西里龙氏开局笔记 Sicilian Dragon Defense
