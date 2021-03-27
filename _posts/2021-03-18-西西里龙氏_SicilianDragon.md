@@ -4,6 +4,7 @@ title: 西西里龙氏开局笔记 Sicilian Dragon Defense
 date: 2021-03-18
 author: Shadow Walker
 tags: [Chess]
+toc: true
 ---
 
 最近在钻研西西里龙氏, 接下来打算把这个作为黑棋的主要开局. 
@@ -30,6 +31,19 @@ tags: [Chess]
 黑方左边是一个堡垒bishop, 右边也是一个灵活的攻防兼备体系. 这之后就是中盘博弈了. 
 
 ![](https://lh3.googleusercontent.com/pw/ACtC-3e45P-qyW67VxO7iBaR3PreGWWUQhLlW_QdTUainyh-7hsm51TkIVMkh4Rt1CLY1Vc3rsJdFrspdQMqV7H6ZXG8eXCftnHZMOmVoLdJOb8NxMYJA3g8e6mWZZ-sOPLkVZ2ozo809LX7x9_uBqap3CfG=w557-h555-no?authuser=0)
+
+## 中盘攻杀
+
+很多时候走完开局定式之后没有一个清晰的目标接下来要干什么. 下图出了一个简单而清晰的对攻方式. 
+其实中盘攻杀的原则很简单, 分两种情况. 
+
+1. 如果是对攻, 很明显了. 用己方侧翼的兵去换对方王翼兵, 打开对方王门, 造成攻杀. 
+2. 如果不是对攻. 那就比较不紧张. 还是走兵, 注意防御, 寻找对方破绽. 
+
+下图出自这个[视频](https://www.youtube.com/watch?v=nh_IbzJdeFY&t=259s&ab_channel=ChongJinCi), 视频里讲的也很好, 已经存了, 传google drive. 
+
+
+![](https://lh3.googleusercontent.com/pw/ACtC-3d2LsNNYFC6QeDGdPQHcr-n6rs9eC_vAquEjCeVnbII9JC7VqMWMtWfkcaR4GqG-0bRWi3fFL8SRHQKWceFZ1d7vgOcJvMT_w8pzhtE5eX9bRrBoD9MKpdURQ7TPLOZL0nhrI9DDha8i7i80p9AyDxI=w503-h508-no?authuser=0)
 
 ## 教学视频
 
