@@ -45,7 +45,7 @@ toc: true
 
 
 ## 教学视频
-[How to make an authentic canard a l'orange](https://www.youtube.com/watch?v=E_FHBDN_UPo&ab_channel=FrenchCookingAcademy) 
+[How to make an authentic canard a l'orange(Google Drive已存)](https://www.youtube.com/watch?v=E_FHBDN_UPo&ab_channel=FrenchCookingAcademy) 
 
 ## 成品
 
