@@ -11,6 +11,14 @@ I didn't start to realize this as a problem, until recently when I think about c
 
 In order to make my code extensible and viable for future use, I should comply with the Jekyll rules and stop freely do whatever I wanted to. 
 
+## Jekyll Commands
+
+### serve
+
+```
+bundle exec jekyll serve
+```
+
 ## Front Matters
 Since I always have to copy and paste this, I just put it here: 
 
