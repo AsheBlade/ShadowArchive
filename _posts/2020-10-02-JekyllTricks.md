@@ -5,6 +5,7 @@ date: 2020-10-02
 author: Shadow Walker
 tags: [Tech, Shortcuts, Jekyll]
 comments: true
+toc: true
 ---
 
 I didn't start to realize this as a problem, until recently when I think about changing the domain name or use a custom server to hold my Github Pages and this problem comes out. 
@@ -48,6 +49,20 @@ comments: true
 ---
 ```
 ## Templates
+
+### WR
+
+```
+2021-Sprint0WR
+---
+layout: post
+title: OPST Sprint 6 WR
+date: 2021-
+author: Shadow Walker
+tags: [WR, Sprint]
+comments: true
+---
+```
 
 ### 庖厨
 
