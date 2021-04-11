@@ -33,11 +33,23 @@ toc: true
 ## 东京
 
 
-### 池袋のホテヘル風俗【MARIA女学館】
-
-[Link](https://ikebukuro-maria.com/)
+### [池袋のホテヘル風俗【MARIA女学館】](https://ikebukuro-maria.com/)
 
 Address: Japan, 〒171-0014 Tokyo, Toshima City, Ikebukuro, 2 Chome−9−1 丸富ビル2F
+
+池袋的店, 不是必去, 至少要到那里走一圈. 
+
+### [Club Lalah Roppongi](https://www.chick.co.jp/roppongi/en/)
+
+Address: Japan, 〒106-0032 Tokyo, Minato City, Roppongi, 3 Chome−13−14 ゴトウビルディング３ｒｄ B1F
+
+曾经 #1 Japanese Hostess 在的店. 六本木相对于池袋自然是档次更高更奢华, 总是想去六本木的酒吧, 不一定是这家店, 但至少可以在街上走走. 
+
+### [青山霊園](https://www.tokyo-park.or.jp/reien/park/index072.html)
+
+address: 〒107-0062 東京都港区南青山２丁目３２−2
+
+东京市中心的墓园. 没去过日本的墓园. 京都的一些古墓看上去更好. 这个不是必去, 查一下京都的古墓可以把这个取消. 
 
 ### 铁板烧
 
@@ -79,6 +91,10 @@ Address & Contacts:
 > Shiroishi-shi, Miyagi-ken 989-0733 Japan
 > Phone:
 > 0224-24-8812
+
+## 奈良
+
+
 
 ## 巴黎
 
