@@ -109,6 +109,8 @@ I know it will take a while to get used to it. But it's better for continous wor
 [Name of Link]({% post_url 2020-08-25-Java_Syntax %})
 
 
+**Important:** Github does not support Jekyll 4.0.  So this does not work after deployment, only work locally. Please refer to [Jekyll Post_url Bug]({% post_url  2020-11-21-JekyllPostUrlBug %})
+
 When link to files, **Jekyll does not allow any file not directly under assets folder.**
 
 For example: 
@@ -121,6 +123,9 @@ These are not allowed:
 
 - /assets/photo/c.pdf
 - /photo/c.pdf
+
+
+
 
 ## raw Liquid comment
 
