@@ -49,13 +49,13 @@ Address: Japan, 〒106-0032 Tokyo, Minato City, Roppongi, 3 Chome−13−14 ゴ�
 
 address: 〒107-0062 東京都港区南青山２丁目３２−2
 
-东京市中心的墓园. 没去过日本的墓园. 京都的一些古墓看上去更好. 这个不是必去, 查一下京都的古墓可以把这个取消. 
+东京市中心的墓园. 没去过日本的墓园. 京都的古墓更好, 下面有收录, 这个不是必去. 
 
 ### 铁板烧
 
 想吃很贵的铁板烧. 具体哪家店还没选好. 
 
-## 龍吟
+### 龍吟
 
 大名鼎鼎的[龍吟](http://www.nihonryori-ryugin.com/), 近几年东京的怀石料理网红店餐厅. 
 
@@ -67,7 +67,17 @@ Chiyoda-Ku, Tokyo 100-0006
 東京ミッドタウン日比谷7階
 
 
-## 关西
+## 京都
+Oiwa Shrine
+大岩神社
+
+非常喜欢参观这类古墓, 以为很远, 其实不然, 就在伏见稻荷大社的北边, 可以顺路过去.  看[视频](https://www.youtube.com/watch?v=mlLpAqskBQo&ab_channel=AnnaFilmProduction)里是很安静的地方, 夏天秋天都可以去, 秋天有红叶. 
+
+Address: Japan, 〒612-0817 Kyoto, Fushimi Ward, Fukakusa Mukaigaharacho, 89-2 大岩神社
+
+
+
+## 关西其他
 
 ### 姬路城
 
