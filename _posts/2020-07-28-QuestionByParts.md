@@ -3,7 +3,7 @@ layout: post
 title: Java Interview Question By Parts
 date: 2020-07-28
 author: Shadow Walker
-tags: [Java]
+tags: [Java, Shortcuts, Interview]
 comments: true
 toc: true
 ---
@@ -820,6 +820,7 @@ Not thread safety	| Thread safety
 Iterator is used to iterate the values	| Enumerator is used to iterate the values
 Allows one null key and multiple null values	| Doesn’t allow anything that is null
 Performance is high than HashTable	| Performance is slow
+
 <br>*Both allow duplicate value but not duplicate key.*
 <br><br>
 Example:
@@ -925,7 +926,7 @@ Time Complexity O(n) | Time Complexity O(log n)
 
 **Q1.Difference between final, finally and finalize.**
 
-1. final variable cannot be changed. final class cannot be extend. final method cannot be overrided. 
+1. final variable cannot be changed. final class are immutable and cannot be extend. final method cannot be overrided. 
 2. ‘finally‘ is used in a try/catch statement to almost always execute the code. finally block will run whatever exception throwed out or not finalize 
 3. ‘finalize‘ is called when an object is garbage collected. You rarely need to override it.
 
