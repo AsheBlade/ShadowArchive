@@ -18,7 +18,7 @@ Feb24 | Join Infosys
 Mar05 | First day of work at Amfam
 Mar05 - Mar13 | Transaction work from Arun
 Mar16 - Mar20 | Getting access; Start working at home | wasn't doing anything productive, <br> was even playing games during day. 
-Mar23 | Finally, I recreated the multipolicy issue; <br>Find out where is batch.xml and where is transaction.dat | So I actually wasn't working on anything before today. 
+Mar23 | Finally, I recreated the multipolicy issue; <br>Find out where is batch.xml and where is transaction.dat | So I actually wasn't working on anything before this day. 
  | No more specific record of work starting Mar23
 Near end of March | multipolicy fixed with MulPolNum_i
 About April 6th | detected double press F9 issue

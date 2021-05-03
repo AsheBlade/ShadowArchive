@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Java Interview Question By Parts
-date: 2020-07-28
+title: ICC Interview Cheat Sheet
+date: 2021-04-28
 author: Shadow Walker
 tags: [Java, Shortcuts, Interview]
 comments: true
@@ -9,7 +9,7 @@ toc: true
 ---
 
 **原则说明**  
-此文档存在的价值在于迅速检索有关Java的面试题, 应该录入知识要点, 不应讨论过分详尽信息. 详尽信息应另开文档. 
+此文档存在的价值在于迅速检索有关Java的面试题, 应该录入知识要点, 不应讨论过分详尽信息, 用作面试小抄, 详尽信息应另开文档. 
 
 
 ## Topics
@@ -45,20 +45,16 @@ toc: true
 * Design patterns and design questions related to your projects.
 
 
-## Stupid Why Questions
+## Why
 
 ### Why MicroService
 [Why MicroService](https://shadow-soft.com/why-microservice-architecture/)
 
----
-<br><br>
 
 ### Why Lambda Expression
 
 [Why Lambda Expressio](https://www.programcreek.com/2014/01/why-lambda-java-8/)
 
----
-<br><br>
 
 ### Why Stream? What is the benefit of Stream? 
 
@@ -67,9 +63,6 @@ toc: true
 - Streams encourage looser coupling. 
 - Streams can succinctly express quite sophisticated behaviour.
 - Streams provide scope for future efficiency gains. 
-
----
-<br><br>
 
 ### Why Spring? Advantage of Spring?
 
@@ -94,52 +87,20 @@ toc: true
 	* Spring ORM.
 	* Spring MVC(Web aspect)
 
----
-<br><br>
-
 
 ### Why Jenkins? Benefit? 
 
 - Jenkins can automate the build process (Compile, Static Code analysis, Archiving)
 
----
-<br><br>
+
 
 
 ### Why Spring Boot? Advantage of Spring Boot
 
----
-<br><br>
 
----
-<br><br>
 
----
-<br><br>
+## Basic
 
----
-<br><br>
-## Pre
-
-### Example
-
-**Q1.**
-
-A.  
-
-For example:
-
-```java
-
-```
-Output:
-
-```java
-
-```
-
-------
-<br><br>
 
 ### String
 
@@ -147,36 +108,6 @@ Output:
 
 A. When you use “==” (i.e. shallow comparison), you are actually **comparing the two object references** to see if they point to the same object. When you use “equals(…)”, which is a “deep comparison” that **compares the actual string values**. 
 
-For example:
-
-```java
-public class Player {
-    public static void main(String[] args)  {
-       //Singleton si = Singleton.getInstance();
-
-        String s1 = "hello";
-        String s2 = "hello";
-
-        String s3 = new String("hello");
-        String s4 = new String("hello");
-
-
-        System.out.println(s1 == s2);
-        System.out.println(s3 == s4);
-        System.out.println(s3.equals(s4));
-    }
-}
-```
-Output:~
-
-```java
-true
-false
-true
-```
-
-------
-<br><br>
 
 **Q2.String vs StringBuffer vs StringBuilder**
 - String
@@ -194,29 +125,16 @@ true
 	Synchronized | Not synchronized
 	Slower than StringBuilder | Faster than StringBuffer
 
+---
+<br>
 
-### boolean
+### Boolean
 **Q1: Default value of boolean?**
 
 A: false
 
-For example:
-
-```java
-public class Player {
-    static boolean bo;
-    public static void main(String[] args)  {
-        System.out.println(bo);
-    }
-}
-```
-Output:
-
-```java
-false
-```
-------
-<br><br>
+---
+<br>
 
 ### Static
 **Q1: What is static in Java?**
@@ -230,14 +148,13 @@ The static can be:
 * block
 * nested class
 
----
-<br><br>
 
 **Q2: What is static block?**
 
 A static block helps to initialize the static data members, just like constructors help to initialize instance members. 
 
 Example:
+
 ```java
 public class Demo {
 	 static int a;
@@ -249,10 +166,8 @@ public class Demo {
  }
 ```
 
----
-<br><br>
 
-**Can we use static block to throw exceptions?**
+**Q3: Can we use static block to throw exceptions?**
 
 Yes, static block can throw only Runtime exception or can use a try-catch block to catch checked exception.
 
@@ -275,9 +190,6 @@ Yes, static block can throw only Runtime exception or can use a try-catch block 
 	- Abstract method alone should be declared.
 	- Classes which implement the interface should provide the implementation for all the methods.
 	- All variables in interface are public static final variables by default. 
-
----
-<br><br>
 
 
 **Q2: How to change abstract class value without using set method. Real Apple question**

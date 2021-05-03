@@ -127,19 +127,6 @@ for (int i = 0; i < mat.length; i++) 
 }
 ```
 
-**ArrayList**
-
-```java
-List<Integer> intArray = new ArrayList<Integer>();
-```
-
-**Print**
-
-```java
-import java.util.*;
-int[] i = new int[1];
-System.out.println(Arrays.toString(i));
-```
 
 **fill**
 
@@ -158,6 +145,14 @@ Arrays.fill(list, 1);
 ArrayList<String> list = new ArrayList<>();
 ```
 
+**Print**
+
+```java
+import java.util.*;
+int[] i = new int[1];
+System.out.println(Arrays.toString(i));
+```
+
 **Conver to Array**
 
 这个工作中不常见, 刷题却经常需要用到. 因为一些题目输出的array不知道需要多大, 这个时候就需要用到arraylist, 然后最后输出转换成Array. 
@@ -172,6 +167,16 @@ public static void main(String[] args)
     String[] array = list.toArray(new String[list.size()]);
 }
 ```
+
+**注意!!!! Integer的ArrayList 不能用以上方法转换**
+
+正确的方法: 
+
+```java
+int[] array = list.stream().mapToInt(i->i).toArray();
+```
+
+虽然很繁琐, 但是, 这是最快的方法. 详见[这里](https://stackoverflow.com/questions/960431/how-to-convert-listinteger-to-int-in-java). 
 
 
 ## Queue
@@ -189,13 +194,31 @@ Insert: `add(e)`
 Remove: `poll()`  remove head  
 return: `peek()`  same as `poll()` but does not remove. 
 
+### PriorityQueue
+PriorityQueue也被称作heap, 优势是录入自动排序, Sorting神器. 
+
+```java
+// init heap 'the smallest element first'
+PriorityQueue<Integer> heap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
+```
+
+heap的三个方法, add,poll, peek和queue完全一样. 
+
+**Complexity**: 把N个element加入一个size为k的heap, T(N) = (Ologk). space complexity: O(k)
+
 ## HashMap
 
 ### Init
 
 ```java
 Map<Integer, Integer> map = new HashMap<>();
+
+Map<Character, String> letters = Map.of(
+        '2', "abc", '3', "def", '4', "ghi", '5', "jkl", 
+        '6', "mno", '7', "pqrs", '8', "tuv", '9', "wxyz");
 ```
+
+
 
 ### Clone
 
@@ -255,11 +278,6 @@ int maxValue Collections.max(map.values());
 
 ## Initilization
 
-### Queue
-
-```java
-Queue<String> queue = new LinkedList<>();
-```
 
 ### HashMap
 
@@ -290,6 +308,12 @@ StringBuilder sb = new StringBuilder();
 
 //init a StringBuilder with capacity of 10. 
 StringBuilder sb = new StringBuilder(10);
+
+//toString
+String s = sb.toString();
+
+//Remove char at certain Index in StringBuilder
+sb.deleteCharAt(path.length() - 1);
 ```
 
 ## BuildIn Operation
@@ -323,15 +347,7 @@ Array.length;
 System.out.println(Arrays.toString(arr));
 ```
 
-### HashMap
 
-**Find max**
-
-```java
-int max = Collections.max(set);
-int maxKey = Collections.max(map.keySet());
-int maxValue Collections.max(map.values());
-```
 
 
 ## Grammar

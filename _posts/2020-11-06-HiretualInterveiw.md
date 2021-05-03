@@ -18,12 +18,7 @@ hiretual的两轮面试都是图论题目, 也正是经过了hiretual的面试, 
 
 第一轮是一道非常难的图论题, 我当时清楚的记得那道题我直接搜答案, 想根据答案进行改动, 结果硬是一个字没改下来, 最后硬着头皮改了几个变量名称交上去了.  然后回家看了两周才看懂答案. 
 
-题目在这里: [UpHill_DownHill]({% post_url ShadowArchive/2020-11-06-UphillDownhill %})
-
-
-[Link to a post]({% link _posts/2020-11-06-UphillDownhill.md %})
-
-[xyx]({{site.baseurl}}{%link _posts/2020-11-06-UphillDownhill.md %})
+题目在这里: [UpHill_DownHill]({% post_url 2020-11-06-UphillDownhill %})
 
 这是一道比较有意义的题目, 考察也比较广泛. 是有一定复杂度的graph加上Dijkstra. 
 

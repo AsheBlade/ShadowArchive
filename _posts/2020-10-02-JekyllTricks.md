@@ -64,6 +64,36 @@ comments: true
 ---
 ```
 
+### LC
+
+```
+---
+layout: post
+title: LC
+date: 2021
+author: Shadow Walker
+tags: [OPLC, Algorithm]
+toc: true
+comments: true
+---
+## 阅后删
+文件名: 2021-01-01-LC105
+title: LC105_Construct Binary Tree from Preorder and Inorder Traversal
+Tag之中添加题目的类别(tree/DP). 
+
+## 原题
+LC
+## 推荐度
+星
+## 历程
+## 难点
+## 答案
+```java
+## Complexity Analysis
+```
+
+
+
 ### 庖厨
 
 ```
