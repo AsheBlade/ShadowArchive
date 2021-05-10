@@ -175,3 +175,124 @@ class Solution {
     }
 }
 ```
+
+## 3Sums LC15
+
+可以算是这个类型最高难度了.  不过没有普遍适用性, 所以其实不推荐. 
+
+其实就是按照2SumII的双指针去进行的, 区别是要引入第三个量, 做一些相应的调整. 其实也就是用第三个量卡一下而已. 增加一层维度. 
+
+需要注意的是, 下面加注释的部分, 其他看leetcode标准答案就好, 有动画, 说的很详细了, 不再赘述.
+
+- 2021-05-07 2刷通过. 
+
+**code**
+
+```java
+class Solution {
+    List<List<Integer>> output;
+    public List<List<Integer>> threeSum(int[] nums) {
+        output = new ArrayList<>();
+        Arrays.sort(nums);
+        
+        // nums[i]<=0 的这个条件是因为, 双指针是向右卡的, low 和high的相应值都大于i. 
+        // 所以一旦大于0就不可能有解了, 没必要继续traverse下去. 
+        for(int i=0; i<nums.length-1 && nums[i]<=0; i++){
+            if(i==0 || nums[i]!=nums[i-1]){
+           	    // 上面这个if只有一个目的, 就是去重. 去重的原因是这道题的条件不让重复. 
+           	    // 去重的原理是之前的sort, 因为sort, 所以只要查相邻是不是重复即可. 
+                twoSum(nums, i);
+            }
+        }
+        return output;
+    }
+    
+    private void twoSum(int[] nums, int i)
+    {
+        //System.out.println(nums[i]);
+        
+        int curr = nums[i];
+        int low = i+1;
+        int high = nums.length-1;
+        //System.out.println(curr + " " + nums[low] + " " + nums[high]);
+        
+        
+        while(low<high)
+        {
+            int sum = curr + nums[low] + nums[high];
+            if(sum>0){
+                high--;
+            }else if(sum<0){
+                low ++;
+                //System.out.println(nums[low]);
+            }else{
+                List<Integer> list = new ArrayList<>();
+                list.add(nums[i]);
+                list.add(nums[low++]);
+                list.add(nums[high--]);
+                output.add(list);
+                // 这个while loop是twoSumII里没有的. 
+                // 加这个的原因是, 这道题不是唯一解的, 就算两个指针卡到了, 也可能往下继续卡有其他解. 
+                // 之前twoSumII没有加这个while loop调整指针继续往下卡的原因是twoSumII的题就设定是单解. 
+                while(low<nums.length-1 && nums[low] == nums[low-1]){
+                    low++;
+                }
+            }
+        }
+    }
+}
+```
+
+## 快慢针
+
+### LC876_Middle of the Linked List
+
+一道很纯粹的快慢针问题. 快针是慢针速度的两倍.  纯粹的太简单了.  有兴趣可以看一下148题, 比这个稍微复杂一些, 需要处理edge case. 
+
+**code**
+
+```java
+public ListNode middleNode(ListNode head) {
+    ListNode slow = head, fast = head;
+    while(fast!=null && fast.next!=null)
+    {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow; 
+}
+```
+
+### LC19_Remove Nth Node From End of List
+
+这道题严格意义上来说感觉应该不算快慢针. 其实这道题的指针是一个先走, 另一个后走.  以后可以考虑把这一道从这个归类之中移除. 
+
+一道在LinkedList上的快慢指针. 一开始看很简单, 其实不然. 思路很简单, 但具体edge case很特殊, 不好处理. 需要考虑的是只有一个元素和remove head的情况, 所以加装这个dummy head. 
+
+**19题, 1721题, 1474 这三道题同宗同源**. 其中最难的是19题, 需要考虑的稍微多一些.  如果要刷的话, 就可19题刷吧. 
+
+**code**
+
+```java
+public ListNode removeNthFromEnd(ListNode head, int n) {
+	 // 这个dummyHead不是没有意义的. 加装dummyHead的意义是为了处理remove head和只有一个元素的情况. 
+	 // 这个算法必须有三个元素的时候才有用.  加装dummyhead之后, 在有一个元素的情况下是, dummyHead, head, null(可以允许一个null)
+	 // 本身思路并不难, edge case 很不好处理. 
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode first = dummy;
+    ListNode second = dummy;
+    // Advances first pointer so that the gap between first and second is n nodes apart
+    for (int i = 1; i <= n + 1; i++) {
+        first = first.next;
+    }
+    // Move first to the end, maintaining the gap
+    while (first != null) {
+        first = first.next;
+        second = second.next;
+    }
+    second.next = second.next.next;
+    return dummy.next;
+}
+```
+

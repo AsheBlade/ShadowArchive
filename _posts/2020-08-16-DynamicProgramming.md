@@ -3,7 +3,7 @@ layout: post
 title: Dynamic Programming
 date: 2020-08-16
 author: Shadow Walker
-tags: [Algorithm, Interview]
+tags: [Algorithm, Interview, DP]
 comments: true
 toc: true
 ---
@@ -498,4 +498,55 @@ public class LongestPalinSubstring {
 
 ```
 
+### LC139_Word Break
+
+第一眼看上去就知道不会. 一开始想学BFS的解法, 但看了半天觉得复杂. 往下看DP, 豁然开朗. 
+
+**是一道很适合DP的题目**. 跟大部分dp一样, 看起来并不难, 第一次遇见写出来却不容易. 
+
+**code**
+
+没有用标准答案之中的set, 以为测试之后发现算力是一样的. 直接list也可以用contains. 
+
+```java
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+    
+    	 // dp size 用s.length()+1 是因为s.substring这个方法, 这个必须用多一位.  这个语法特殊. 例如: 
+    	 // String s = "hello"    s.substring(0, s.length()) = s = "hello" ; 
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        
+        for(int i=1; i<s.length() + 1; i++)
+        {
+        	  // 这个double loop看起来很吓人, 其实很容易理解, 就是在每个点去查之前每个点到这个点的可能性. 
+        	  // 因为已经用 dp 对之前的点进行了记录, 所以查起来很方便. 
+            for(int j=0; j<i; j++)
+            {
+                if(dp[j] && wordDict.contains(s.substring(j,i))){
+                		// dp[i] 为真的条件是dp[j]为真且, i 和 j之间存在legal词汇. 很容易理解. 
+                    dp[i] = true;
+                    break;
+                }
+                    
+            }
+        }
+        
+        return dp[s.length()];
+    }
+}
+```
+
 ### Coin Machine
+
+
+## 特殊
+
+### [LC152_Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+
+这个解法很特殊的, 一开始刚看到题目的时候以为是跟53题Maximum Subarray一样, 结果跑了一遍才发现需要考虑负数. 
+
+我不知道这个解法是否能用在别的DP上. 第一次看见不需要array的DP.  目前最怕的其实就是这种题, 很特殊, 我解不了, 对其他题目没有帮助, 而且第二次遇见也不能保证做出来. 标准答案的解法就是最佳, 看那个图解, 看几眼就能懂. 其实就是一直track最小值. 
+
+不在此处收录代码了, 代码和题目都去原题里看吧. 
+

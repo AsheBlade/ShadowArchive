@@ -89,8 +89,20 @@ char c = (char)a;
 ```
 
 ### List<Integer> to Int[]
+
+其实这两种是不应该互相转的.  你会发现有很多奇怪的方法, 比如下面这种, 但其实最快的就是直接traverse一遍, 直接带进去. 这样不会出错, 而且快捷. 
+
 ```java
 int[] array = list.stream().mapToInt(i->i).toArray();
+```
+
+快就是慢, traverse最快, 省事: 
+
+```java
+for(int num: nums)
+{
+	arrayList.add(num);
+}
 ```
 
 
