@@ -115,6 +115,12 @@ int[] arr = new int[n];
 int[] arr = {1,2,3};
 ```
 
+**Clone**
+
+```java
+int[] newArray = oldArray.clone();
+```
+
 **2D Array (Matrix)**
 
 ```java
@@ -163,6 +169,8 @@ ArrayList<String> list = new ArrayList<>();
 import java.util.*;
 int[] i = new int[1];
 System.out.println(Arrays.toString(i));
+// ArrayList
+System.out.println(Arrays.toString(sublist.toArray()));
 ```
 
 **Conver to Array**
@@ -410,6 +418,15 @@ int a = Integer.MIN_VALUE;
 int b = input value 
 int output = Math.max(a, b);
 ```
+
+### Integer to Binary
+
+Yes you will get a String, but this is the only way. You can always convert it back to integer. It is up to you. 
+
+```java
+String s = Integer.toBinaryString(n);
+```
+
 ## Length
 
 ### String

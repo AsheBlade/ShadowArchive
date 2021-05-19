@@ -26,7 +26,12 @@ toc: true
 
 自己写的答案, 一遍过. 比较基本的Backtrack.  要看我提交的答案, 写的比标准答案好. 
 
-### 17. Letter Combinations of a Phone Number
+### 17. Letter Combinations of a Phone Numbe
+
+Backtrack基本题, 两周之后一刷过了.  这种题从一开始烧脑, 到现在对我来说已经是简单题了, 非常自豪. 
+
+自己写了100% code, 看提交记录,  比标准答案易读易懂. 
+
 
 ### 39. Combination Sum
 
@@ -34,7 +39,7 @@ toc: true
 
 ### 40. Combination Sum II
 
-跟39题基本一样, 除了去重. 一刷没过. 收录在LC40了, 可查. 
+5星.  看起来跟之前那些思路类似, 实则完全不同, 而且要考虑去重的问题, 好题. 三刷终于领悟. 
 
 ### 46. Permutations
 

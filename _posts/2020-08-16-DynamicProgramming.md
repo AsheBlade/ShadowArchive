@@ -248,6 +248,49 @@ class Solution {
 }
 ```
 
+## Boolean dp 问题
+
+这一类的特点是用dp 存储boolean, 进行是否判断. 
+
+### LC139_Word Break
+
+第一眼看上去就知道不会. 一开始想学BFS的解法, 但看了半天觉得复杂. 往下看DP, 豁然开朗. 
+
+**是一道很适合DP的题目**. 跟大部分dp一样, 看起来并不难, 第一次遇见写出来却不容易. 
+
+**code**
+
+没有用标准答案之中的set, 以为测试之后发现算力是一样的. 直接list也可以用contains. 
+
+```java
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+    
+    	 // dp size 用s.length()+1 是因为s.substring这个方法, 这个必须用多一位.  这个语法特殊. 例如: 
+    	 // String s = "hello"    s.substring(0, s.length()) = s = "hello" ; 
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        
+        for(int i=1; i<s.length() + 1; i++)
+        {
+        	  // 这个double loop看起来很吓人, 其实很容易理解, 就是在每个点去查之前每个点到这个点的可能性. 
+        	  // 因为已经用 dp 对之前的点进行了记录, 所以查起来很方便. 
+            for(int j=0; j<i; j++)
+            {
+                if(dp[j] && wordDict.contains(s.substring(j,i))){
+                		// dp[i] 为真的条件是dp[j]为真且, i 和 j之间存在legal词汇. 很容易理解. 
+                    dp[i] = true;
+                    break;
+                }
+                    
+            }
+        }
+        
+        return dp[s.length()];
+    }
+}
+```
+
 ## Matrix dp 问题
 
 这个类型的dp, 我还没想好是否单独分一个类. 其主要的特点就是由一个matrix dp去解决, 出现了二维化, 而不仅仅是前面的一维. 
@@ -498,47 +541,61 @@ public class LongestPalinSubstring {
 
 ```
 
-### LC139_Word Break
 
-第一眼看上去就知道不会. 一开始想学BFS的解法, 但看了半天觉得复杂. 往下看DP, 豁然开朗. 
-
-**是一道很适合DP的题目**. 跟大部分dp一样, 看起来并不难, 第一次遇见写出来却不容易. 
-
-**code**
-
-没有用标准答案之中的set, 以为测试之后发现算力是一样的. 直接list也可以用contains. 
-
-```java
-class Solution {
-    public boolean wordBreak(String s, List<String> wordDict) {
-    
-    	 // dp size 用s.length()+1 是因为s.substring这个方法, 这个必须用多一位.  这个语法特殊. 例如: 
-    	 // String s = "hello"    s.substring(0, s.length()) = s = "hello" ; 
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true;
-        
-        for(int i=1; i<s.length() + 1; i++)
-        {
-        	  // 这个double loop看起来很吓人, 其实很容易理解, 就是在每个点去查之前每个点到这个点的可能性. 
-        	  // 因为已经用 dp 对之前的点进行了记录, 所以查起来很方便. 
-            for(int j=0; j<i; j++)
-            {
-                if(dp[j] && wordDict.contains(s.substring(j,i))){
-                		// dp[i] 为真的条件是dp[j]为真且, i 和 j之间存在legal词汇. 很容易理解. 
-                    dp[i] = true;
-                    break;
-                }
-                    
-            }
-        }
-        
-        return dp[s.length()];
-    }
-}
-```
 
 ### Coin Machine
 
+## DP & DFS
+
+这一部分的特点是DP组合其他的问题, DFS, 递归, Backtrack都能和DP组合. 这一部分对我来说挺难的.  目前是绝对不可能写出来的. 
+
+### LC416_Partition Equal Subset Sum
+
+这道题我一开始的思路是BackTrack, 发现写不出来, 看答案发现是DP.  这道题的DP有几个难点: 
+- 用Boolean 构建nums, 因为Boolean的default value是null, 可以查是否赋值. 
+- 把点选取的问题简化成subSum选取的问题. 因为这道题是不需要考虑具体一个index的选取的, 只要考虑subSum在这个点选不选即可. 
+- 一些小技巧, 比如totalSum必须是偶数. 
+
+下面的DFS模板可以看一下, 可以背, 能用很多地方.  这种题目前对我来说还是太难了, 暂时不考虑掌握, 这个阶段不看DP, 下面的答案是我根据标准答案改的, 更易懂, 标准答案那个不容易看懂. 2021-05-11
+
+**Follow Up:** 698题是这道题的进阶版, 而且用的是我喜欢的backtrack, 可以看一眼. 理论上这道题也可以不用DP用backtrack的. 
+
+```java
+class Solution {
+    Boolean[][] memo;
+    int[] nums;
+    public boolean canPartition(int[] nums) {
+        int totalSum = 0;
+        // find sum of all array elements
+        for (int num : nums) {
+            totalSum += num;
+        }
+        // if totalSum is odd, it cannot be partitioned into equal sum subset
+        if (totalSum % 2 != 0) return false;    
+        int subSetSum = totalSum / 2;
+
+        memo = new Boolean[nums.length][subSetSum + 1];
+        this.nums = nums;
+        return dfs(0, subSetSum);
+    }
+
+    public boolean dfs(int n, int subSetSum) {
+        // Base Cases
+        if (subSetSum == 0)
+            return true;
+        if (n == nums.length-1 || subSetSum < 0)
+            return false;
+        // check if subSetSum for given n is already computed and stored in memo
+        if (memo[n][subSetSum] != null)
+            return memo[n][subSetSum];
+        boolean result = dfs(n + 1, subSetSum - nums[n + 1]) ||
+                dfs(n + 1, subSetSum);
+        // store the result in memo
+        memo[n][subSetSum] = result;
+        return result;
+    }
+}
+```
 
 ## 特殊
 
@@ -548,5 +605,31 @@ class Solution {
 
 我不知道这个解法是否能用在别的DP上. 第一次看见不需要array的DP.  目前最怕的其实就是这种题, 很特殊, 我解不了, 对其他题目没有帮助, 而且第二次遇见也不能保证做出来. 标准答案的解法就是最佳, 看那个图解, 看几眼就能懂. 其实就是一直track最小值. 
 
-不在此处收录代码了, 代码和题目都去原题里看吧. 
+**难点在于** 理解为什么会以一个点去保存连续值. 特别是currMax=tempMax那一行.  因为其实这道题max是保持所有整个array的最大值, currMax是保持当前index可能的最大值, currMax是会经由pointer移动的, max不会. 理解这点也就能完全理解这道题目. 
 
+```java
+class Solution {
+    public int maxProduct(int[] nums) {
+         
+        int currMax = nums[0];
+        int currMin = nums[0];
+        int max = nums[0];
+        
+        for(int i=1; i<nums.length; i++)
+        {
+            int curr = nums[i];
+            int tempMax = Math.max(curr, Math.max(curr*currMax, curr*currMin));
+            currMin = Math.min(curr, Math.min(curr*currMax, curr*currMin));
+            currMax = tempMax;
+            
+            max = Math.max(currMax, max);
+        }
+        
+        return max;
+    }
+}
+```
+
+- 2021-05-10
+
+	第二天早上起来一遍刷出来了, 但还是晕乎乎的. 这道题很特殊, 目前还做不到crystal clear. 估计一个月之后是做不出来的. 

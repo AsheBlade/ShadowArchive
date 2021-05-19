@@ -9,6 +9,10 @@ toc: true
 
 ## Overview
 
+2021-05-17 推翻之前的overview 说明.  SlidingWindow不是奇淫技巧, 是很常见的一类题型, 所以做专题总结. 
+
+---
+
 这一篇是关于sliding window这个奇淫技巧的. 现在其实对于Array的考察非常烦人. 这一块比较简单所以没什么可考的, 一旦考的话, 就是这种奇淫技巧. 其实这种技巧工作和学习之中用途基本没有, 而且适用的题型也很少. 
 
 之所以想记录一下这个技巧是觉得其还是有一定的适用性, 也许以后能够用到. 
@@ -17,7 +21,11 @@ toc: true
 
 一般游标卡尺类题目都是具有特殊性的. 一般都是两个指针, 从low和high, 头尾开始慢慢往里面卡. 这种题目通常都是array, 一般都具有一定特殊性. 
 
-## Longest Substring Without Repeating Characters LC_03
+## 相向指针
+
+相向指针的意思是两个指针从两端慢慢向中间走.  这种最常见.  有三种情况, 第一种是以两个指针相遇作为结尾, 第二种是以两个指针之间的元素去判断, 第三种是用sorted array, 只取两个指针的值来判断, 和两个指针之间的元素无关. 
+
+### Longest Substring Without Repeating Characters LC_03
 
 就是这道题其实当时baanyan第一天还跟老师怼上了. 因为我当时说我用hashmap能解而且算力上并不慢. 现在想想应该是我错了. 我今天想了半天也没想到hashmap怎么能做出和这个标准答案算力一样的解法. **所以说, 做人做学问还是应该虚心一点, 尾巴收起来**. 我当时之所以瞧不上老师的解法是因为我当时(其实现在也存在)打心底瞧不起这种只适用于一道或者几道题的奇淫技巧, 觉得这种东西花拳绣腿, 学的比较鸡肋. 
 
@@ -97,7 +105,7 @@ class Solution {
 	
 还有一些更快的解法, 游标卡尺加上hashmap的解法, 不想去学了. 这种奇淫技巧学的差不多就可以. 目前阶段没必要学最优解, 现在主要是大量刷. 
 
-## Container With Most Water LC_011
+### Container With Most Water LC_011
 
 **Problem Description**
 
@@ -138,7 +146,7 @@ class Solution {
 }
 ```
 
-## Two Sum II - Input array is sorted LC_167
+### Two Sum II - Input array is sorted LC_167
 
 **Problem Description**
 
@@ -176,7 +184,7 @@ class Solution {
 }
 ```
 
-## 3Sums LC15
+### 3Sums LC15
 
 可以算是这个类型最高难度了.  不过没有普遍适用性, 所以其实不推荐. 
 
@@ -242,6 +250,108 @@ class Solution {
     }
 }
 ```
+
+## 同向指针
+
+两个指针走的方向一样. 跟上面的相向正好相反.  这种一般是两个指针之间卡着一个特定的值, 每次走了之后检测两个指针之间的元素是否符合标准. 
+
+### LC438_Find All Anagrams in a String
+
+这道题挺有意思的, 不算特别吧. 思路其实想想也不难, 看答案不到10分钟就能懂.  这道题关键的是这个思路, **HashMap是可以比较的**, 有了这个思路之后很多题都可以利用这个思路比,**尤其是那种乱序的比较, 只比较元素不比较顺序的, 都可以用这个思路**: 
+
+- key 和 value完全一样的两个HashMap就是完全相同的, 
+- key, value=0 和 没有这个key和value是两回事, 不相等. 
+
+官方答案太啰嗦, 自己改了改, 放在下面. 
+
+- 2021-05-17 第一次
+
+```java
+class Solution {
+  public List<Integer> findAnagrams(String s, String p) {
+    int ns = s.length(), np = p.length();
+    if (ns < np) return new ArrayList();
+
+    Map<Character, Integer> pMap = new HashMap();
+    Map<Character, Integer> sMap = new HashMap();
+    // build reference hashmap using string p
+    for(char c: p.toCharArray()){
+        pMap.put(c, pMap.getOrDefault(c,0) + 1);
+    }
+
+    List<Integer> output = new ArrayList();
+    // sliding window on the string s
+    for (int i = 0; i < ns; ++i) {
+      // add one more letter 
+      // on the right side of the window
+      char c = s.charAt(i);
+      sMap.put(c, sMap.getOrDefault(c,0) + 1);
+      // remove one letter 
+      // from the left side of the window
+      if (i >= np) {
+        char ch = s.charAt(i - np);
+        if (sMap.get(ch) == 1) {
+          sMap.remove(ch);
+        }
+        else {
+          sMap.put(ch, sMap.get(ch) - 1);
+        }
+      }
+      // compare hashmap in the sliding window
+      // with the reference hashmap
+      if (pMap.equals(sMap)) {
+        output.add(i - np + 1);
+      }
+    }
+    return output;
+  }
+}
+```
+## LC581_Shortest Unsorted Continuous Subarray
+
+ 上来基本思路是没错的. 自己写了双指针, 但发现有edge case解决不了. 看了答案调整之后crystal clear. 答案有用Stack做的最优解, 我没学, 看起来挺特殊的, 有时间的话, 可以学一下, 没时间就算了. 
+ 
+ 下面代码基本完全是自己写的, 比标准答案易读, 思路是一样的. 
+
+```java
+class Solution {
+    private Integer low;
+    private Integer high;
+    int n;
+    public int findUnsortedSubarray(int[] nums) {
+        this.n = nums.length;
+        int[] sNums = nums.clone();
+        Arrays.sort(sNums);
+        
+        for(int i=0; i<n; i++)
+        {
+            if(nums[i]!=sNums[i]){
+                low = i;
+                break;
+            }                
+        }
+        if(low == null)
+            return 0;
+        
+        for(int i=low+1; i<n; i++)
+        {
+            if(nums[i]<sNums[i]){
+                high = i;
+            }  
+        }
+
+        
+        return high-low+1;
+    }
+}
+```
+
+- Time complexity : O(nlogn). Sorting takes  nlogn time.
+
+- Space complexity : O(n). We are making n copy of original array.
+
+
+
 
 ## 快慢针
 

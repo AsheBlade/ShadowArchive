@@ -21,6 +21,8 @@ Syntax的总结在这个[guide](https://easonback26.github.io/ShadowArchive/Java
 
 Syntax是需要刷一下的, 不然总当场google多少是会减分. 
 
+**要会默写heap, 也就是priorityQueue**
+
 # Arrays
 
 Array这一块表面上很基础, 其实Interview的时候并不基础. 现在基本不考, 如果考的话, 就都是一些奇淫技巧. 
