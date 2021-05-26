@@ -30,6 +30,10 @@ toc: true
 
 故地重游
 
+## 西北
+
+[永泰古城](https://zh.wikipedia.org/wiki/%E6%B0%B8%E6%B3%B0%E5%9F%8E%E5%9D%80)
+
 ## 东京
 
 

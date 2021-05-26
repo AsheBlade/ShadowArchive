@@ -248,6 +248,53 @@ class Solution {
 }
 ```
 
+### 213. House Robber II
+
+基础的House robber加闭环特殊条件, 关键在于如何处理这个特殊条件. 其实就是走两次, 知道如何处理的话, 其实没啥难度, 再见应该不存在做不出来的问题. 代码写的很难看, 但也是100%, 对于我自己来说比标准答案容易理解, 不收录了, 看我在05/22/2021 12:46提交的答案. 
+
+### 256. Paint House
+
+目前见到House robber家族里最好的一道题. 算是完全覆盖了基础的house robber. 属于House robber问题, 其实就是加了一层维度变成了二维dp而已. 思路并不复杂. 下面答案是按我的习惯自己写的, 没有最优解的dp快, 但基本是一样的. 最优解的会比我省很多space time, 暂时不学. 
+
+```java
+class Solution {
+    public int minCost(int[][] costs) {
+        if (costs.length == 0) 
+            return 0;  
+        int N = costs.length;
+        int[][] dp = new int[N][3];
+        dp[0][0] = costs[0][0];
+        dp[0][1] = costs[0][1];
+        dp[0][2] = costs[0][2];
+        for(int i=1; i<N;i++){
+            dp[i][0] = costs[i][0] + Math.min(dp[i-1][1],dp[i-1][2]);
+            dp[i][1] = costs[i][1] + Math.min(dp[i-1][0],dp[i-1][2]);
+            dp[i][2] = costs[i][2] + Math.min(dp[i-1][0],dp[i-1][1]);
+        }
+        return Math.min(dp[N-1][0],Math.min(dp[N-1][1], dp[N-1][2]));
+    }
+}
+```
+
+### 746. Min Cost Climbing Stairs
+
+我觉得这道题的难点不在于题本身, 而在于条件稀缺.  因为不知道起点的cost是多少, 题目没告诉是0.  这个目前算是一道四星题目, 是值得刷的. 
+
+```java
+class Solution {
+    public int minCostClimbingStairs(int[] cost) {
+        int[] dp = new int[cost.length+1];
+
+        for(int i=2; i<cost.length + 1; i++)
+        {
+            dp[i] = Math.min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]);
+        }
+        
+        return dp[dp.length-1];
+    }
+}
+```
+
 ## Boolean dp 问题
 
 这一类的特点是用dp 存储boolean, 进行是否判断. 
@@ -551,7 +598,7 @@ public class LongestPalinSubstring {
 
 ### LC416_Partition Equal Subset Sum
 
-这道题我一开始的思路是BackTrack, 发现写不出来, 看答案发现是DP.  这道题的DP有几个难点: 
+这道题我一开始的思路是BackTrack, 发现写不出来, 看答案发现是DP+DFS.  这道题的DP有几个难点: 
 - 用Boolean 构建nums, 因为Boolean的default value是null, 可以查是否赋值. 
 - 把点选取的问题简化成subSum选取的问题. 因为这道题是不需要考虑具体一个index的选取的, 只要考虑subSum在这个点选不选即可. 
 - 一些小技巧, 比如totalSum必须是偶数. 
@@ -583,11 +630,14 @@ class Solution {
         // Base Cases
         if (subSetSum == 0)
             return true;
+        // nums.length-1 返回, 因为下面是计算n+1的. nums[nums.length-1]的两种可能都已经算过了. 也是为了防止overflow. 
         if (n == nums.length-1 || subSetSum < 0)
             return false;
         // check if subSetSum for given n is already computed and stored in memo
         if (memo[n][subSetSum] != null)
             return memo[n][subSetSum];
+        // n的TF取决于n+1, 在n+1只有两种情况, 或者选取, 或者不选n+1. 如果两种都不行的话, n一定是F. 
+        	  // 因为是OR, 所以只要找到一个true, 就会自动断开, 不必担心浪费算力的问题. 
         boolean result = dfs(n + 1, subSetSum - nums[n + 1]) ||
                 dfs(n + 1, subSetSum);
         // store the result in memo

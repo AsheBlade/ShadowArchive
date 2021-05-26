@@ -339,8 +339,11 @@ sb.deleteCharAt(path.length() - 1);
 ## BuildIn Operation
 
 ### String Builder
-	> Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class provides an alternative to String Class, as it creates a mutable sequence of characters. 
-**Append**<br>
+
+> Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class provides an alternative to String Class, as it creates a mutable sequence of characters. 
+
+**Append**
+
 combine and add strings together
 ```java
 sb.append(“geek”);
@@ -356,6 +359,42 @@ output StringBuilder content to String
 ```java
 String s = sb.toString();
 ```
+
+### Character
+
+Judge if a character is a digit char. 
+
+```java
+Character.isDigit(c)
+```
+
+Judge if a character is white space. 
+
+```java
+Character.isWhitespace(c)
+```
+
+### String
+
+String.substring(a,b). very important in Leetcode. 
+
+- a is start
+- b is end + 1
+
+```java
+String s = "ab";
+System.out.println(s.substring(0,0));
+System.out.println(s.substring(0,1));
+System.out.println(s.substring(0,2));
+```
+
+String.startWith(s). This is used to judge if a String starts with s. 
+
+```java
+str.startsWith(s)
+```
+
+### Array
 
 **Length**
 ```java
