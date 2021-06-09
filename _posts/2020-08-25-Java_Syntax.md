@@ -466,6 +466,16 @@ Yes you will get a String, but this is the only way. You can always convert it b
 String s = Integer.toBinaryString(n);
 ```
 
+### Random
+
+这一块例子可以参考LC380 和 LC384. 
+
+```java
+Random random = new Random();
+int j = random.nextInt(high);  // generate random int between 0 and high (exclude high);
+int i = random.nextInt(high-low) + low;  // get random int between low and high (exclude high);
+```
+
 ## Length
 
 ### String

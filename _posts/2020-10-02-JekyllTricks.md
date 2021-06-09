@@ -72,7 +72,7 @@ layout: post
 title: LC
 date: 2021
 author: Shadow Walker
-tags: [OPLC, Algorithm]
+tags: [OPLC]
 toc: true
 comments: true
 ---

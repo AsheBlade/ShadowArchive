@@ -118,14 +118,14 @@ class Solution {
         
         head = dummyHead.next;
         dummyHead = new Node(-1);
-        Node output = dummyHead;
+        Node output = dummyHead; // 问. 这里为什么不能用output = dummyHead.next, 然后下面用output, 反复尝试这个就是不行.
         
         //2. 第二次用hashmap之中的新copy复制random和next. 
         while(head!=null)
         {
             output.next = visitedHash.get(head);
 
-            if(head.random!=null && output.next!=null){
+            if(head.random!=null){
                 output.next.random = visitedHash.get(head.random);
 
             }

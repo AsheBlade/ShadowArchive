@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build Data Structure
+title: Data Structure Design
 date: 2021-05-20
 author: Shadow Walker
 tags: [Algorithm, Interview]

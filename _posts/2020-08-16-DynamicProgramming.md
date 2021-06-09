@@ -683,3 +683,31 @@ class Solution {
 - 2021-05-10
 
 	第二天早上起来一遍刷出来了, 但还是晕乎乎的. 这道题很特殊, 目前还做不到crystal clear. 估计一个月之后是做不出来的. 
+
+### [LC337_House Robber III](https://leetcode.com/problems/house-robber-iii/)
+
+很特殊的一道树状DP. 其实自己做的时候思路想的也差不多了. 但就是式子列不出来. 这个式子列的真是优美! 一看就懂. 
+
+```java
+class Solution {
+    public int[] helper(TreeNode node) {
+        // return [rob this node, not rob this node]
+        if (node == null) {
+            return new int[] { 0, 0 };
+        }
+        int left[] = helper(node.left);
+        int right[] = helper(node.right);
+        // if we rob this node, we cannot rob its children
+        int rob = node.val + left[1] + right[1];
+        // else, we free to choose rob its children or not
+        int notRob = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
+
+        return new int[] { rob, notRob };
+    }
+
+    public int rob(TreeNode root) {
+        int[] answer = helper(root);
+        return Math.max(answer[0], answer[1]);
+    }
+}
+```
