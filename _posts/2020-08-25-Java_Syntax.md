@@ -82,6 +82,13 @@ char c = ‘1’;
 int i = Character.getNumericValue(c);  
 ```
 
+### Char Array to Int
+
+```java
+char[] a;
+int i = Integer.parseInt(new String(a));
+```
+
 ### Int to Char
 ```java
 int a = 65;

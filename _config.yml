@@ -74,10 +74,10 @@ footer-text: Copyright (c) 2021 Shadow Walker
 
 # 输入Gitalk相关设定，即可添加评论区，具体请看教程
 gitalk:
-  clientID: ecd5f9ca822b01f65e22
-  clientSecret: 954fc161c6daece1d5d57bfc82d593a045d18551
+  clientID: a3fcc2375c9254bb9429
+  clientSecret: 8288f825a22535bb344d5969dd761e3bd2a6becb
   repo: ShadowArchive
-  owner: easonback26
+  owner: AsheBlade
 
 # 输入Google Analytics web tracking code
 google_analytics:

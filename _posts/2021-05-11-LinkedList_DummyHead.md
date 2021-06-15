@@ -139,4 +139,74 @@ class Solution {
 ```
 
 
+## 86. Partition List
 
+这道题的特别之处, 不用dummyHead.next 而是直接等于过去. 这个暂时还没彻底想明白.  
+
+这道题的话, 如果是firstDummy.next = smallTail的话, 就会出现映射不改, 停留在 ListNode(-1)的情况. 
+
+```java
+class Solution {
+    public ListNode partition(ListNode head, int x) {
+        if(head == null)
+            return null;
+        
+        ListNode firstDummy = new ListNode(-1);
+        ListNode secondDummy = new ListNode(-1);
+        ListNode smallTail = new ListNode(-1);
+        ListNode bigTail = new ListNode(-1);
+        firstDummy= smallTail;
+        secondDummy = bigTail;
+        
+        while(head!=null){
+            if(head.val<x){  
+                smallTail.next = head;
+                smallTail = smallTail.next;    
+            }else{
+                bigTail.next = head;
+                bigTail = bigTail.next;
+            }
+            head = head.next;
+        }
+        
+        bigTail.next = null;
+        
+        smallTail.next = secondDummy.next;
+        return firstDummy.next;
+    }
+}
+```
+
+## 147. Insertion Sort List
+
+这道题是目前见过换头之中最难想的. 难点在于理解这个算法, 这不是普通意义的insertion sort, 先创建一个空的LinkedList, 然后每一次从把旧LinkedList之中的元素选择插入进新的LinkedList之中. 
+
+**这道题的插入部分可以作为模板去背一下.**
+
+```java
+class Solution {
+    public ListNode insertionSortList(ListNode head) {
+        ListNode dummy = new ListNode();
+
+        while (head != null) {
+            // At each iteration, we insert an element into the resulting list.
+            ListNode prev = dummy;
+
+            // find the position to insert the current node
+            while (prev.next != null && prev.next.val < head.val) {
+                prev = prev.next;
+            }
+
+            ListNode temp = head.next;
+            // insert the current node to the new list
+            head.next = prev.next;
+            prev.next = head;
+
+            // moving on to the next iteration
+            head = temp;
+        }
+
+        return dummy.next;
+    }
+}
+```
