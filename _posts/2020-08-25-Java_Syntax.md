@@ -180,6 +180,13 @@ System.out.println(Arrays.toString(i));
 System.out.println(Arrays.toString(sublist.toArray()));
 ```
 
+**Swap**
+
+```java
+// swap the element at index first and second for list. 
+Collections.swap(list, first, second);
+```
+
 **Conver to Array**
 
 这个工作中不常见, 刷题却经常需要用到. 因为一些题目输出的array不知道需要多大, 这个时候就需要用到arraylist, 然后最后输出转换成Array. 
