@@ -67,3 +67,5 @@ This is not my code, the code is from [here](https://codepen.io/sashatran/pen/rP
 ## 更多
 
 [JavaScript/jQuery - “$ is not defined- $function()” error](https://stackoverflow.com/questions/10779148/javascript-jquery-is-not-defined-function-error)
+
+[ How to Include JavaScript in Our HTML | JavaScript Tutorial | Learn JavaScript | For Beginners](https://www.youtube.com/watch?v=AD5hxsFJc4o&ab_channel=DaniKrossing)
