@@ -11,21 +11,21 @@ toc: true
 ## Overview
 
 - Lowest Common 家族题目
-	* 236. Lowest Common Ancestor of a Binary Tree
-	* 1644. Lowest Common Ancestor of a Binary Tree II
-	* 1650. Lowest Common Ancestor of a Binary Tree III
-	* 1676. Lowest Common Ancestor of a Binary Tree IV
+	* 236 Lowest Common Ancestor of a Binary Tree
+	* 1644 Lowest Common Ancestor of a Binary Tree II
+	* 1650 Lowest Common Ancestor of a Binary Tree III
+	* 1676 Lowest Common Ancestor of a Binary Tree IV
 	* 865/1123. Smallest Subtree with all the Deepest Nodes
 
 - 其他
 
-	* 235. Lowest Common Ancestor of a Binary Search Tree
-	* 1302. Deepest Leaves Sum
+	* 235 Lowest Common Ancestor of a Binary Search Tree
+	* 1302 Deepest Leaves Sum
 
 - 更多: 
 
-	* 1430. Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree
-	* 1379. Find a Corresponding Node of a Binary Tree in a Clone of That Tree
+	* 1430 Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree
+	* 1379 Find a Corresponding Node of a Binary Tree in a Clone of That Tree
 
 ## 刷题思路
 

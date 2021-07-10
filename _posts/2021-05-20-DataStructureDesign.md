@@ -137,3 +137,100 @@ class LRUCache {
     }
 }
 ```
+
+
+
+## 1628. Design an Expression Tree With Evaluate Function
+
+很喜欢的一道数据结构设计, 既考察构建tree, 又考察tree的 in order traverse. 知识点考察全面. 收录在 data structure design. 
+
+很容易想到用stack, 但难点在于构建的时候用stack 记录 TreeNode, 而不是记录 Integer. 
+
+```java
+abstract class Node {
+    
+    public abstract int evaluate();
+    // define your fields here
+    String val;
+    Node left;
+    Node right;
+}
+
+class TreeNode extends Node{
+    
+    public int evaluate(){
+        return inOrder(this);
+    }
+    
+    private int inOrder(TreeNode tn){
+        
+        if(tn == null)
+            return 0;
+        
+        if(tn.left == null && tn.right == null)
+            return Integer.valueOf(tn.val);
+        
+        int num1 = inOrder(tn.left);
+        int num2 = inOrder(tn.right);
+        
+        String s = tn.val;
+        
+        if(s.equals("*"))
+            return num1*num2;
+        else if(s.equals("/"))
+            return num1/num2;
+        else if(s.equals("+"))
+            return num1+num2;
+        else if(s.equals("-"))
+            return num1-num2;
+        
+        throw new RuntimeException();
+    }
+    // define your fields here
+    String val;
+    TreeNode left;
+    TreeNode right;
+    
+    public TreeNode(String val){
+        this.val = val;
+    }
+    
+    public TreeNode(String val, TreeNode left, TreeNode right){
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+class TreeBuilder {
+    TreeNode root;
+    Set<String> operations = new HashSet<>();
+    String[] postfix;
+    
+    Node buildTree(String[] postfix) {
+        operations.add("*");
+        operations.add("/");
+        operations.add("+");
+        operations.add("-");
+        
+        Stack<TreeNode> stack = new Stack<>();
+        for(String token: postfix){
+            if(operations.contains(token)){
+                // operator
+                TreeNode n2 = stack.pop();
+                TreeNode n1 = stack.pop();
+                stack.push(new TreeNode(token, n1, n2));
+            } else{
+                // operand
+                stack.push(new TreeNode(token));
+            }
+        }
+        return stack.pop();
+    }
+    
+    
+    private int evaluate(){
+        return this.root.evaluate();
+    }
+}
+```

@@ -112,6 +112,11 @@ for(int num: nums)
 }
 ```
 
+### String[] to List<String>
+
+```java
+List<String> list= Arrays.asList(arr);
+```
 
 ## Array
 
@@ -152,7 +157,6 @@ for (int i = 0; i < mat.length; i++) 
 }
 ```
 
-
 **fill**
 
 fill an array with certain integer
@@ -161,6 +165,7 @@ fill an array with certain integer
 int[] list = new int[100]
 Arrays.fill(list, 1);
 ```
+
 
 ## ArrayList
 
@@ -239,6 +244,30 @@ PriorityQueue<Integer> heap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
 heap的三个方法, add,poll, peek和queue完全一样. 
 
 **Complexity**: 把N个element加入一个size为k的heap, T(N) = (Ologk). space complexity: O(k)
+
+
+### Deque
+
+```java
+Deque<MyObject> deque = new LinkedList<MyObject>();
+add()
+addLast()
+addFirst()
+offer()
+offerFirst()
+offerLast()
+peek()
+peekFirst()
+peekLast()
+getFirst()
+getLast()
+remove()
+removeFirst()
+removeLast()
+poll()
+pollFirst()
+pollLast()
+```
 
 ## HashMap
 
@@ -388,6 +417,13 @@ Judge if a character is white space.
 Character.isWhitespace(c)
 ```
 
+Traverse from a to z. 
+
+```java
+for(char c= 'a'; c<='z'; c++){
+}
+```
+
 ### String
 
 String.substring(a,b). very important in Leetcode. 
@@ -395,11 +431,12 @@ String.substring(a,b). very important in Leetcode.
 - a is start
 - b is end + 1
 
+String.substring(a):  substring start from a to the end of the string. 
+
 ```java
-String s = "ab";
-System.out.println(s.substring(0,0));
-System.out.println(s.substring(0,1));
-System.out.println(s.substring(0,2));
+String s="SachinTendulkar";  
+System.out.println(s.substring(6));//Tendulkar  
+System.out.println(s.substring(0,6));//Sachin  
 ```
 
 String.startWith(s). This is used to judge if a String starts with s. 
@@ -407,6 +444,7 @@ String.startWith(s). This is used to judge if a String starts with s.
 ```java
 str.startsWith(s)
 ```
+
 
 ### Array
 
@@ -490,6 +528,45 @@ int j = random.nextInt(high);  // generate random int between 0 and high (exclud
 int i = random.nextInt(high-low) + low;  // get random int between low and high (exclude high);
 ```
 
+### module
+
+有的题目会要求 return modulo 10^9 + 7, 比如1465题有这个要求. 
+
+```java
+// 得到的答案然后 加上下面这段就可以. 
+% (int)(1e9 + 7));
+```
+
+## Compare
+
+### Char
+
+```java
+// Simple a - b
+int i = 'A' - 'B';
+```
+
+### String
+
+```java
+int i = a.compareTo(b);
+```
+
+### compare&Lambda
+
+两种常见的compare方法, 我更倾向于用lambda. 
+
+```java
+Arrays.sort(words, new Comparator<String>() {
+    public int compare (String s1, String s2) {
+        return s1.length() - s2.length();
+    }
+});
+    
+Arrays.sort(words, (s1, s2)->s1.length()-s2.length());
+```
+
+
 ## Length
 
 ### String
@@ -509,6 +586,12 @@ for (int num: list)
 {
     System.out.print(num);
 }
+```
+
+### Sort anything
+
+```
+Collections.sort(a,b);
 ```
 
 ### Find average in Array
@@ -557,3 +640,11 @@ public class Test {
     }
 }
 ```
+
+## Exception
+
+Runtime, 对于Leetcode中的题目, 处理无解或者不可能出现的edge case可以统一用这一行. 
+
+```java
+throw new RuntimeException();
+``

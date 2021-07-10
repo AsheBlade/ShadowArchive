@@ -8,6 +8,11 @@ toc: true
 comments: true
 ---
 
+
+## Topological Sort
+
+ 2021-07-02 更新: 师傅教的最优解法. 下面都不用看了, 就看[Topological Sort]({% post_url 2021-07-02-TopologicalSort %})即可. 
+ 
 ## 笨办法
 
 ```
